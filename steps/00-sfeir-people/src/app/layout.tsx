@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
-import '@/styles/reset.css';
 import '@/styles/global.css';
 
 export const metadata: Metadata = {

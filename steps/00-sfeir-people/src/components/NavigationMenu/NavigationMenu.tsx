@@ -3,7 +3,7 @@ import NavigationItem from './NavigationItem';
 const NavigationMenu = () => {
   return (
     <nav>
-      <ul className="menu">
+      <ul className="flex flex-col gap-2">
         <li>
           <NavigationItem href="/">Home</NavigationItem>
         </li>
@@ -15,7 +15,7 @@ const NavigationMenu = () => {
         </li>
         <li>
           <form>
-            <button type="submit" className="menu__item">
+            <button type="submit" className="block px-4 py-2">
               Logout
             </button>
           </form>

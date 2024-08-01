@@ -13,3 +13,9 @@ export type Person = {
   manager?: string;
   managerId?: string;
 };
+
+export type PaginationAttributes = {
+  per_page?: number;
+  page: number;
+  total_pages: number;
+};

@@ -8,28 +8,26 @@ type PersonCardProps = {
 
 const PersonCard: React.FC<PersonCardProps> = ({ person }) => {
   return (
-    <div className="card">
-      <div className="card__body">
-        <div className="personcard-header">
-          {person.photo && (
-            <Image
-              className="personcard-header__photo"
-              src={person.photo}
-              alt={`Picture of ${person.firstname} ${person.lastname}`}
-              width="100"
-              height="100"
-            />
-          )}
-          <span>
-            {person.firstname} {person.lastname}
-          </span>
-          <span>{person.position}</span>
-        </div>
-        <div className="personcard-footer">
-          <span className="personcard-footer__item">{person.phone}</span>
-          <span className="personcard-footer__item">{person.email}</span>
-          {person.manager && <span className="personcard-footer__item">{person.manager}</span>}
-        </div>
+    <div className="bg-white p-4 rounded-lg">
+      <div className="flex flex-col gap-2 items-center">
+        {person.photo && (
+          <Image
+            className="rounded-full"
+            src={person.photo}
+            alt={`Picture of ${person.firstname} ${person.lastname}`}
+            width="100"
+            height="100"
+          />
+        )}
+        <span>
+          {person.firstname} {person.lastname}
+        </span>
+        <span>{person.position}</span>
+      </div>
+      <div className="bg-gray-100 rounded-md p-2 mt-4 grid gap-2">
+        <span className="flex gap-1">{person.phone}</span>
+        <span className="flex gap-1">{person.email}</span>
+        {person.manager && <span className="flex gap-1">{person.manager}</span>}
       </div>
     </div>
   );
