@@ -1,22 +1,30 @@
 import clsx from 'clsx';
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps<C extends React.ElementType> = {
   children: React.ReactNode;
   className?: string;
-  variant: 'primary' | 'secondary';
-};
+  variant?: 'primary' | 'secondary';
+  component?: C;
+} & Omit<React.ComponentPropsWithoutRef<C>, 'className' | 'variant'>;
 
 const classNames = {
-  primary: 'text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5',
+  primary: 'inline-block text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5',
   secondary:
-    'py-2.5 px-5 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700',
+    'inline-block py-2.5 px-5 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700',
 };
 
-const Button: React.FC<ButtonProps> = ({ children, className, variant = 'secondary', ...restProps }) => {
+const Button = <C extends React.ElementType = 'button'>({
+  children,
+  className,
+  variant = 'secondary',
+  component,
+  ...restProps
+}: ButtonProps<C>) => {
+  const Component = component || 'button';
   return (
-    <button {...restProps} className={clsx(className, classNames[variant])}>
+    <Component {...restProps} className={clsx(className, classNames[variant])}>
       {children}
-    </button>
+    </Component>
   );
 };
 

@@ -1,6 +1,7 @@
 import * as peopleApi from '@/api/people';
 import { cleanObject } from '@/functions/data';
-import { revalidateTag } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
+import { redirect } from 'next/navigation';
 
 export const update = async (userId: string, formData: FormData) => {
   'use server';
@@ -20,7 +21,9 @@ export const update = async (userId: string, formData: FormData) => {
 
   await peopleApi.updateOne(payload);
 
-  revalidateTag(userId);
+  revalidateTag(`employee-${userId}`);
+  revalidateTag('employee-list');
+  redirect(`/employees/${userId}`);
 };
 
 export const create = () => {};

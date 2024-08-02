@@ -21,7 +21,7 @@ export const findAll = async (query: {
       page: query.page || 1,
     },
   });
-  const peopleData = (await fetch(url).then((res) => res.json())) as {
+  const peopleData = (await fetch(url, { next: { tags: ['employee-list'] } }).then((res) => res.json())) as {
     data: Array<Person>;
     pagination: PaginationAttributes;
   };
@@ -33,7 +33,7 @@ export const findAll = async (query: {
 
 export const findOne = async (id: string): Promise<Person> => {
   const url = `${baseUrl}/api/people/${id}`;
-  const data = (await fetch(url).then((res) => res.json())) as Person;
+  const data = (await fetch(url, { next: { tags: [`employee-${id}`] } }).then((res) => res.json())) as Person;
   return formatPersonObject(data);
 };
 
@@ -58,7 +58,6 @@ export const updateOne = async (personData: PersonUpdate): Promise<Person> => {
   const data = (await fetch(url, {
     method: 'PATCH',
     body: JSON.stringify(personData),
-    next: { tags: [personData.id] },
   }).then((res) => res.json())) as Person;
   return formatPersonObject(data);
 };

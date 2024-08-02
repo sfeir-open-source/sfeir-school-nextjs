@@ -1,18 +1,18 @@
-'use client';
-
 import Image from 'next/image';
 import TextField from '@/components/TextField';
 import { Person } from '@/types';
 import FormSubmitButton from './FormSubmitButton';
+('react');
 
 type EmployeeFormProps = {
   employee?: Person;
   action: (formData: FormData) => void;
+  className?: string;
 };
 
-const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action }) => {
+const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className }) => {
   return (
-    <form action={action}>
+    <form action={action} className={className}>
       <div className="flex justify-center w-full">
         <Image
           src={employee?.photo || '/profile-placeholder.jpg'}
