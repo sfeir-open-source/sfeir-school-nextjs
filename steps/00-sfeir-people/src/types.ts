@@ -6,7 +6,7 @@ export type Person = {
   position: string;
   entryDate: string;
   birthDate: string;
-  gender: 'string';
+  gender: string;
   email: string;
   phone: string;
   isManager: boolean;

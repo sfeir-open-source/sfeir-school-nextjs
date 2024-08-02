@@ -9,9 +9,10 @@ const Search = ({ ...restProps }) => {
   const params = useSearchParams();
   const pathname = usePathname();
 
-  const handleChange = debounce((event) => {
+  const handleChange = debounce((event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target?.value;
     const newParams = new URLSearchParams(params);
+    newParams.delete('page');
     if (value) newParams.set('search', value);
     else newParams.delete('search');
     router.replace(`${pathname}?${newParams.toString()}`);

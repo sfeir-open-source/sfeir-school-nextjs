@@ -52,7 +52,14 @@ const verifyResourceExists = (request, reply, done) => {
   done();
 };
 
-fastify.get('/api/people', (request, reply) => {
+const addDelay =
+  (delay = 500) =>
+  async () => {
+    const pause = () => new Promise((resolve) => setTimeout(() => resolve('done'), delay));
+    await pause();
+  };
+
+fastify.get('/api/people', { preHandler: [addDelay()] }, (request, reply) => {
   const page = Number(request.query?.page) || 1;
   const per_page = Number(request.query?.per_page) || 1;
   const search = request.query?.search;
@@ -85,7 +92,7 @@ fastify.get('/api/people', (request, reply) => {
   });
 });
 
-fastify.post('/api/people', (request, reply) => {
+fastify.post('/api/people', { preHandler: [addDelay(1000)] }, (request, reply) => {
   const id = new ObjectId();
   const newPerson = {
     ...request.body,
@@ -104,20 +111,22 @@ fastify.post('/api/people', (request, reply) => {
   reply.status(201).send(newPerson);
 });
 
-fastify.get('/api/people/:id', { preHandler: [verifyResourceExists] }, (request, reply) => {
+fastify.get('/api/people/:id', { preHandler: [addDelay(), verifyResourceExists] }, (request, reply) => {
   reply.send(DATA.people[request.resourceIndex]);
 });
 
-fastify.delete('/api/people/:id', { preHandler: [verifyResourceExists] }, (request, reply) => {
+fastify.delete('/api/people/:id', { preHandler: [addDelay(), verifyResourceExists] }, (request, reply) => {
   DATA.people.splice(request.resourceIndex, 1);
   reply.code(204).send();
 });
 
-fastify.patch('/api/people/:id', { preHandler: [verifyResourceExists] }, (request, reply) => {
+fastify.patch('/api/people/:id', { preHandler: [addDelay(1000), verifyResourceExists] }, (request, reply) => {
   const currentPerson = DATA.people[request.resourceIndex];
+  const payload = JSON.parse(request.body);
+
   const newPerson = {
     ...currentPerson,
-    ...request.body,
+    ...payload,
     id: currentPerson.id,
   };
 
