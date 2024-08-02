@@ -2,16 +2,16 @@
 
 # Présentation
 
-![speaker](./assets/images/jf.jpg)
-![badge](./assets/images/gde.png)
+![speaker](./assets/images/speaker-antoiner.jpeg)
+![badge](./assets/images/logo-react.png)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
-## Jean-François Garreau
+## Antoine RICHARD
 
-### CTO front
+### Developer & EM
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### @jefbinomed
+### richard.an@sfeir.com
 
 <!-- .element: class="icon-twitter icon-second" -->
