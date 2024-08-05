@@ -1,8 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import TextField from '@/components/TextField';
 import { Person } from '@/types';
 import FormSubmitButton from './FormSubmitButton';
-('react');
+import { useFormState } from 'react-dom';
 
 type EmployeeFormProps = {
   employee?: Person;
@@ -10,9 +12,17 @@ type EmployeeFormProps = {
   className?: string;
 };
 
+const initialState = {
+  errors: [],
+};
+
 const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className }) => {
+  const [state, formAction] = useFormState(action, initialState);
+
+  console.log('///', state);
+
   return (
-    <form action={action} className={className}>
+    <form action={formAction} className={className}>
       <div className="flex justify-center w-full">
         <Image
           src={employee?.photo || '/profile-placeholder.jpg'}

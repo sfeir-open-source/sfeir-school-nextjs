@@ -1,12 +1,22 @@
 import { PaginationAttributes, Person } from '@/types';
 import qs from 'query-string';
 
+import { ApiError } from './error';
+
 const baseUrl = process.env.API_BASE_URL;
 
 const formatPersonObject = (apiPerson: Person): Person => ({
   ...apiPerson,
   photo: apiPerson.photo ? baseUrl + apiPerson.photo : undefined,
 });
+
+export async function fetchJson<T>(url: string, options?: RequestInit): Promise<T> {
+  const response: Response = await fetch(url, options);
+  const data: T | unknown = await response.json();
+  if (response.ok) return data as T;
+
+  throw new ApiError(response.statusText, data as unknown);
+}
 
 export const findAll = async (query: {
   search?: string;
@@ -21,10 +31,11 @@ export const findAll = async (query: {
       page: query.page || 1,
     },
   });
-  const peopleData = (await fetch(url, { next: { tags: ['employee-list'] } }).then((res) => res.json())) as {
+  const peopleData = await fetchJson<{
     data: Array<Person>;
     pagination: PaginationAttributes;
-  };
+  }>(url, { next: { tags: ['employee-list'] } });
+
   return {
     pagination: peopleData.pagination,
     data: peopleData.data?.map(formatPersonObject),
@@ -33,11 +44,11 @@ export const findAll = async (query: {
 
 export const findOne = async (id: string): Promise<Person> => {
   const url = `${baseUrl}/api/people/${id}`;
-  const data = (await fetch(url, { next: { tags: [`employee-${id}`] } }).then((res) => res.json())) as Person;
+  const data = await fetchJson<Person>(url, { next: { tags: [`employee-${id}`] } });
   return formatPersonObject(data);
 };
 
-type PersonUpdate = {
+export const updateOne = async (personData: {
   id: string;
   photo?: string;
   firstname?: string;
@@ -51,13 +62,8 @@ type PersonUpdate = {
   isManager?: boolean;
   manager?: string;
   managerId?: string;
-};
-
-export const updateOne = async (personData: PersonUpdate): Promise<Person> => {
+}): Promise<Person> => {
   const url = `${baseUrl}/api/people/${personData.id}`;
-  const data = (await fetch(url, {
-    method: 'PATCH',
-    body: JSON.stringify(personData),
-  }).then((res) => res.json())) as Person;
+  const data = await fetchJson<Person>(url, { method: 'PATCH', body: JSON.stringify(personData) });
   return formatPersonObject(data);
 };

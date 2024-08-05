@@ -4,6 +4,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "@fastify/static": "^7.0.4",
     "ajv": "^8.17.1",
     "fastify": "^4.28.1",
     "fluent-json-schema": "^5.0.0",

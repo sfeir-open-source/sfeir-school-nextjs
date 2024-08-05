@@ -1,9 +1,9 @@
 import * as peopleApi from '@/api/people';
 import { cleanObject } from '@/functions/data';
-import { revalidatePath, revalidateTag } from 'next/cache';
+import { revalidateTag } from 'next/cache';
 import { redirect } from 'next/navigation';
 
-export const update = async (userId: string, formData: FormData) => {
+export const update = async (userId: string, _: unknown, formData: FormData) => {
   'use server';
 
   const payload = cleanObject({
@@ -19,7 +19,13 @@ export const update = async (userId: string, formData: FormData) => {
     managerId: formData.get('managerId') as string,
   });
 
-  await peopleApi.updateOne(payload);
+  try {
+    await peopleApi.updateOne(payload);
+  } catch (err) {
+    return {
+      errors: err.body,
+    };
+  }
 
   revalidateTag(`employee-${userId}`);
   revalidateTag('employee-list');

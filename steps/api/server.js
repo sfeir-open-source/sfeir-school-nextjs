@@ -1,3 +1,5 @@
+const path = require('path');
+
 const { ObjectId } = require('mongodb');
 const { S } = require('fluent-json-schema');
 const Ajv = require('ajv');
@@ -10,6 +12,10 @@ const fastify = require('fastify')({
       target: 'pino-pretty',
     },
   },
+});
+
+fastify.register(require('@fastify/static'), {
+  root: path.join(__dirname, 'public'),
 });
 
 const DATA = require('./db.json');
