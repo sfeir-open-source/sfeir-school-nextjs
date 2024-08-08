@@ -44,12 +44,40 @@ function routingSlides() {
   ];
 }
 
+function serverComponentSlides() {
+  return [
+    '03-server-components/00-title.md',
+    '03-server-components/01-intro.md',
+    '03-server-components/10-csr.md',
+    '03-server-components/11-csr-workflow.md',
+    '03-server-components/13-ssr.md',
+    '03-server-components/14-ssr2.md',
+    '03-server-components/15-ssr3.md',
+    '03-server-components/16-ssr-next.md',
+    '03-server-components/17-ssr-workflow.md',
+    '03-server-components/18-hydration-cons.md',
+    '03-server-components/20-server-components.md',
+    '03-server-components/21-heavy-work.md',
+    '03-server-components/22-security.md',
+    '03-server-components/23-node-api.md',
+    '03-server-components/30-client-server.md',
+    '03-server-components/31-rules-hooks.md',
+    '03-server-components/32-rules-import.md',
+    '03-server-components/33-boundaries.md',
+    '03-server-components/34-boundaries-invalid.md',
+    '03-server-components/35-composition.md',
+    '03-server-components/36-recap.md',
+    '03-server-components/40-lab.md',
+  ];
+}
+
 function formation() {
   return [
     //
     ...schoolSlides(), //
     ...introSlides(), //
     ...routingSlides(), //
+    ...serverComponentSlides(), //
   ].map((slidePath) => {
     return { path: slidePath };
   });
