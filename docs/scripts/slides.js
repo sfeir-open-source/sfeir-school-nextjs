@@ -30,9 +30,17 @@ function routingSlides() {
     '02-routing/02-pages.md',
     '02-routing/02-pages-dynamic.md',
     '02-routing/02-layout.md',
+    '02-routing/02-root-layout.md',
     '02-routing/02-nested-layout.md',
     '02-routing/02-template.md',
+    '02-routing/02-groups.md',
     '02-routing/02-advanced.md',
+    '02-routing/02-advanced-parallel.md',
+    '02-routing/02-advanced-intercept.md',
+    '02-routing/02-advanced-intercept-patterns.md',
+    '02-routing/02-advanced-intercept-modal.md',
+    '02-routing/02-lab.md',
+    '02-routing/02-lab2.md',
   ];
 }
 
