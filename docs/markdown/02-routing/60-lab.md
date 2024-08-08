@@ -14,4 +14,9 @@
 - Expenses page
 - Login page
 
+**2. Create the application layouts**
+
+- Dashboard layout
+- Authentication layout
+
 </small>

@@ -11,14 +11,12 @@
 
 **Do all child-components have to be client-components?**
 
-Imagine this component :
+We can create a dedicated client component :
 
 ```jsx
 'use client';
-import EmployeeCard from './EmployeeCard';
-import Pagination from './Pagination';
 
-const EmployeesList = ({ employees }) => {
+const EmployeesDisplayMode = ({ children }) => {
   const [displayMode, setDisplayMode] = useState('list');
 
   useEffect(() => {
@@ -27,21 +25,34 @@ const EmployeesList = ({ employees }) => {
     return () => window.removeEventListener('toggle-display-mode', eventCallback);
   }, []);
 
-  return (
-    <div className={displayMode}>
-      {employees.map((employee) => (
-        <EmployeeCard key={employee.id} employee={employee} />
-      ))}
-      <Pagination />
-    </div>
-  );
+  return <div className={displayMode}>{children}</div>;
 };
 ```
 
 ##--##
 
-<br/> <br/> <br/>
+<br/>
 
-And the component tree :
+<br/>
+<br/>
 
-<img src="./assets/images/03-server-components/tree-2.png" class="tree-34" />
+Then use children composition :
+
+App.tsx :
+
+```jsx
+import EmployeesDisplayMode from './EmployeesDisplayMode';
+import EmployeesList from './EmployeesList';
+import Pagination from './Pagination';
+
+const App = ({ employees }) => {
+  return (
+    <>
+      <EmployeesDisplayMode>
+        <EmployeesList employees={employees} />
+        <Pagination />
+      </EmployeesDisplayMode>
+    </>
+  );
+};
+```

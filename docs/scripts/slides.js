@@ -40,7 +40,6 @@ function routingSlides() {
     '02-routing/53-advanced-intercept-patterns.md',
     '02-routing/54-advanced-intercept-modal.md',
     '02-routing/60-lab.md',
-    '02-routing/61-lab2.md',
   ];
 }
 
@@ -60,13 +59,16 @@ function serverComponentSlides() {
     '03-server-components/21-heavy-work.md',
     '03-server-components/22-security.md',
     '03-server-components/23-node-api.md',
-    '03-server-components/30-client-server.md',
+    '03-server-components/24-client-server.md',
+    '03-server-components/25-lab.md',
     '03-server-components/31-rules-hooks.md',
     '03-server-components/32-rules-import.md',
     '03-server-components/33-boundaries.md',
     '03-server-components/34-boundaries-invalid.md',
     '03-server-components/35-composition.md',
-    '03-server-components/36-recap.md',
+    '03-server-components/36-composition1.md',
+    '03-server-components/37-composition2.md',
+    '03-server-components/38-recap.md',
     '03-server-components/40-lab.md',
   ];
 }
