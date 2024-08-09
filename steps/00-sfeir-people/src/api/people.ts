@@ -44,7 +44,7 @@ export const findAll = async (query: {
 
 export const findOne = async (id: string): Promise<Person> => {
   const url = `${baseUrl}/api/people/${id}`;
-  const data = await fetchJson<Person>(url, { next: { tags: [`employee-${id}`] } });
+  const data = await fetchJson<Person>(url, { next: { tags: [`employee-${id}`], revalidate: 3600 } });
   return formatPersonObject(data);
 };
 

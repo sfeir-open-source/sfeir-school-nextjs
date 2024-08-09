@@ -13,6 +13,8 @@ const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
 
   const formAction = update.bind(null, employee.id);
 
+  console.log('YOO');
+
   return (
     <>
       <div className="flex items-center gap-1">

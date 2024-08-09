@@ -1,19 +1,12 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Server components
+# Fetching from the server
 
-## Security & Data fetching
+## third party libraries
 
-- Allows to fetch data
-- Hides sensitive data from the client-side
+Allows to use third parties libraries :
 
-##--##
-
-<br/> <br/>
-
-EmployeesPage.tsx :
-
-```jsx
+```jsx [1-5]
 import db from 'imaginary-db';
 
 const EmployeesPage = async () => {

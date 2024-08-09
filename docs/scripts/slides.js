@@ -1,6 +1,5 @@
 import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-school-theme.mjs';
 
-// One method per module
 function schoolSlides() {
   return [
     '00-school/00-title.md',
@@ -81,13 +80,42 @@ function serverComponentSlides() {
   ];
 }
 
+function dataFetchingSlides() {
+  return [
+    '04-data-fetching/00-title.md',
+    '04-data-fetching/01-intro.md',
+    '04-data-fetching/10-server-fetch.md',
+    '04-data-fetching/11-server-third.md',
+    '04-data-fetching/12-server-parallel-pattern.md',
+    '04-data-fetching/13-server-parallel.md',
+    '04-data-fetching/14-server-security.md',
+    '04-data-fetching/20-client-handler.md',
+    '04-data-fetching/21-client-handler-convention.md',
+    '04-data-fetching/22-client-handler-request.md',
+    '04-data-fetching/23-client-handler-headers.md',
+    '04-data-fetching/24-client-fetch.md',
+    '04-data-fetching/30-lab.md',
+    '04-data-fetching/40-caching.md',
+    '04-data-fetching/41-memoization.md',
+    '04-data-fetching/42-memoisation-third.md',
+    '04-data-fetching/43-data.md',
+    '04-data-fetching/43-data-ttl.md',
+    '04-data-fetching/45-data-route.md',
+    '04-data-fetching/46-data-tag.md',
+    '04-data-fetching/46-data-third.md',
+    '04-data-fetching/50-route-cache.md',
+    '04-data-fetching/60-recap.md',
+    '04-data-fetching/70-lab.md',
+  ];
+}
+
 function formation() {
   return [
-    //
-    ...schoolSlides(), //
-    ...introSlides(), //
-    ...routingSlides(), //
-    ...serverComponentSlides(), //
+    ...schoolSlides(),
+    ...introSlides(),
+    ...routingSlides(),
+    ...serverComponentSlides(),
+    ...dataFetchingSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });
