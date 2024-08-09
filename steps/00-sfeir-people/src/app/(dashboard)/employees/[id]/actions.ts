@@ -1,3 +1,4 @@
+import { ApiError } from '@/api/error';
 import * as peopleApi from '@/api/people';
 import { cleanObject } from '@/functions/data';
 import { revalidateTag } from 'next/cache';
@@ -21,10 +22,9 @@ export const update = async (userId: string, _: unknown, formData: FormData) => 
 
   try {
     await peopleApi.updateOne(payload);
-  } catch (err) {
-    return {
-      errors: err.body,
-    };
+  } catch (err: unknown) {
+    if (err instanceof ApiError) return { errors: err?.body || [] };
+    return [];
   }
 
   revalidateTag(`employee-${userId}`);

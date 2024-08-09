@@ -40,6 +40,14 @@ function routingSlides() {
     '02-routing/53-advanced-intercept-patterns.md',
     '02-routing/54-advanced-intercept-modal.md',
     '02-routing/60-lab.md',
+    '02-routing/70-navigation.md',
+    '02-routing/71-link.md',
+    '02-routing/72-userouter.md',
+    '02-routing/73-history.md',
+    '02-routing/74-redirect.md',
+    '02-routing/75-hooks.md',
+    '02-routing/76-serverside.md',
+    '02-routing/80-lab.md',
   ];
 }
 

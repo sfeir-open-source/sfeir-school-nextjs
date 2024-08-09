@@ -8,7 +8,7 @@ import { useFormState } from 'react-dom';
 
 type EmployeeFormProps = {
   employee?: Person;
-  action: (formData: FormData) => void;
+  action: (state: void, formData: FormData) => void;
   className?: string;
 };
 
@@ -17,9 +17,7 @@ const initialState = {
 };
 
 const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className }) => {
-  const [state, formAction] = useFormState(action, initialState);
-
-  console.log('///', state);
+  const [state, formAction] = useFormState(action, initialState as unknown as void);
 
   return (
     <form action={formAction} className={className}>
