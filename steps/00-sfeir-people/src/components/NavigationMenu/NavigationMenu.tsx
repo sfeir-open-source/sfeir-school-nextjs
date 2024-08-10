@@ -1,3 +1,4 @@
+import Logout from './Logout';
 import NavigationItem from './NavigationItem';
 
 const NavigationMenu = () => {
@@ -14,11 +15,7 @@ const NavigationMenu = () => {
           <NavigationItem href="/expenses">Expenses</NavigationItem>
         </li>
         <li>
-          <form>
-            <button type="submit" className="block px-4 py-2">
-              Logout
-            </button>
-          </form>
+          <Logout />
         </li>
       </ul>
     </nav>

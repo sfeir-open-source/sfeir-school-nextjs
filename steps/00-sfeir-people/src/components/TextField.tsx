@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 type TextFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label: string;
   id: string;
@@ -16,9 +18,12 @@ const TextField: React.FC<TextFieldProps> = ({ label, id, type = 'text', classNa
         type={type}
         id={id}
         {...restProps}
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+        className={clsx(
+          'bg-gray-50 border  text-gray-900 text-sm rounded-lg block w-full p-2.5',
+          errorMessages?.length ? 'border-red-500' : 'border-gray-300'
+        )}
       />
-      {errorMessages?.length && <p>{errorMessages[0]}</p>}
+      {errorMessages?.length && <p className="text-red-500 text-xs italic mt-2">{errorMessages[0]}</p>}
     </div>
   );
 };
