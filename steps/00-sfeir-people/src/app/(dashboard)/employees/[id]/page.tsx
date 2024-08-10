@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ArrowLeft from '@/components/Icons/ArrowLeft';
 import EmployeeForm from '@/components/EmployeeForm';
 
-import { update } from './actions';
+import { update } from '../actions';
 import PersonCard from '@/components/PersonCard';
 import Button from '@/components/Button';
 
@@ -12,8 +12,6 @@ const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
   const employee = await peopleApi.findOne(params.id);
 
   const formAction = update.bind(null, employee.id);
-
-  console.log('YOO');
 
   return (
     <>

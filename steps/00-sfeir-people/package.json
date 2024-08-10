@@ -17,6 +17,7 @@
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
+    "server-only": "^0.0.1",
     "showdown": "^2.1.0",
     "unified": "^11.0.5"
   },

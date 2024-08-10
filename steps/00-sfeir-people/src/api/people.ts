@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { PaginationAttributes, Person } from '@/types';
 import qs from 'query-string';
 
@@ -11,7 +13,15 @@ const formatPersonObject = (apiPerson: Person): Person => ({
 });
 
 export async function fetchJson<T>(url: string, options?: RequestInit): Promise<T> {
-  const response: Response = await fetch(url, options);
+  const requestOptions = {
+    ...options,
+    headers: {
+      ...options?.headers,
+      ['x-api-key']: process.env.API_KEY || 'not-set',
+      ['content-type']: 'application/json',
+    },
+  };
+  const response: Response = await fetch(url, requestOptions);
   const data: T | unknown = await response.json();
   if (response.ok) return data as T;
 
@@ -44,7 +54,26 @@ export const findAll = async (query: {
 
 export const findOne = async (id: string): Promise<Person> => {
   const url = `${baseUrl}/api/people/${id}`;
-  const data = await fetchJson<Person>(url, { next: { tags: [`employee-${id}`], revalidate: 3600 } });
+  const data = await fetchJson<Person>(url, { next: { tags: [`employee-${id}`] } });
+  return formatPersonObject(data);
+};
+
+export const create = async (personData: {
+  photo?: string;
+  firstname: string;
+  lastname: string;
+  position: string;
+  entryDate: string;
+  birthDate: string;
+  gender?: string;
+  email: string;
+  phone: string;
+  isManager?: boolean;
+  manager?: string;
+  managerId?: string;
+}): Promise<Person> => {
+  const url = `${baseUrl}/api/people`;
+  const data = await fetchJson<Person>(url, { method: 'POST', body: JSON.stringify(personData) });
   return formatPersonObject(data);
 };
 

@@ -1,12 +1,14 @@
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { ObjectId } from 'mongodb';
+import vine from '@vinejs/vine';
+import Fastify from 'fastify';
+import fastifyStatic from '@fastify/static';
 
-const { ObjectId } = require('mongodb');
-const { S } = require('fluent-json-schema');
-const Ajv = require('ajv');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const ajv = new Ajv();
-
-const fastify = require('fastify')({
+const fastify = Fastify({
   logger: {
     transport: {
       target: 'pino-pretty',
@@ -14,47 +16,61 @@ const fastify = require('fastify')({
   },
 });
 
-fastify.register(require('@fastify/static'), {
+import DATA from './db.json' assert { type: 'json' };
+const API_KEY = '441a5b21-f2eb-4cec-8383-ca7a48c526a6';
+
+fastify.register(fastifyStatic, {
   root: path.join(__dirname, 'public'),
 });
 
-const DATA = require('./db.json');
+const employeeBaseSchema = {
+  photo: vine.string().minLength(1).optional(),
+  firstname: vine.string().minLength(2),
+  lastname: vine.string().minLength(2),
+  position: vine.string().minLength(2),
+  entryDate: vine.date({ formats: ['DD/MM/YYYY'] }),
+  birthDate: vine.date({ formats: ['DD/MM/YYYY'] }),
+  gender: vine.string().optional(),
+  email: vine.string().email(),
+  phone: vine.string().minLength(6),
+  isManager: vine.boolean(),
+  manager: vine.string().minLength(2).optional(),
+  managerId: vine.string().minLength(2).optional(),
+};
 
-const personSchema = S.object()
-  .title('Person Schema')
-  .prop('id', S.string().required())
-  .prop('photo', S.string())
-  .prop('firstname', S.string().required().minLength(1))
-  .prop('lastname', S.string().required().minLength(1))
-  .prop('position', S.string().required().minLength(1))
-  .prop(
-    'entryDate',
-    S.string()
-      .pattern(/^\d{2}\/\d{2}\/\d{4}$/)
-      .required()
-  )
-  .prop('birthDate', S.string().pattern(/^\d{2}\/\d{2}\/\d{4}$/))
-  .prop('gender', S.string())
-  .prop(
-    'email',
-    S.string()
-      .pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
-      .required()
-  )
-  .prop('phone', S.string().required().minLength(1))
-  .prop('isManager', S.boolean())
-  .prop('manager', S.string())
-  .prop('managerId', S.string())
-  .valueOf();
+const employeeSchema = vine.object(employeeBaseSchema);
+
+const partialEmployeeSchema = vine.object(
+  Object.fromEntries(Object.entries(employeeBaseSchema).map(([key, value]) => [key, value.optional()]))
+);
+
+const validateBodySchema = (schema) => async (request, reply) => {
+  try {
+    await vine.validate({ schema, data: request.body });
+  } catch (err) {
+    const errors = err.messages.reduce((messages, value) => {
+      if (!messages[value.field]) messages[value.field] = [];
+      messages[value.field].push(value.message);
+      return messages;
+    }, {});
+    reply.status(400).send({ error: 'Validation error', code: 'VALIDATION_ERROR', validationErrors: errors });
+  }
+};
 
 const verifyResourceExists = (request, reply, done) => {
   const { id } = request.params;
   const index = DATA.people.findIndex((resource) => resource.id === id);
   if (index === -1) {
-    reply.code(404).send({ error: 'Resource not found' });
+    reply.code(404).send({ error: 'Resource not found', code: 'RESOURCE_NOT_FOUND' });
     return;
   }
   request.resourceIndex = index;
+  done();
+};
+
+const protectRequest = (request, reply, done) => {
+  const apiKey = request.headers['x-api-key'];
+  if (apiKey !== API_KEY) reply.code(401).send({ error: 'Unauthorized', code: 'UNAUTHORIZED' });
   done();
 };
 
@@ -65,7 +81,7 @@ const addDelay =
     await pause();
   };
 
-fastify.get('/api/people', { preHandler: [addDelay()] }, (request, reply) => {
+fastify.get('/api/people', { preHandler: [protectRequest, addDelay()] }, (request, reply) => {
   const page = Number(request.query?.page) || 1;
   const per_page = Number(request.query?.per_page) || 1;
   const search = request.query?.search;
@@ -98,55 +114,50 @@ fastify.get('/api/people', { preHandler: [addDelay()] }, (request, reply) => {
   });
 });
 
-fastify.post('/api/people', { preHandler: [addDelay(1000)] }, (request, reply) => {
-  const id = new ObjectId();
-  const newPerson = {
-    ...request.body,
-    id: id.toString(),
-  };
+fastify.post(
+  '/api/people',
+  { preHandler: [protectRequest, validateBodySchema(employeeSchema), addDelay(1000)] },
+  async (request, reply, done) => {
+    const id = new ObjectId();
+    const newPerson = {
+      ...request.body,
+      id: id.toString(),
+    };
 
-  const validate = ajv.compile(personSchema);
-  const valid = validate(newPerson);
-
-  if (!valid) {
-    reply.status(400).send(validate.errors);
-    return;
+    DATA.people.push(newPerson);
+    reply.status(201).send(newPerson);
   }
+);
 
-  DATA.people.push(newPerson);
-  reply.status(201).send(newPerson);
-});
-
-fastify.get('/api/people/:id', { preHandler: [addDelay(), verifyResourceExists] }, (request, reply) => {
+fastify.get('/api/people/:id', { preHandler: [protectRequest, addDelay(), verifyResourceExists] }, (request, reply) => {
   reply.send(DATA.people[request.resourceIndex]);
 });
 
-fastify.delete('/api/people/:id', { preHandler: [addDelay(), verifyResourceExists] }, (request, reply) => {
-  DATA.people.splice(request.resourceIndex, 1);
-  reply.code(204).send();
-});
-
-fastify.patch('/api/people/:id', { preHandler: [addDelay(1000), verifyResourceExists] }, (request, reply) => {
-  const currentPerson = DATA.people[request.resourceIndex];
-  const payload = JSON.parse(request.body);
-
-  const newPerson = {
-    ...currentPerson,
-    ...payload,
-    id: currentPerson.id,
-  };
-
-  const validate = ajv.compile(personSchema);
-  const valid = validate(newPerson);
-
-  if (!valid) {
-    reply.status(400).send(validate.errors);
-    return;
+fastify.delete(
+  '/api/people/:id',
+  { preHandler: [protectRequest, addDelay(), verifyResourceExists] },
+  (request, reply) => {
+    DATA.people.splice(request.resourceIndex, 1);
+    reply.code(204).send();
   }
+);
 
-  DATA.people[request.resourceIndex] = newPerson;
-  reply.send(newPerson);
-});
+fastify.patch(
+  '/api/people/:id',
+  { preHandler: [protectRequest, validateBodySchema(partialEmployeeSchema), addDelay(1000), verifyResourceExists] },
+  async (request, reply) => {
+    const currentPerson = DATA.people[request.resourceIndex];
+
+    const newPerson = {
+      ...currentPerson,
+      ...request.body,
+      id: currentPerson.id,
+    };
+
+    DATA.people[request.resourceIndex] = newPerson;
+    reply.send(newPerson);
+  }
+);
 
 fastify.listen({ port: 3001 }, function (err, address) {
   if (err) {

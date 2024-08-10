@@ -2,6 +2,8 @@ import Image from 'next/image';
 
 import { Person } from '@/types';
 
+import placeholderImage from '@/assets/images/profile-placeholder.jpg';
+
 type PersonCardProps = {
   person: Person;
   actions?: React.ReactNode;
@@ -11,15 +13,13 @@ const PersonCard: React.FC<PersonCardProps> = ({ person, actions }) => {
   return (
     <div className="bg-white p-4 rounded-lg">
       <div className="flex flex-col gap-2 items-center">
-        {person.photo && (
-          <Image
-            className="rounded-full"
-            src={person.photo}
-            alt={`Picture of ${person.firstname} ${person.lastname}`}
-            width="100"
-            height="100"
-          />
-        )}
+        <Image
+          className="rounded-full"
+          src={person.photo || placeholderImage}
+          alt={`Picture of ${person.firstname} ${person.lastname}`}
+          width="100"
+          height="100"
+        />
         <span>
           {person.firstname} {person.lastname}
         </span>

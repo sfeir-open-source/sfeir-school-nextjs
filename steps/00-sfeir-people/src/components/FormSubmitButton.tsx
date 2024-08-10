@@ -4,7 +4,7 @@ import { useFormStatus } from 'react-dom';
 import Button, { ButtonProps } from './Button';
 import Loader from './Icons/Loader';
 
-const FormSubmitButton: React.FC<ButtonProps<'button'>> = ({ children, className, ...restProps }) => {
+const FormSubmitButton: React.FC<ButtonProps<'button'>> = ({ children, ...restProps }) => {
   const { pending } = useFormStatus();
 
   return (
