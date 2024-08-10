@@ -6,10 +6,10 @@
   "type": "module",
   "dependencies": {
     "@fastify/static": "^7.0.4",
+    "@fastify/swagger": "^8.15.0",
+    "@fastify/swagger-ui": "^4.0.1",
     "@vinejs/vine": "^2.1.0",
-    "ajv": "^8.17.1",
     "fastify": "^4.28.1",
-    "fluent-json-schema": "^5.0.0",
     "mongodb": "^6.8.0"
   },
   "devDependencies": {
