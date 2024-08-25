@@ -39,15 +39,31 @@ export const findAll = (request, reply) => {
   const page = Number(request.query?.page) || 1;
   const per_page = Number(request.query?.per_page) || 1;
   const search = request.query?.search;
+  const sortBy = request.query?.sort_by;
+  const order = request.query?.order?.toLowerCase() === 'desc' ? 'desc' : 'asc';
 
-  let data;
+  let data = [...DATA.people];
 
   if (search) {
-    data = DATA.people.filter((person) =>
+    data = data.filter((person) =>
       `${person.firstname} ${person.lastname}`.toLowerCase().includes(search.toLowerCase())
     );
-  } else {
-    data = DATA.people;
+  }
+
+  if (sortBy && data[0].hasOwnProperty(sortBy)) {
+    data.sort((a, b) => {
+      let valueA = a[sortBy];
+      let valueB = b[sortBy];
+
+      if (sortBy === 'entryDate' || sortBy === 'birthDate') {
+        valueA = new Date(valueA.split('/').reverse().join('-'));
+        valueB = new Date(valueB.split('/').reverse().join('-'));
+      }
+
+      if (valueA < valueB) return order === 'asc' ? -1 : 1;
+      if (valueA > valueB) return order === 'asc' ? 1 : -1;
+      return 0;
+    });
   }
 
   const total_pages = Math.ceil(data.length / per_page);

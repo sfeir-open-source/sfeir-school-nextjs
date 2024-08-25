@@ -81,6 +81,16 @@ fastify.get(
             type: 'number',
             description: 'resources per page',
           },
+          sort_by: {
+            type: 'string',
+            description: 'the object key for sorting results',
+          },
+          order: {
+            type: 'string',
+            default: 'asc',
+            enum: ['asc', 'desc'],
+            description: 'The order for sorting results',
+          },
         },
       },
     },
@@ -197,6 +207,16 @@ fastify.get(
           per_page: {
             type: 'number',
             description: 'resources per page',
+          },
+          sort_by: {
+            type: 'string',
+            description: 'the object key for sorting results',
+          },
+          order: {
+            type: 'string',
+            default: 'asc',
+            enum: ['asc', 'desc'],
+            description: 'The order for sorting results',
           },
         },
       },

@@ -1,9 +1,10 @@
 import 'server-only';
 
-import { PaginationAttributes, Person } from '@/types';
 import qs from 'query-string';
 
-import { ApiError } from './error';
+import { PaginationAttributes, Person } from '@/types';
+
+import { fetchJson } from './common';
 
 const baseUrl = process.env.API_BASE_URL;
 
@@ -12,39 +13,30 @@ const formatPersonObject = (apiPerson: Person): Person => ({
   photo: apiPerson.photo ? baseUrl + apiPerson.photo : undefined,
 });
 
-export async function fetchJson<T>(url: string, options?: RequestInit): Promise<T> {
-  const requestOptions = {
-    ...options,
-    headers: {
-      ...options?.headers,
-      ['x-api-key']: process.env.API_KEY || 'not-set',
-      ['content-type']: 'application/json',
-    },
-  };
-  const response: Response = await fetch(url, requestOptions);
-  const data: T | unknown = await response.json();
-  if (response.ok) return data as T;
-
-  throw new ApiError(response.statusText, data as unknown);
-}
-
-export const findAll = async (query: {
-  search?: string;
-  page?: number;
-  perPage?: number;
-}): Promise<{ data: Array<Person>; pagination: PaginationAttributes }> => {
+export const findAll = async (
+  query: {
+    search?: string;
+    page?: number;
+    perPage?: number;
+    sortBy?: string;
+    order?: string;
+  },
+  additionalTags: Array<string> = []
+): Promise<{ data: Array<Person>; pagination: PaginationAttributes }> => {
   const url = qs.stringifyUrl({
     url: `${baseUrl}/api/people`,
     query: {
       search: query.search,
       per_page: query.perPage || 8,
       page: query.page || 1,
+      sort_by: query.sortBy,
+      order: query.order,
     },
   });
   const peopleData = await fetchJson<{
     data: Array<Person>;
     pagination: PaginationAttributes;
-  }>(url, { next: { tags: ['employee-list'] } });
+  }>(url, { next: { tags: ['employee-list', ...additionalTags] } });
 
   return {
     pagination: peopleData.pagination,

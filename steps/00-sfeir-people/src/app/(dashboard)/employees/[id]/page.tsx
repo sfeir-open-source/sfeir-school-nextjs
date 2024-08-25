@@ -5,6 +5,7 @@ import * as peopleApi from '@/api/people';
 import PersonCard from '@/components/PersonCard';
 import Button from '@/components/Button';
 import PageTitle from '@/components/PageTitle';
+import EmployeeExpenses from '@/components/EmployeeExpenses';
 
 const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
   const employee = await peopleApi.findOne(params.id);
@@ -28,7 +29,10 @@ const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
             }
           />
         </div>
-        <div className="bg-white p-4 rounded-lg w-2/5 dark:bg-slate-900"></div>
+        <div className="bg-white p-4 rounded-lg w-2/5 dark:bg-slate-900">
+          <h2 className="text-xl font-bold mb-4">Last expenses</h2>
+          <EmployeeExpenses employeeId={params.id} />
+        </div>
       </div>
     </>
   );

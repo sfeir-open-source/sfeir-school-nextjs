@@ -14,6 +14,22 @@ export type Person = {
   managerId?: string;
 };
 
+export type Expense = {
+  id: string;
+  employeeId: string;
+  price: {
+    priceIncludingTax: number;
+    taxAmount: number;
+    priceExludingTax: number;
+    currency: string;
+  };
+  label: string;
+  description: string;
+  category: string;
+  receiptLink: string;
+  status: 'approved' | 'created' | 'declined';
+};
+
 export type PaginationAttributes = {
   per_page?: number;
   page: number;
