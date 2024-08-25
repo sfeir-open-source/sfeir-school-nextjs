@@ -11,7 +11,7 @@ type TextFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
 const TextField: React.FC<TextFieldProps> = ({ label, id, type = 'text', className, errorMessages, ...restProps }) => {
   return (
     <div className={className}>
-      <label htmlFor={id} className="block mb-2 text-sm font-medium text-gray-900">
+      <label htmlFor={id} className="block mb-2 text-sm font-medium text-slate-900 dark:text-gray-100">
         {label}
       </label>
       <input
@@ -19,7 +19,7 @@ const TextField: React.FC<TextFieldProps> = ({ label, id, type = 'text', classNa
         id={id}
         {...restProps}
         className={clsx(
-          'bg-gray-50 border  text-gray-900 text-sm rounded-lg block w-full p-2.5',
+          'bg-gray-50 border  text-slate-900 text-sm rounded-lg block w-full p-2.5 dark:bg-slate-800 dark:border-gray-500 dark:text-white',
           errorMessages?.length ? 'border-red-500' : 'border-gray-300'
         )}
       />

@@ -1,5 +1,6 @@
 import * as peopleApi from '@/api/people';
 import Button from '@/components/Button';
+import PageTitle from '@/components/PageTitle';
 import Pagination from '@/components/Pagination';
 import PersonCard from '@/components/PersonCard';
 import Search from '@/components/Search';
@@ -13,7 +14,7 @@ const Employees = async ({ searchParams }: { searchParams: { search?: string; pa
 
   return (
     <div className="flex flex-col">
-      <h1 className="heading1">Employees</h1>
+      <PageTitle>Employees</PageTitle>
       <div className="flex items-start justify-between">
         <Search className="mb-4 self-start min-w-96" />
         <Button variant="secondary" component={Link} href="/employees/new">
@@ -26,14 +27,14 @@ const Employees = async ({ searchParams }: { searchParams: { search?: string; pa
             key={employee.id}
             person={employee}
             actions={
-              <>
+              <div className="flex flex-wrap gap-2">
                 <Button component={Link} href={`/employees/${employee.id}`}>
                   View detail
                 </Button>
-                <Button component={Link} href={`/employees/${employee.id}/edit`} className="ml-2">
+                <Button component={Link} href={`/employees/${employee.id}/edit`}>
                   Edit
                 </Button>
-              </>
+              </div>
             }
           />
         ))}

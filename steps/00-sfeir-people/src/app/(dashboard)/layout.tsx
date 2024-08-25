@@ -6,6 +6,7 @@ import path from 'path';
 
 import NavigationMenu from '@/components/NavigationMenu';
 import logo from '@/assets/svg/logo.svg';
+import Logo from '@/components/Logo';
 
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = async ({ children }) => {
   const packageJsonPath = path.join(process.cwd(), 'package.json');
@@ -13,10 +14,10 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = async ({ childr
   const packageJson = JSON.parse(packageJsonContent);
 
   return (
-    <div className="flex bg-blue-50">
-      <header className="p-4 min-h-screen	min-w-64 bg-white flex flex-col">
+    <div className="flex bg-blue-50 dark:bg-slate-950 dark:text-white">
+      <header className="p-4 min-h-screen	min-w-64 bg-white flex flex-col sticky left-0 top-0 h-screen dark:bg-slate-900">
         <Link href="/">
-          <Image src={logo} alt="People logo" className="h-10 w-auto mb-5 pl-4" />
+          <Logo />
         </Link>
         <NavigationMenu />
         <div className="mt-auto">Version: {packageJson.version}</div>

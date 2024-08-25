@@ -18,7 +18,8 @@ const NavigationItem: React.FC<NavigationItemsProps> = ({ href, children }) => {
       href={href}
       className={clsx(
         'block px-4 py-2 rounded-md',
-        ((href !== '/' && pathname.includes(href)) || (pathname === '/' && pathname === href)) && 'bg-blue-50'
+        ((href !== '/' && pathname.includes(href)) || (pathname === '/' && pathname === href)) &&
+          'bg-blue-50 dark:bg-slate-950'
       )}
     >
       {children}

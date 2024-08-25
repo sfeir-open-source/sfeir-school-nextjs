@@ -26,13 +26,14 @@ const Search = ({ ...restProps }) => {
       <input
         id="search"
         type="text"
+        autoComplete="off"
         onChange={handleChange}
         defaultValue={params.get('search')?.toString() || ''}
         placeholder="Search"
         {...restProps}
         className={clsx(
           restProps?.className,
-          'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block p-2.5'
+          'bg-gray-50 border border-gray-300 text-slate-900 text-sm rounded-lg block p-2.5 dark:bg-slate-800 dark:border-gray-500 dark:text-white'
         )}
       />
     </>

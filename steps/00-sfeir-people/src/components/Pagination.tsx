@@ -18,10 +18,11 @@ type PaginationShortcutProps = {
 
 const PaginationShortcut: React.FC<PaginationShortcutProps> = ({ href, disabled, className, children }) => {
   const classNames = clsx(
-    'block text-center px-3 py-2 ms-0 border bg-white',
+    'block text-center px-3 py-2 ms-0 border bg-white dark:bg-slate-900',
     className,
-    !disabled && 'hover:bg-gray-100 hover:text-gray-700 text-gray-500 border-gray-300 ',
-    disabled && 'text-gray-300 border-gray-200'
+    !disabled &&
+      'hover:bg-gray-100 hover:text-gray-700 text-gray-500 border-gray-300 dark:text-white dark:border-gray-700 dark:hover:bg-slate-950 dark:hover:text-white',
+    disabled && 'text-gray-300 border-gray-200 dark:text-gray-500 dark:border-gray-600'
   );
 
   if (disabled) return <div className={classNames}>{children}</div>;
@@ -65,9 +66,11 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages, className }) => {
                 href={getPageUrl(index + 1)}
                 replace
                 className={clsx(
-                  'block text-center px-3 py-2 ms-0 border border-gray-300',
-                  isActive && 'text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700',
-                  !isActive && 'text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700'
+                  'block text-center px-3 py-2 ms-0 border border-gray-300 dark:border-gray-700',
+                  isActive &&
+                    'text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:bg-blue-900 dark:text-white dark:hover:bg-blue-950 dark:hover:text-white',
+                  !isActive &&
+                    'text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-950 dark:hover:text-white'
                 )}
               >
                 {index + 1}
