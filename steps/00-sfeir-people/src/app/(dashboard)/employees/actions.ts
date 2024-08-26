@@ -29,8 +29,7 @@ export const update = async (userId: string, _: unknown, formData: FormData) => 
     return { error: 'unexpected error' };
   }
 
-  revalidateTag(`employee-${userId}`);
-  revalidateTag('employee-list');
+  revalidateTag(peopleApi.Tags.EMPLOYEE_COMMON);
   redirect(`/employees/${userId}`);
 };
 
@@ -61,6 +60,6 @@ export const create = async (_: unknown, formData: FormData) => {
     return { error: 'unexpected error' };
   }
 
-  revalidateTag('employee-list');
+  revalidateTag(peopleApi.Tags.EMPLOYEE_LIST);
   redirect(`/employees/${employee.id}`);
 };

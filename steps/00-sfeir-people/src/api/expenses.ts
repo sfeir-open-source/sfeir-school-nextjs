@@ -8,15 +8,19 @@ import { fetchJson } from './common';
 
 const baseUrl = process.env.API_BASE_URL;
 
-export const findAll = async (
-  query: {
-    page?: number;
-    perPage?: number;
-    sortBy?: string;
-    order?: string;
-  },
-  additionalTags: Array<string> = []
-): Promise<{ data: Array<Expense>; pagination: PaginationAttributes }> => {
+export const Tags = {
+  EXPENSE_COMMON: 'expense-common',
+  EXPENSE_LIST: 'expense-list',
+  EXPENSE_LIST_EMPLOYEE: 'expense-list-employee',
+  EXPENSE_SINGLE: 'expense-single',
+};
+
+export const findAll = async (query: {
+  page?: number;
+  perPage?: number;
+  sortBy?: string;
+  order?: string;
+}): Promise<{ data: Array<Expense>; pagination: PaginationAttributes }> => {
   const url = qs.stringifyUrl({
     url: `${baseUrl}/api/expenses`,
     query: {
@@ -29,7 +33,7 @@ export const findAll = async (
   const expensesData = await fetchJson<{
     data: Array<Expense>;
     pagination: PaginationAttributes;
-  }>(url, { next: { tags: ['expenses-list', ...additionalTags] } });
+  }>(url, { next: { tags: [Tags.EXPENSE_COMMON, Tags.EXPENSE_LIST] } });
 
   return {
     pagination: expensesData.pagination,
@@ -51,12 +55,13 @@ export const findLatestOfEmployee = async (id: string, count?: number): Promise<
   const expensesData = await fetchJson<{
     data: Array<Expense>;
     pagination: PaginationAttributes;
-  }>(url, { next: { tags: [`employee-expenses-${id}`] } });
-
+  }>(url, { next: { tags: [Tags.EXPENSE_COMMON, Tags.EXPENSE_LIST_EMPLOYEE, `expense-list-employee-${id}`] } });
   return expensesData.data;
 };
 
 export const findOne = async (id: string): Promise<Expense> => {
   const url = `${baseUrl}/api/expenses/${id}`;
-  return fetchJson<Expense>(url, { next: { tags: [`expense-${id}`] } });
+  return fetchJson<Expense>(url, {
+    next: { tags: [Tags.EXPENSE_COMMON, Tags.EXPENSE_SINGLE, `expense-single-${id}`] },
+  });
 };

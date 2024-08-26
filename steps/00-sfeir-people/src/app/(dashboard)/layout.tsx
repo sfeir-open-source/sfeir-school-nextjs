@@ -1,14 +1,14 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { promises as fs } from 'fs';
 import path from 'path';
 
 import NavigationMenu from '@/components/NavigationMenu';
-import logo from '@/assets/svg/logo.svg';
 import Logo from '@/components/Logo';
 
-const DashboardLayout: React.FC<{ children: React.ReactNode }> = async ({ children }) => {
+type DashboardLayoutProps = { children: React.ReactNode; modal: React.ReactNode };
+
+const DashboardLayout: React.FC<DashboardLayoutProps> = async ({ children, modal }) => {
   const packageJsonPath = path.join(process.cwd(), 'package.json');
   const packageJsonContent = await fs.readFile(packageJsonPath, 'utf-8');
   const packageJson = JSON.parse(packageJsonContent);
@@ -23,6 +23,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = async ({ childr
         <div className="mt-auto">Version: {packageJson.version}</div>
       </header>
       <main className="w-full p-4">{children}</main>
+      {modal}
     </div>
   );
 };

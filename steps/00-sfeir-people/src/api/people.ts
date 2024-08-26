@@ -13,16 +13,19 @@ const formatPersonObject = (apiPerson: Person): Person => ({
   photo: apiPerson.photo ? baseUrl + apiPerson.photo : undefined,
 });
 
-export const findAll = async (
-  query: {
-    search?: string;
-    page?: number;
-    perPage?: number;
-    sortBy?: string;
-    order?: string;
-  },
-  additionalTags: Array<string> = []
-): Promise<{ data: Array<Person>; pagination: PaginationAttributes }> => {
+export const Tags = {
+  EMPLOYEE_COMMON: 'employee-common',
+  EMPLOYEE_LIST: 'employee-list',
+  EMPLOYEE_SINGLE: 'employee-single',
+};
+
+export const findAll = async (query: {
+  search?: string;
+  page?: number;
+  perPage?: number;
+  sortBy?: string;
+  order?: string;
+}): Promise<{ data: Array<Person>; pagination: PaginationAttributes }> => {
   const url = qs.stringifyUrl({
     url: `${baseUrl}/api/people`,
     query: {
@@ -36,7 +39,7 @@ export const findAll = async (
   const peopleData = await fetchJson<{
     data: Array<Person>;
     pagination: PaginationAttributes;
-  }>(url, { next: { tags: ['employee-list', ...additionalTags] } });
+  }>(url, { next: { tags: [Tags.EMPLOYEE_COMMON, Tags.EMPLOYEE_LIST] } });
 
   return {
     pagination: peopleData.pagination,
@@ -46,7 +49,9 @@ export const findAll = async (
 
 export const findOne = async (id: string): Promise<Person> => {
   const url = `${baseUrl}/api/people/${id}`;
-  const data = await fetchJson<Person>(url, { next: { tags: [`employee-${id}`] } });
+  const data = await fetchJson<Person>(url, {
+    next: { tags: [Tags.EMPLOYEE_COMMON, Tags.EMPLOYEE_SINGLE, `employee-${id}`] },
+  });
   return formatPersonObject(data);
 };
 

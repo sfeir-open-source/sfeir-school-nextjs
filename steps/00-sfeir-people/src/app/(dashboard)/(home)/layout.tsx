@@ -1,4 +1,6 @@
 import PageTitle from '@/components/PageTitle';
+import Paper from '@/components/Paper';
+import Link from 'next/link';
 
 type HomeLayoutProps = {
   employeesSlot?: React.ReactNode;
@@ -16,7 +18,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ employeesSlot, expensesSlot }) 
         </div>
         <div className="w-1/2">
           <h2 className="text-xl font-bold mb-4">Last expenses</h2>
-          {expensesSlot}
+          <Paper>{expensesSlot}</Paper>
         </div>
       </div>
     </>

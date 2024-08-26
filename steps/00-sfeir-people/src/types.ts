@@ -28,6 +28,8 @@ export type Expense = {
   category: string;
   receiptLink: string;
   status: 'approved' | 'created' | 'declined';
+  creationDate: string;
+  updateDate: string;
 };
 
 export type PaginationAttributes = {

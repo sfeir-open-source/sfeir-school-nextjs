@@ -6,6 +6,9 @@ import PersonCard from '@/components/PersonCard';
 import Button from '@/components/Button';
 import PageTitle from '@/components/PageTitle';
 import EmployeeExpenses from '@/components/EmployeeExpenses';
+import Paper from '@/components/Paper';
+import { Suspense } from 'react';
+import TableLoading from '@/components/TableLoading';
 
 const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
   const employee = await peopleApi.findOne(params.id);
@@ -29,10 +32,12 @@ const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
             }
           />
         </div>
-        <div className="bg-white p-4 rounded-lg w-2/5 dark:bg-slate-900">
-          <h2 className="text-xl font-bold mb-4">Last expenses</h2>
-          <EmployeeExpenses employeeId={params.id} />
-        </div>
+        <Paper className="w-2/5">
+          <h2 className="text-xl font-bold p-4">Last expenses</h2>
+          <Suspense fallback={<TableLoading rows={5} cols={5} />}>
+            <EmployeeExpenses employeeId={params.id} />
+          </Suspense>
+        </Paper>
       </div>
     </>
   );
