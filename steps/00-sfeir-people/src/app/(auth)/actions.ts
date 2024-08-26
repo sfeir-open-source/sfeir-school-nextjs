@@ -4,8 +4,11 @@ import { cookies } from 'next/headers';
 import { login as loginFn } from '@/functions/auth';
 import { redirect } from 'next/navigation';
 
-export const login = async (formData: FormData) => {
+export const login = async (_: unknown, formData: FormData) => {
   'use server';
+
+  if (!formData) return { error: 'Username or password is invalid' };
+
   const username = (formData.get('username') || '') as string;
   const password = (formData.get('password') || '') as string;
 
@@ -21,13 +24,12 @@ export const login = async (formData: FormData) => {
     redirect('/');
   }
 
-  return { error: 'Invalid credentials' };
+  return { error: 'Username or password is invalid' };
 };
 
 export const logout = async () => {
   'use server';
 
-  console.log('LOGOUT');
   cookies().delete('auth_token');
   redirect('/login');
 };
