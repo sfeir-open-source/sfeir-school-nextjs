@@ -1,4 +1,11 @@
-<!-- .slide: class="two-column with-code" -->
+<!-- .slide: class="two-column with-code title-margin-sm" -->
+
+<style>
+  .routing-colocation-img {
+    width: 650px;
+    height: auto;
+  }
+</style>
 
 # Colocation
 
@@ -6,14 +13,4 @@ You can collocate files alongside specific files.
 
 They will not be interpreted as routes :
 
-```
-src/
-  app/
-    page.tsx
-    header.tsx      <- non routable
-    components/
-      button.tsx    <- non routable
-    admin/
-      page.tsx
-      db.ts         <- non routable
-```
+<img src="./assets/images/02-routing/colocation.png" class="routing-colocation-img"  />

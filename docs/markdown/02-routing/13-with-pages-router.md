@@ -1,5 +1,12 @@
 <!-- .slide: class="two-column with-code" -->
 
+<style>
+  .routing-pages-vs-app-img {
+    width: 700px;
+    height: auto;
+  }
+</style>
+
 # Pages router
 
 The app router always has priority over the page router
@@ -14,19 +21,6 @@ Routes :
 
 ##--##
 
-<br/> <br/> <br/> <br/> <br/>
-
 src directory :
 
-```
-src/
-  app/
-    page.tsx           <- used
-    admin/
-      employees/
-        page.tsx       <- used
-  pages/
-    admin/
-      index.tsx        <- used
-      employees.tsx    <- ignored
-```
+<img src="./assets/images/02-routing/app-vs-pages-priority.png" class="routing-pages-vs-app-img"  />

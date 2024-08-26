@@ -14,5 +14,5 @@
 
 **Special files**
 
-- **global-error** : Unexpected global error
+- **/error** (root level) : Unexpected global error
 - **default** : (advanced) Fallback UI for parallel routes
