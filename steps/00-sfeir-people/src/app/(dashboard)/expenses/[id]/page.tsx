@@ -1,9 +1,7 @@
-const Expenses = () => {
-  return (
-    <main>
-      <h1>Single Expense</h1>
-    </main>
-  );
+import ExpenseDetails from '@/components/ExpenseDetails';
+
+const SingleExpense = ({ params }: { params: { id: string } }) => {
+  return <ExpenseDetails expenseId={params.id} />;
 };
 
-export default Expenses;
+export default SingleExpense;

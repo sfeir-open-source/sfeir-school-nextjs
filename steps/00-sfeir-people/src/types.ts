@@ -20,7 +20,7 @@ export type Expense = {
   price: {
     priceIncludingTax: number;
     taxAmount: number;
-    priceExludingTax: number;
+    priceExcludingTax: number;
     currency: string;
   };
   label: string;

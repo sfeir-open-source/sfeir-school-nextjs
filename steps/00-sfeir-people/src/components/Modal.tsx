@@ -8,12 +8,12 @@ export type ModalProps = {
 
 const Modal: React.FC<ModalProps> = ({ title, onClose, children, ...restProps }) => (
   <div
-    className="flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full  h-[calc(100%-1rem)] max-h-full backdrop-blur-sm bg-gray-900 bg-opacity-40 "
+    className="flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full  h-screen max-h-full backdrop-blur-sm bg-gray-900 bg-opacity-40 "
     {...restProps}
   >
     <div className="relative p-4 w-full max-w-2xl max-h-full">
       <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-        <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+        <div className="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
           <button
             type="button"
@@ -39,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({ title, onClose, children, ...restProps })
           </button>
         </div>
 
-        <div className="p-4 md:p-5 space-y-4">{children}</div>
+        <div>{children}</div>
       </div>
     </div>
   </div>
