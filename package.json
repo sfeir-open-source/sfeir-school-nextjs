@@ -1,0 +1,34 @@
+{
+  "name": "sfeir-school-nextjs",
+  "version": "1.0.0",
+  "description": "Template repository for SFEIR School, this template could be use to start a school with revealJS and SFEIR School theme",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfeir-open-source/sfeir-school-nextjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sfeir-open-source/sfeir-school-nextjs/issues"
+  },
+  "homepage": "https://github.com/sfeir-open-source/sfeir-school-nextjs#readme",
+  "workspaces": [
+    "docs",
+    "steps/*"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7"
+  },
+  "dependencies": {
+    "query-string": "^9.1.0"
+  }
+}
