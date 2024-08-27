@@ -113,6 +113,30 @@ function dataFetchingSlides() {
   ];
 }
 
+function mutationSlides() {
+  return [
+    '05-mutations/00-title.md',
+    '05-mutations/01-intro.md',
+    '05-mutations/02-behavior-without.md',
+    '05-mutations/03-behavior-with.md',
+    '05-mutations/04-behavior.md',
+    '05-mutations/10-conventions-definition.md',
+    '05-mutations/11-conventions-using.md',
+    '05-mutations/12-conventions-prop.md',
+    '05-mutations/13-other-than-form.md',
+    '05-mutations/14-params.md',
+    '05-mutations/15-params-invocation.md',
+    '05-mutations/16-security.md',
+    '05-mutations/17-security-closure.md',
+    '05-mutations/18-security-origins.md',
+    '05-mutations/19-how-to-chose.md',
+    '05-mutations/20-lab.md',
+    '05-mutations/30-useformstatus.md',
+    '05-mutations/31-useformstate.md',
+    '05-mutations/40-lab.md',
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -120,6 +144,7 @@ function formation() {
     ...routingSlides(),
     ...serverComponentSlides(),
     ...dataFetchingSlides(),
+    ...mutationSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });

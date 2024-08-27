@@ -1,6 +1,5 @@
 import PageTitle from '@/components/PageTitle';
 import Paper from '@/components/Paper';
-import Link from 'next/link';
 
 type HomeLayoutProps = {
   employeesSlot?: React.ReactNode;
