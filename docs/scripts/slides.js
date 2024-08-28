@@ -137,6 +137,17 @@ function mutationSlides() {
   ];
 }
 
+function errorSlides() {
+  return [
+    '06-error-management/00-title.md',
+    '06-error-management/01-intro.md',
+    '06-error-management/10-error-boundaries.md',
+    '06-error-management/11-router-default.md',
+    '06-error-management/12-router-error.md',
+    '06-error-management/13-parallel-routing.md',
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -145,6 +156,7 @@ function formation() {
     ...serverComponentSlides(),
     ...dataFetchingSlides(),
     ...mutationSlides(),
+    ...errorSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });
