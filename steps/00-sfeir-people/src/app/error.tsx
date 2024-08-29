@@ -1,7 +1,5 @@
 'use client';
 
-import Logo from '@/components/Logo';
-
 const GlobalError = () => {
   return (
     <div className="flex min-h-screen bg-white dark:bg-slate-950 dark:text-white">
