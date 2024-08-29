@@ -133,6 +133,7 @@ function mutationSlides() {
     '05-mutations/20-lab.md',
     '05-mutations/30-useformstatus.md',
     '05-mutations/31-useformstate.md',
+    '05-mutations/32-error.md',
     '05-mutations/40-lab.md',
   ];
 }
@@ -145,6 +146,12 @@ function errorSlides() {
     '06-error-management/11-router-default.md',
     '06-error-management/12-router-error.md',
     '06-error-management/13-parallel-routing.md',
+    '06-error-management/14-custom.md',
+    '06-error-management/20-lab.md',
+    '06-error-management/30-expected-errors.md',
+    '06-error-management/31-expected-redirect.md',
+    '06-error-management/32-not-found.md',
+    '06-error-management/40-lab.md',
   ];
 }
 
