@@ -26,6 +26,8 @@ export function middleware(request) {
 
 ##--##
 
+<br/> <br/>
+
 Modify request :
 
 ```js

@@ -1,9 +1,10 @@
 <!-- .slide: class="two-column with-code " -->
 
-# request matching
+# Request matching
 
-There are two ways to filter the requests : <br/>
-Exporting the **matcher** configuration :
+**There are two ways to filter the requests** <br/>
+
+1. Exporting the **matcher** configuration :
 
 ```js
 export const config = {
@@ -13,7 +14,9 @@ export const config = {
 
 ##--##
 
-Conditional statements :
+<br/> <br/> <br/> <br/><br/>
+
+2. With conditional statements :
 
 ```js
 export function middleware(request) {

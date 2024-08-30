@@ -2,6 +2,8 @@
 
 # middleware
 
+## Use cases
+
 - Authentication
 - Localization (ex : redirect user to the right locale)
 - Bot detection

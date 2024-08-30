@@ -4,10 +4,10 @@
 
 ## matching request
 
-Request attribute matching :
+Request attribute matching
 
-- **has** : check if request has a specified attribute / value
-- **missing** : check if request is missing attribute / value
+- **has**
+- **missing**
 
 Has and missing objects can have the following fields :
 
@@ -16,6 +16,8 @@ Has and missing objects can have the following fields :
 - value
 
 ##--##
+
+<br/> <br/>
 
 ```js
 module.exports = {

@@ -16,6 +16,8 @@ allows to catch the incoming request and :
 
 ##--##
 
+<br/> <br/><br/>
+
 Runs before caching content / route matching :
 
 1. headers - next.config.js

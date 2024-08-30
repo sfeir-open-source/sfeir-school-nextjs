@@ -17,6 +17,8 @@ Detailed configuration :
 
 ##--##
 
+<br/> <br/>
+
 ```js
 module.exports = {
   async rewrites() {

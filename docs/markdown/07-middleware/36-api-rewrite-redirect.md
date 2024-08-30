@@ -16,6 +16,8 @@ export function middleware(request: NextRequest) {
 
 ##--##
 
+<br/> <br/> <br/>
+
 **Redirect** the incoming request to a different URL :
 
 ```js

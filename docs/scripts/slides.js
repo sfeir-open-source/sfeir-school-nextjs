@@ -155,6 +155,31 @@ function errorSlides() {
   ];
 }
 
+function middlewareSlides() {
+  return [
+    '07-middleware/00-title.md',
+    '07-middleware/01-intro.md',
+    '07-middleware/10-next-config.md',
+    '07-middleware/11-headers.md',
+    '07-middleware/12-matching.md',
+    '07-middleware/13-matching-attribute.md',
+    '07-middleware/14-redirects.md',
+    '07-middleware/15-rewrite.md',
+    '07-middleware/16-rewrite-advanced.md',
+    '07-middleware/20-lab.md',
+    '07-middleware/30-middleware.md',
+    '07-middleware/31-definition.md',
+    '07-middleware/32-use-cases.md',
+    '07-middleware/33-convention.md',
+    '07-middleware/34-url-matching.md',
+    '07-middleware/35-api-modify.md',
+    '07-middleware/36-api-rewrite-redirect.md',
+    '07-middleware/37-api-return.md',
+    '07-middleware/38-warning.md',
+    '07-middleware/40-lab.md',
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -164,6 +189,7 @@ function formation() {
     ...dataFetchingSlides(),
     ...mutationSlides(),
     ...errorSlides(),
+    ...middlewareSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });
