@@ -206,6 +206,29 @@ function renderingMethodSlides() {
   ];
 }
 
+function deployingSlides() {
+  return [
+    '09-deploying-and-hosting/00-title.md',
+    '09-deploying-and-hosting/01-intro.md',
+    '09-deploying-and-hosting/10-vercel.md',
+    '09-deploying-and-hosting/20-nodejs.md',
+    '09-deploying-and-hosting/30-docker-image.md',
+    '09-deploying-and-hosting/31-docker-multistage.md',
+    '09-deploying-and-hosting/32-docker-standalone.md',
+    '09-deploying-and-hosting/33-docker-demo.md',
+    '09-deploying-and-hosting/34-docker-cache.md',
+    '09-deploying-and-hosting/35-docker-cache-custom.md',
+    '09-deploying-and-hosting/36-docker-cache-redis.md',
+    '09-deploying-and-hosting/40-static.md',
+    '09-deploying-and-hosting/41-static-convention.md',
+    '09-deploying-and-hosting/42-static-supported.md',
+    '09-deploying-and-hosting/43-static-unsupported.md',
+    '09-deploying-and-hosting/44-static-adaptations.md',
+    '09-deploying-and-hosting/45-static-proxy-schema.md',
+    '09-deploying-and-hosting/46-static-pro-cons.md',
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -217,6 +240,7 @@ function formation() {
     ...errorSlides(),
     ...middlewareSlides(),
     ...renderingMethodSlides(),
+    ...deployingSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });
