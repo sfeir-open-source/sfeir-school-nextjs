@@ -1,14 +1,7 @@
-import { ErrorBoundary } from 'react-error-boundary';
-
-import Alert from '@/components/Alert';
-import ExpenseDetails from '@/components/ExpenseDetails';
+import PageTitle from '@/components/PageTitle';
 
 const SingleExpense = ({ params }: { params: { id: string } }) => {
-  return (
-    <ErrorBoundary fallback={<Alert>Oops, something went wrong :/</Alert>}>
-      <ExpenseDetails expenseId={params.id} />
-    </ErrorBoundary>
-  );
+  return <PageTitle>Single Expense - {params.id}</PageTitle>;
 };
 
 export default SingleExpense;

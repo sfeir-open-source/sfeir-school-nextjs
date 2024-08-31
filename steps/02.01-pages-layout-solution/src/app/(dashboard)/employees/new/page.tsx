@@ -1,8 +1,6 @@
 import EmployeeForm from '@/components/EmployeeForm';
 import PageTitle from '@/components/PageTitle';
 
-import { create } from './../actions';
-
 const EmployeeDetail = async () => {
   return (
     <>
@@ -11,7 +9,7 @@ const EmployeeDetail = async () => {
       </PageTitle>
 
       <div className="flex gap-4 bg-white p-4 rounded-lg dark:bg-slate-900">
-        <EmployeeForm className="w-full" action={create} />
+        <EmployeeForm className="w-full" />
       </div>
     </>
   );

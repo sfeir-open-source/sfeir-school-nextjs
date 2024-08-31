@@ -3,10 +3,10 @@
 import Image from 'next/image';
 import TextField from '@/components/TextField';
 import { Person } from '@/types';
-import FormSubmitButton from './FormSubmitButton';
 import { useFormState } from 'react-dom';
 
 import placeholderImage from '@/assets/images/profile-placeholder.jpg';
+import Button from './Button';
 
 type ActionState = {
   validationErrors?: { [key: string]: Array<string> };
@@ -16,7 +16,7 @@ type Action = (id: string, formData: FormData) => Promise<void | ActionState>;
 
 type EmployeeFormProps = {
   employee?: Person;
-  action: Action;
+  action?: Action;
   className?: string;
 };
 
@@ -102,9 +102,9 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className
         </div>
       </div>
       <div className="flex justify-center">
-        <FormSubmitButton className="mt-4" variant="primary">
+        <Button className="mt-4" variant="primary" type="submit">
           Submit
-        </FormSubmitButton>
+        </Button>
       </div>
     </form>
   );
