@@ -180,6 +180,31 @@ function middlewareSlides() {
   ];
 }
 
+function renderingMethodSlides() {
+  return [
+    '08-rendering-methods/00-title.md',
+    '08-rendering-methods/01-intro.md',
+    '08-rendering-methods/10-ssr.md',
+    '08-rendering-methods/11-pro-cons.md',
+    '08-rendering-methods/20-static-rendering.md',
+    '08-rendering-methods/21-static-rendering-schema.md',
+    '08-rendering-methods/22-static-rendering-config.md',
+    '08-rendering-methods/30-incremental.md',
+    '08-rendering-methods/31-incremental-schema.md',
+    '08-rendering-methods/32-incremental-example.md',
+    '08-rendering-methods/33-incremental-example2.md',
+    '08-rendering-methods/34-incremental-runtime.md',
+    '08-rendering-methods/40-lab.md',
+    '08-rendering-methods/50-streaming.md',
+    '08-rendering-methods/51-solution.md',
+    '08-rendering-methods/52-streaming-next.md',
+    '08-rendering-methods/53-streaming-loading.md',
+    '08-rendering-methods/54-streaming-parallel.md',
+    '08-rendering-methods/60-suspense.md',
+    '08-rendering-methods/70-lab.md',
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -190,6 +215,7 @@ function formation() {
     ...mutationSlides(),
     ...errorSlides(),
     ...middlewareSlides(),
+    ...renderingMethodSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });
