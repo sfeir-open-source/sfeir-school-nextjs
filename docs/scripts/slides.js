@@ -201,6 +201,7 @@ function renderingMethodSlides() {
     '08-rendering-methods/53-streaming-loading.md',
     '08-rendering-methods/54-streaming-parallel.md',
     '08-rendering-methods/60-suspense.md',
+    '08-rendering-methods/61-limitations.md',
     '08-rendering-methods/70-lab.md',
   ];
 }
