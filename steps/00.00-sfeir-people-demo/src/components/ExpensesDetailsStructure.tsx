@@ -1,5 +1,3 @@
-import Skeleton from './Skeleton';
-
 type ExpenseDetailsStructureProps = {
   information: React.ReactNode;
   workflow: React.ReactNode;
@@ -29,10 +27,12 @@ const ExpenseDetailsStructure: React.FC<ExpenseDetailsStructureProps> = ({
         <h2 className="text-xl font-semibold mb-2">Amount</h2>
         {amount}
       </div>
-      <div className="w-1/2">
-        <h2 className="text-xl font-semibold mb-2">Employee</h2>
-        {employee}
-      </div>
+      {employee && (
+        <div className="w-1/2">
+          <h2 className="text-xl font-semibold mb-2">Employee</h2>
+          {employee}
+        </div>
+      )}
     </div>
   </>
 );

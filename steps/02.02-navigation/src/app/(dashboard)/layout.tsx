@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -6,6 +7,10 @@ import NavigationMenu from '@/components/NavigationMenu';
 import logo from '@/assets/svg/logo.svg';
 
 type DashboardLayoutProps = { children: React.ReactNode };
+
+export const metadata: Metadata = {
+  title: 'SFEIR People | Dashboard',
+};
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = async ({ children }) => {
   return (
