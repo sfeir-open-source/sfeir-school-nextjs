@@ -2,18 +2,34 @@ import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-s
 
 function schoolSlides() {
   return [
-    '00-school/00-title.md',
-    '00-school/00-planning.md',
-    '00-school/00-wifi.md',
-    '00-school/00-repo.md',
-    '00-school/00-requirements.md',
-    '00-school/00-speaker.md',
-    '00-school/00-tour-de-table.md',
+    '00-school/01-title.md',
+    '00-school/10-planning.md',
+    '00-school/20-wifi.md',
+    '00-school/21-repo.md',
+    '00-school/22-requirements.md',
+    '00-school/30-speaker.md',
+    '00-school/31-tour-de-table.md',
+    '00-school/40-what-we-will-do.md',
+    '00-school/41-plan.md',
+    '00-school/42-application.md',
+    '00-school/43-commands.md',
   ];
 }
 
 function introSlides() {
-  return ['01-intro/01-title.md'];
+  return [
+    '01-intro/01-title.md',
+    '01-intro/02-bg.md',
+    '01-intro/10-what.md',
+    '01-intro/11-what-meta.md',
+    '01-intro/12-react-vercel.md',
+    '01-intro/13-equivalents.md',
+    '01-intro/14-features.md',
+    '01-intro/20-history.md',
+    '01-intro/21-app-router.md',
+    '01-intro/22-today.md',
+    '01-intro/30-command.md',
+  ];
 }
 
 function routingSlides() {
