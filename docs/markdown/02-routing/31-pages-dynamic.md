@@ -1,6 +1,8 @@
-<!-- .slide: class="two-column with-code title-margin-sm" -->
+<!-- .slide: class="two-column with-code" -->
 
-# Dynamic routing
+# Routing
+
+## Page declaration : dynamic routing
 
 ```
 /app/post/[id]/page.tsx                 website.com/post/123

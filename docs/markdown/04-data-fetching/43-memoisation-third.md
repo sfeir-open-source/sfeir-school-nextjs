@@ -1,12 +1,13 @@
 <!-- .slide: class="two-column with-code" -->
 
-# Request memoization
+# Caching
 
-## What if I'm not using fetch ?
+## 1/4 Request memoization
 
+**What if I'm not using fetch ?**<br/>
 You can use React cache function to memoize functions :
 
-```jsx
+```jsx [1, 6-9, 13, 21]
 import { cache } from 'react';
 
 import apolloClient from '@/apollo';

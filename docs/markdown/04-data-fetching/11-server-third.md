@@ -1,8 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Fetching from the server
+# 1. Fetching from the server
 
-## third party libraries
+## using third party libraries
 
 Allows to use third parties libraries :
 

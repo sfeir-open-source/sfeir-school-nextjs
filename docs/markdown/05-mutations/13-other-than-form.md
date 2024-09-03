@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Conventions
+# Server actions
 
 ## Not only for forms
 

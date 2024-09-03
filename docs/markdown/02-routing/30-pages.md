@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code" -->
 
-# Page declaration
+# Routing
+
+## Page declaration
 
 Create a _page.tsx_ file in nested directories :
 

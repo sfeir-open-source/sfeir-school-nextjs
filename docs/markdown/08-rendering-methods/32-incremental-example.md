@@ -1,8 +1,10 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Incremental Static Rendering
+# Rendering methods
 
-## Examples
+## Incremental Static Rendering (ISR)
+
+**Examples**
 
 Single dynamic segment
 
@@ -22,6 +24,8 @@ export const generateStaticParams = () => {
 
 <br/> <br/>
 
+<div>
+
 Multiple dynamic segment
 
 ```js
@@ -39,3 +43,6 @@ export const generateStaticParams = () => {
 // - /employee/b/2
 // - /employee/c/3
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

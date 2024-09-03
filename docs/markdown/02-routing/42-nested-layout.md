@@ -7,7 +7,7 @@
   }
 </style>
 
-# Layouts
+# Routing
 
 ## Nested layouts
 

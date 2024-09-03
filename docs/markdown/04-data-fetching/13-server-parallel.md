@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Fetching from the server
+# 1. Fetching from the server
 
 ## parallel fetching patterns
 

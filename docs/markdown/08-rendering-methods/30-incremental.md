@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Incremental Static Rendering
+# Rendering methods
+
+## Incremental Static Rendering (ISR)
 
 By default, dynamic routes (_/[id]/page.tsx_) can't be known at build time <br/>
 But there is a way to generate them :

@@ -7,7 +7,7 @@
   }
 </style>
 
-# Advanced routing
+# Routing
 
 ## Intercepting routes
 

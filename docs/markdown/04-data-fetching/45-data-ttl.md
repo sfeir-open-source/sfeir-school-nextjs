@@ -1,8 +1,10 @@
 <!-- .slide: class="two-column with-code" -->
 
-# Data cache
+# Caching
 
-## Revalidating : time based (TTL)
+## 2/4 Data cache
+
+Revalidating : time based (TTL)
 
 ```jsx
 export default function Page({ params }) {

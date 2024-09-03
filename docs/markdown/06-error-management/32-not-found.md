@@ -26,7 +26,9 @@ This component is rendered in two cases :
 - When a segment is unknown to the router
 - When invoking **notFound** method explicitly :
 
-```jsx
+```jsx [1,6]
+import { notFound } from 'next/navigation'
+
 export default async function User({ params }) {
   const user = await fetchUser(params.id)
 

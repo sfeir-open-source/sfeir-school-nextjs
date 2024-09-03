@@ -12,7 +12,7 @@
   }
 </style>
 
-# Fetching from the client
+# 2. Fetching from the client
 
 ## Route handlers
 

@@ -10,8 +10,8 @@ Detailed configuration :
 2. redirects - next.config.js
 3. middleware
 4. <strong>rewrites | beforeFiles - next.config.js</strong>
-5. <strong>routes (/public, /\_next/..., /app...)</strong>
-6. rewrites | afterFiles - next.config.js
+5. routes (/public, /\_next/..., /app...)
+6. <strong>rewrites | afterFiles - next.config.js</strong>
 7. dynamic routes (/[slug]/page.tsx ...)
 8. <strong>rewrites | fallback - next.config.js</strong>
 

@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Dynamic rendering
+# Rendering methods
+
+## Dynamic rendering (SSR)
 
 **Pros**
 

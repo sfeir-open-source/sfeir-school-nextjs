@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code" -->
 
-# React Server Component : Why ?
+# Server Components : Why ?
 
 - Reduce JavaScript bundle size
 - Better initial performances

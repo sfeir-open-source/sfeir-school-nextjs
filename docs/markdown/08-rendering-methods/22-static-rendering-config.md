@@ -1,8 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Static rendering
+# Rendering methods
 
-## Configuration
+## Static rendering
 
 Static rendering can be configured using [route segment configuration](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config)
 

@@ -1,8 +1,10 @@
 <!-- .slide: class="two-column with-code" -->
 
-# Full route caching
+# Caching
 
-## Configuration
+## 3/4 Full route caching
+
+**Configuration**
 
 This depends on the rendering method (static vs. dynamic).
 <br/> <br/>

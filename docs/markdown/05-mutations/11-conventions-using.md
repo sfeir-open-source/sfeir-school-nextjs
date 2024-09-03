@@ -1,11 +1,10 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Conventions
+# Server actions
 
-## Using a server action
+## How to call it ?
 
 Simply import it and use it as a regular function <br/>
-_Note : this function is asynchronous_
 
 ```js
 // MyComponent.tsx (can be client or server component)
@@ -15,3 +14,7 @@ const MyComponent = () => {
   return <form onSubmit={createUser}>...</form>;
 };
 ```
+
+<br/>
+
+_Note : this function is asynchronous_

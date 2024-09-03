@@ -2,7 +2,7 @@
 
 # Constraints
 
-As soon as a component needs to use **hooks** or **contexts**, it must become a client-component
+As soon as a component needs to use **hooks**, **contexts** or **event handlers**, it must become a client-component
 
 Why ? Because this means it will be re-rendered
 **A server-component can never be re-rendered**
@@ -11,7 +11,7 @@ Why ? Because this means it will be re-rendered
 
 <br/> <br/>
 
-```jsx [1]
+```jsx [1, 6]
 "use client"
 
 import { useState, useEffect } from 'react';

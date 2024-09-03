@@ -6,8 +6,8 @@
 
 Two ways to fetch data :
 
-- On the server : React Server Components
-- On the client : Route handlers
+1. On the server : React Server Components
+2. On the client : Route handlers
 
 <div>
 

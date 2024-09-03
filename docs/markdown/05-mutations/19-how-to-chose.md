@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code title-margin-sm" -->
+<!-- .slide: class="two-column with-code" -->
 
 <style>
   .htc-17 {
@@ -7,6 +7,8 @@
   }
 </style>
 
-# How to choose between server action and route handler ?
+# Server actions
+
+## Server action vs Route handler : How to choose ?
 
 <img src="./assets/images/05-mutations/how-to-choose.png" class="htc-17" />

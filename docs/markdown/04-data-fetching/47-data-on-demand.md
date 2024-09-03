@@ -10,9 +10,11 @@
 
 </style>
 
-# Data cache
+# Caching
 
-## Revalidating : on demand
+## 2/4 Data cache
+
+Revalidating : on demand from route handlers or server actions
 
 1. Using route pathname :
 
@@ -22,6 +24,10 @@ import { revalidatePath } from 'next/cache';
 revalidatePath('/employees/1234');
 revalidatePath('/employees/[id]/page', 'page');
 ```
+
+##--##
+
+<br/> <br/> <br/> <br/> <br/>
 
 <div>
 
@@ -44,17 +50,3 @@ revalidateTag('employees');
 
 </div>
 <!-- .element: class="fragment" data-fragment-index="1"-->
-
-##--##
-
-<br/> <br/>
-
-<div>
-
-Where can you do this ?
-
-- In route handlers
-- In server actions
-
-</div>
-<!-- .element: class="fragment" data-fragment-index="2"-->

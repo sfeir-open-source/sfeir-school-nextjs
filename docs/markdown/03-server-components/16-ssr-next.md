@@ -1,8 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Rendering methods
+# Server Components : Why ?
 
-## Server-Side Rendering
+## Server-side Rendering
 
 Next.js : Page router
 

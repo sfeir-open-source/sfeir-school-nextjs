@@ -1,6 +1,8 @@
-<!-- .slide: class="two-column with-code title-margin-sm " -->
+<!-- .slide: class="two-column with-code" -->
 
-# Hierarchy
+# Routing
+
+## Nested file hierarchy
 
 Nested routes = nested components
 

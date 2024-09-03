@@ -1,6 +1,8 @@
-<!-- .slide: class="with-code title-margin-sm" -->
+<!-- .slide: class="with-code" -->
 
-# Naming convention
+# Routing
+
+## Conventions
 
 (.tsx | .js | .jsx)
 

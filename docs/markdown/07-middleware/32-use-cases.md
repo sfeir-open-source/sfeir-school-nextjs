@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# middleware
+# Middleware
 
 ## Use cases
 
@@ -9,3 +9,4 @@
 - Bot detection
 - Complex URL rewriting
 - Logging / Analytics
+- ...

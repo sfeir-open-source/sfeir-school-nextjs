@@ -7,6 +7,8 @@
   }
 </style>
 
-# Dynamic rendering
+# Rendering methods
+
+## Dynamic rendering (SSR)
 
 <img src="./assets/images/08-rendering/ssr-workflow-schema.png" class="ssr-workflow-schema-01" />

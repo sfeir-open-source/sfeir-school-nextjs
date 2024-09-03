@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code title-margin-sm" -->
+<!-- .slide: class="two-column with-code" -->
 
 <style>
   .routing-colocation-img {
@@ -7,7 +7,9 @@
   }
 </style>
 
-# Colocation
+# Routing
+
+## Colocation
 
 You can collocate files alongside specific files.
 

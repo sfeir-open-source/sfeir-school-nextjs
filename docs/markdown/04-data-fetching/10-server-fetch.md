@@ -1,8 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Fetching from the server
+# 1. Fetching from the server
 
-## fetch
+## using fetch
 
 Data can be fetched into an asynchronous server component :
 

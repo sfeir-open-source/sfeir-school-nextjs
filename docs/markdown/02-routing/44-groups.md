@@ -7,7 +7,9 @@
   }
 </style>
 
-# Groups
+# Routing
+
+## Groups
 
 Groups are directories that do not affect URLs
 
@@ -17,9 +19,15 @@ Groups are directories that do not affect URLs
 
 <br/> <br/> <br/>
 
+<div>
+
 They can be used for :
 
 - Organizing /app directory (by section / feature)
 - Creating multiple nested layouts for the same segment
 - Creating multiple root layouts
 - Applying different layouts without affecting URLs
+
+</div>
+
+<!-- .element: class="fragment" data-fragment-index="1"-->

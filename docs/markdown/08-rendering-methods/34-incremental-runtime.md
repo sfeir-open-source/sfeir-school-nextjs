@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code title-margin-sm " -->
+<!-- .slide: class="two-column with-code " -->
 
 <style>
   .incremental-34 {
@@ -7,7 +7,9 @@
   }
 </style>
 
-# Incremental Static Rendering
+# Rendering methods
+
+## Incremental Static Rendering (ISR)
 
 What if a page params are not known at build time ?
 

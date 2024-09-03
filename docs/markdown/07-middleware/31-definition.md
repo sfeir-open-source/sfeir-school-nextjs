@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# middleware
+# Middleware
 
 What is next.js middleware ? <br/>
 
@@ -11,12 +11,13 @@ allows to catch the incoming request and :
   - redirect
   - modify request headers
   - modify response headers
-  - return early
 - produce and return an early response
 
 ##--##
 
-<br/> <br/><br/>
+<div>
+
+<br/><br/><br/>
 
 Runs before caching content / route matching :
 
@@ -28,3 +29,6 @@ Runs before caching content / route matching :
 6. rewrites | afterFiles - next.config.js
 7. dynamic routes (/[slug]/page.tsx ...)
 8. rewrites | fallback - next.config.js
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

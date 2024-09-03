@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# middleware
+# Middleware
 
 ## Conventions
 

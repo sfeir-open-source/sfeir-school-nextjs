@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Request matching
+# Middleware
+
+## Request matching
 
 **There are two ways to filter the requests** <br/>
 

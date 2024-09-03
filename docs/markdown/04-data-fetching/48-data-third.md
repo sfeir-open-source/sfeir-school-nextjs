@@ -10,11 +10,11 @@
 
 </style>
 
-# Data cache
+# Caching
 
-## What if I'm not using fetch ?
+## 2/4 Data cache
 
-You can use **unstable_cache** method from Next.js to wrap the third party methods :
+**What if I'm not using fetch ?** -> You can use **unstable_cache** method from Next.js :
 
 ```jsx
 // In a server component, use unstable_cache to wrap the third party code :

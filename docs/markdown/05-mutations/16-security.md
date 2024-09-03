@@ -1,10 +1,14 @@
-<!-- .slide: class="two-column with-code title-margin-sm" -->
+<!-- .slide: class="two-column with-code" -->
 
-# Security considerations
+# Server actions
+
+## Security considerations
 
 Like route handlers, server-actions works with public HTTP calls. This requires security precautions
 
-**Authorization**
+<div>
+
+**1. Authorization**
 
 Make sure that users are authorized to perform an action or to access the data :
 
@@ -22,3 +26,6 @@ export async function approveExpense() {
   // Mutations & server operations
 }
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

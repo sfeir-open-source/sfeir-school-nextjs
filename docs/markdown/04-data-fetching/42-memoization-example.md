@@ -1,8 +1,10 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Request memoization
+# Caching
 
-## Example
+## 1/4 Request memoization
+
+Example :
 
 ```jsx
 export async function generateMetadata({ params }) {

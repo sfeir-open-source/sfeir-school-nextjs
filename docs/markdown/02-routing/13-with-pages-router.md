@@ -7,7 +7,9 @@
   }
 </style>
 
-# Pages router
+# Routing
+
+## With pages router
 
 The app router always has priority over the page router
 

@@ -12,7 +12,7 @@
   }
   </style>
 
-# Advanced routing
+# Routing
 
 ## Intercepting routes + Parallel routing
 

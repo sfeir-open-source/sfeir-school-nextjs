@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Advanced routing
+# Routing
+
+## Advanced features
 
 - Parallel routing
 - Intercepting routes

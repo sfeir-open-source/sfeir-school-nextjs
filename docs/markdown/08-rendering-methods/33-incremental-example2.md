@@ -1,8 +1,10 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Incremental Static Rendering
+# Rendering methods
 
-## Examples
+## Incremental Static Rendering (ISR)
+
+**Examples**
 
 Catch-all dynamic segment
 
@@ -22,6 +24,8 @@ export const generateStaticParams = () => {
 
 <br/> <br/>
 
+<div>
+
 Parent / Children page segments :
 
 ```js
@@ -38,3 +42,6 @@ export const generateStaticParams = async ({ params: { category } }) => {
   return employees.map((employee) => ({ id: employee.id }));
 };
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

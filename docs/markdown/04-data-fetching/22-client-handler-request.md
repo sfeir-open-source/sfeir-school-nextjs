@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Fetching from the client
+# 2. Fetching from the client
 
 ## Reading request
 

@@ -6,8 +6,8 @@
   }
 </style>
 
-# Behavior
+# What are server actions ?
 
-## Without server action
+## Behavior : without server action
 
 <img src="./assets/images/05-mutations/without-server-action.png" class="behavior-without-02" />

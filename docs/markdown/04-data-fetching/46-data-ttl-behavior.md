@@ -8,9 +8,9 @@
   }
 </style>
 
-# Data cache
+# Caching
 
-## Revalidating : time based (TTL)
+## 2/4 Data cache
 
 Time based revalidation has a "stale-while-revalidate" behavior :
 

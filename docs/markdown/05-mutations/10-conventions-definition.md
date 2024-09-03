@@ -1,8 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Conventions
+# Server actions
 
-## Defining a server action
+## Conventions
 
 **Server actions can be defined in separate modules :**
 
@@ -17,7 +17,9 @@ const createUser = () => {
 
 'use server' has to be specified at the top level
 
-**Or directly in a server component with an inline function :**
+<div>
+
+**Or inlined in a server component body :**
 
 ```jsx
 // MyComponent.tsx
@@ -28,3 +30,6 @@ const MyComponent = () => {
   }
 };
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

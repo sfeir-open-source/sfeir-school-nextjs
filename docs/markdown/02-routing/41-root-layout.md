@@ -1,8 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Layouts
+# Routing
 
-## Root Layout
+## Root layout
 
 This layout is **required**
 

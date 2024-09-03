@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code title-margin-sm" -->
+<!-- .slide: class="two-column with-code" -->
 
 <style>
   .layout-schema-img {
@@ -7,7 +7,9 @@
   }
 </style>
 
-# Layouts
+# Routing
+
+## Shared layouts
 
 Layouts can be used to define a UI that is shared between several sub-segments.
 

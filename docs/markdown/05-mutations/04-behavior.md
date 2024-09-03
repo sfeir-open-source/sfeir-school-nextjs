@@ -1,7 +1,7 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Behavior
+# What are server actions ?
 
-- Window is not refreshed
+- Window is not refreshed, only re-rendered
 - Allows progressive enhancement (works if JavaScript is not loaded or disabled)
 - Can interact with cache and revalidation

@@ -7,9 +7,11 @@
   }
 </style>
 
-# Static rendering
+# Rendering methods
 
-## Conditions
+## Static rendering
+
+**Conditions :**
 
 - The route data is not personalized to the user (no dynamic function)
   - cookies

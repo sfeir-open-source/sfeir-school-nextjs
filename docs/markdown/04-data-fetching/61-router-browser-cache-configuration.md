@@ -1,19 +1,22 @@
 <!-- .slide: class="two-column with-code" -->
 
-# Router caching
+# Caching
+
+## 4/4 Router caching
 
 **Behavior**
 
-The behavior depends on two factors :
+The behavior depends on two factors : <br/><br/>
 
-1. Browser session
+1. Browser session <br/><br/>
 2. Automatic TTL, depending on prefetching :
-
-- default : dynamic pages are not cached / static pages are cached for 5 minutes
-- full prefetching (prefetch={true}) 5 minutes
+   - default : dynamic pages are not cached / static pages are cached for 5 minutes
+   - full prefetching (prefetch={true}) 5 minutes
 
 ##--##
 <br/> <br/>
+
+<div>
 
 **Configuring**
 
@@ -31,3 +34,7 @@ const nextConfig = {
 
 module.exports = nextConfig;
 ```
+
+</div>
+
+<!-- .element: class="fragment" data-fragment-index="1"-->

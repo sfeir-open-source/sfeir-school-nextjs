@@ -7,7 +7,9 @@
   }
 </style>
 
-# Incremental Static Rendering
+# Rendering methods
+
+## Incremental Static Rendering (ISR)
 
 ```js
 export const generateStaticParams = async () => {

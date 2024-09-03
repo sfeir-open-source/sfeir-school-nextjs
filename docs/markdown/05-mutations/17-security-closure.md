@@ -1,10 +1,12 @@
-<!-- .slide: class="two-column with-code title-margin-sm" -->
+<!-- .slide: class="two-column with-code" -->
 
-# Security considerations
+# Server actions
 
-**Closures**
+## Security considerations
 
-Server actions inside component is a closure : the action has access to the outer function's scope (like sensitive variables). <br/>
+**2. Closures**
+
+Inline server actions are closures : the action has access to the outer function's scope (like sensitive variables). <br/>
 
 ```jsx
 // MyComponent.tsx
@@ -22,10 +24,12 @@ This is useful to capture snapshot of the data
 
 ##--##
 
+<div>
+
 <br/> <br/>
 
-- Closure variables are part of the action definition
-- It's then send to the client and back to the server when action is triggered
+- Closure variables are part of the action definition, during the action lifecycle
+- It's sent to the client and back to the server when action is triggered
 - Next.js automatically encrypts those
 - A private key is generated for each action and each build
 
@@ -36,3 +40,6 @@ To define an encryption key explicitly :
 ```
 process.env.NEXT_SERVER_ACTIONS_ENCRYPTION_KEY
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

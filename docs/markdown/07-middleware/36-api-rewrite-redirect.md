@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# API
+# Middleware
+
+## API
 
 **Rewrite** response to display another URL :
 
@@ -18,6 +20,8 @@ export function middleware(request: NextRequest) {
 
 <br/> <br/> <br/>
 
+<div>
+
 **Redirect** the incoming request to a different URL :
 
 ```js
@@ -29,3 +33,6 @@ export function middleware(request) {
   }
 }
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

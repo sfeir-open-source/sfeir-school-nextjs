@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# API
+# Middleware
+
+## API
 
 You can also produce a response early
 

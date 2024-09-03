@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code title-margin-sm" -->
+<!-- .slide: class="two-column with-code" -->
 
 <style>
   .template-schema-img {
@@ -9,7 +9,9 @@
   }
 </style>
 
-# Templates
+# Routing
+
+## Templates
 
 Templates are layouts, but when navigating :
 
@@ -42,3 +44,5 @@ const Wrapper = () => {
   );
 };
 ```
+
+<!-- .element: class="fragment" data-fragment-index="1"-->

@@ -7,7 +7,9 @@
   }
 </style>
 
-# Static rendering
+# Rendering methods
+
+## Static rendering
 
 _This is the default behavior. If all conditions are set, Next will always prioritize this rendering method_
 

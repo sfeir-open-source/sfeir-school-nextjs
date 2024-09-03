@@ -1,6 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# API
+# Middleware
+
+## API
 
 Modify response :
 
@@ -28,6 +30,8 @@ export function middleware(request) {
 
 <br/> <br/>
 
+<div>
+
 Modify request :
 
 ```js
@@ -54,3 +58,6 @@ export function middleware(request) {
   return response;
 }
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

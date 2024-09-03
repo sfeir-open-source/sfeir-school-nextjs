@@ -1,8 +1,13 @@
-# Arguments - using action invocation
+<!-- .slide: class="two-column with-code " -->
 
-It's possible to passe arguments to server action :
+# Server actions
 
-```jsx
+## Arguments (using function invocation)
+
+When calling it directly as a function, it's possible to pass arguments :
+
+```jsx [7-9]
+'use client';
 import { createUser } from './actions';
 
 const ClientComponent = () => {
@@ -18,6 +23,10 @@ const ClientComponent = () => {
 };
 ```
 
+##--##
+
+<br/> <br/> <br/> <br/> <br/> <br/>
+
 ```jsx
 //actions.ts
 'use server';
@@ -26,4 +35,4 @@ export const createUser = async (username, email) => {
 };
 ```
 
-_this arguments have to be serializable_
+_this arguments must be serializable as JSON_

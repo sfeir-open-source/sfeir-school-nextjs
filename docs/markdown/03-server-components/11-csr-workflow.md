@@ -1,8 +1,8 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Rendering methods
+# Server Components : Why ?
 
-## Client-Side applications
+## Client-side applications
 
 <br/>
 

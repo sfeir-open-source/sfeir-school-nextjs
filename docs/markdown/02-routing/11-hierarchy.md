@@ -1,6 +1,8 @@
-<!-- .slide: class="two-column with-code title-margin-sm " -->
+<!-- .slide: class="two-column with-code" -->
 
-# Hierarchy
+# Routing
+
+## File hierarchy
 
 File components are rendered and nested in a specific order :
 
