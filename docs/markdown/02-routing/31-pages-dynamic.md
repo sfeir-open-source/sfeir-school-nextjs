@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code" -->
+<!-- .slide: class="two-column with-code title-margin-sm" -->
 
 # Dynamic routing
 
@@ -11,6 +11,7 @@
                                         ...
 ```
 
+<div>
 Catch all segments :
 
 ```
@@ -20,6 +21,12 @@ Catch all segments :
                                         ...
 ```
 
+</div>
+
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+<div>
+
 Optional catch all segments :
 
 ```
@@ -28,3 +35,7 @@ Optional catch all segments :
                                         website.com/a/b
                                         ...
 ```
+
+</div>
+
+<!-- .element: class="fragment" data-fragment-index="2"-->

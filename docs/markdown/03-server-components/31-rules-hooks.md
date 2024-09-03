@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code " -->
+<!-- .slide: class="two-column with-code title-margin-sm" -->
 
 # Constraints
 
@@ -9,19 +9,7 @@ Why ? Because this means it will be re-rendered
 
 ##--##
 
-```jsx
-import { useState, useEffect } from 'react';
-
-const Timer = () => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    setInterval(() => )
-  });
-
-  return <span>Seconds : {count}</span>
-}
-```
+<br/> <br/>
 
 ```jsx [1]
 "use client"

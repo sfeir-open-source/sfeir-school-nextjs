@@ -37,8 +37,13 @@ const App = ({ employees }) => {
 <br/>
 <br/>
 
+<div>
+
 The component tree now looks like this :
 
 <img src="./assets/images/03-server-components/tree-5.png" class="tree-37" />
 
 Client boundary is much smaller
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

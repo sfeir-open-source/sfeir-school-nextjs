@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code" -->
+<!-- .slide: class="with-code" -->
 
 # Data fetching
 
@@ -7,7 +7,15 @@
 Two ways to fetch data :
 
 - On the server : React Server Components
-- On the client : Router handlers
-  <br/></br>
+- On the client : Route handlers
 
-Caching
+<div>
+
+Caching :
+
+- Request memoïzation
+- Data cache
+- Full Route cache
+- Router cache
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

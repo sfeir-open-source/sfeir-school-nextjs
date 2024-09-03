@@ -1,8 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Route handlers
-
-## Fetching from the client
+# Fetching from the client
 
 **Using fetch API**
 

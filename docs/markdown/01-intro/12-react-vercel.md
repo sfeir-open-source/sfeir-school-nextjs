@@ -9,4 +9,4 @@
 
 ## A special connection between React and Vercel
 
-<img src="./assets/images/01-intro/react-vercel.png" class="react-vercel-12"  />
+<img src="./assets/images/01-intro/react-vercel-search.png" class="react-vercel-12"  />

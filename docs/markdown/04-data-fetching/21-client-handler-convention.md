@@ -12,9 +12,9 @@
   }
 </style>
 
-# Route handlers
+# Fetching from the client
 
-## Convention
+## Route handlers
 
 A route handler can't share the same path as a page :
 

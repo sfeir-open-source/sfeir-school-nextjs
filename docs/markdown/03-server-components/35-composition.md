@@ -40,8 +40,11 @@ const EmployeesList = ({ employees }) => {
 
 ##--##
 
+<div>
 <br/> <br/> <br/>
 
 And the component tree :
 
 <img src="./assets/images/03-server-components/tree-2.png" class="tree-34" />
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

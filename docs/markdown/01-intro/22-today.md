@@ -10,6 +10,8 @@
 
 ##--##
 
+<div>
+
 ## Next version
 
 **Version 15** (currently in RC)
@@ -17,3 +19,6 @@
 - Support for the React 19 RC : React Compiler
 - Caching management changes
 - Turbopack extended support
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

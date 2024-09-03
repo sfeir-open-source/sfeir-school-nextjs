@@ -22,6 +22,8 @@ index.html
 
 ##--##
 
+<div>
+
 <br/> <br/> <br/>
 script.js
 
@@ -33,3 +35,7 @@ const rootElement = document.getElementById('root');
 
 ReactDOM.createRoot(rootElement).render(<App />);
 ```
+
+</div>
+
+<!-- .element: class="fragment" data-fragment-index="1"-->

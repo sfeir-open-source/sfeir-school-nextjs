@@ -14,7 +14,7 @@
 
 ## What if I'm not using fetch ?
 
-You can use unstable_cache method from Next.js to wrap the third party methods :
+You can use **unstable_cache** method from Next.js to wrap the third party methods :
 
 ```jsx
 // In a server component, use unstable_cache to wrap the third party code :
@@ -40,6 +40,10 @@ export default function Page() {
   return <EmployeeList employees={employees} />
 }
 ```
+
+##--##
+
+<br/> <br/> <br/> <br/> <br/>
 
 ```js
 // Then revalidate the tag on a route handler or server action :

@@ -1,4 +1,4 @@
-<!-- .slide: class="two-column with-code " -->
+<!-- .slide: class="two-column with-code title-margin-sm" -->
 
 <style>
   .tree-33{
@@ -15,7 +15,10 @@
 
 ##--##
 
-<br/> <br/>
+<div>
+<br/> <br/><br/>
 "use client" is declared at module-level <br/> All client-component imports are considered to be client-components.
 
 <img src="./assets/images/03-server-components/tree-2.png" class="tree-33" />
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

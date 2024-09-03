@@ -23,6 +23,8 @@ revalidatePath('/employees/1234');
 revalidatePath('/employees/[id]/page', 'page');
 ```
 
+<div>
+
 2. Using tags :
 
 ```jsx
@@ -40,9 +42,19 @@ import { revalidateTag } from 'next/cache';
 revalidateTag('employees');
 ```
 
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
 ##--##
+
+<br/> <br/>
+
+<div>
 
 Where can you do this ?
 
 - In route handlers
 - In server actions
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="2"-->

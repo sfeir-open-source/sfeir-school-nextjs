@@ -36,6 +36,8 @@ const EmployeesDisplayMode = ({ children }) => {
 <br/>
 <br/>
 
+<div>
+
 Then use children composition :
 
 App.tsx :
@@ -56,3 +58,6 @@ const App = ({ employees }) => {
   );
 };
 ```
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->

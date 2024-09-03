@@ -7,9 +7,9 @@
   }
 </style>
 
-# Route handlers
+# Fetching from the client
 
-## Convention
+## Route handlers
 
 `route.ts` file in the /app directory
 
