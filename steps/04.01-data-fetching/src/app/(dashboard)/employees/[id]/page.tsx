@@ -1,3 +1,4 @@
+import EmployeeExpenses from '@/components/EmployeeExpenses';
 import PageTitle from '@/components/PageTitle';
 import PersonCard from '@/components/PersonCard';
 
@@ -13,7 +14,7 @@ const EmployeeDetail = ({ params }: { params: { id: string } }) => {
       <PageTitle backHref="/employees">
         Single Employee - {employee.firstname} {employee.lastname}
       </PageTitle>
-      <PersonCard person={employee} />
+      <PersonCard person={employee} actions={<EmployeeExpenses employeeId={employee.id} />} />
     </>
   );
 };
