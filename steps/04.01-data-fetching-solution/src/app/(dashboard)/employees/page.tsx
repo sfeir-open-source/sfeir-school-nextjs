@@ -5,13 +5,11 @@ import PageTitle from '@/components/PageTitle';
 import PersonCard from '@/components/PersonCard';
 import Search from '@/components/Search';
 
-import employeesData from '@/data/employees.json';
+import * as peopleApi from '@/api/people';
 
 const Employees = async ({ searchParams }: { searchParams: { search?: string } }) => {
-  const search = searchParams.search || '';
-  const employees = employeesData.filter((employee) =>
-    `${employee.firstname} ${employee.lastname}`.toLowerCase().includes(search.toLowerCase())
-  );
+  const search = searchParams.search || undefined;
+  const employeesData = await peopleApi.findAll({ search });
 
   return (
     <div className="flex flex-col">
@@ -23,7 +21,7 @@ const Employees = async ({ searchParams }: { searchParams: { search?: string } }
         </Button>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        {employees?.map((employee) => (
+        {employeesData?.data?.map((employee) => (
           <PersonCard
             key={employee.id}
             person={employee}

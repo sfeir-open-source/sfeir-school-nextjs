@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-import { promises as fs } from 'fs';
-import path from 'path';
-
 import Button from '@/components/Button';
 import PageTitle from '@/components/PageTitle';
 import PersonCard from '@/components/PersonCard';
@@ -15,15 +12,6 @@ const Employees = async ({ searchParams }: { searchParams: { search?: string } }
   const employees = employeesData.filter((employee) =>
     `${employee.firstname} ${employee.lastname}`.toLowerCase().includes(search.toLowerCase())
   );
-
-  const trackingObject = {
-    date: Date.now().toString(),
-    search: searchParams.search || '',
-    results: employees.length,
-  };
-
-  const logFilePath = path.join(process.cwd(), 'logs.txt');
-  await fs.appendFile(logFilePath, JSON.stringify(trackingObject) + '\n');
 
   return (
     <div className="flex flex-col">
