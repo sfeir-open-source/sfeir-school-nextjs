@@ -1,0 +1,7 @@
+{"date":"1725279539109","search":"","results":10}
+{"date":"1725279541415","search":"e","results":8}
+{"date":"1725279542139","search":"ea","results":1}
+{"date":"1725279545021","search":"cas","results":1}
+{"date":"1725279546930","search":"rienrginerg","results":0}
+{"date":"1725477180668","search":"","results":10}
+{"date":"1725477603422","search":"","results":10}
