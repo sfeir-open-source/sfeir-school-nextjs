@@ -2,7 +2,7 @@ import { Person } from '@/types';
 import { fetchJson } from './common';
 import qs from 'query-string';
 
-const baseUrl = process.env.API_BASE_URL + '/api' || 'http://localhost:3001/api';
+const baseUrl = process.env.API_BASE_URL ? process.env.API_BASE_URL + '/api' : 'http://localhost:3001/api';
 const apiKey = process.env.API_KEY || '';
 
 export const findAll = ({ search }: { search?: string }): Promise<{ data: Array<Person> }> => {

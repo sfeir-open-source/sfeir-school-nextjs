@@ -3,16 +3,11 @@
 import Image from 'next/image';
 import TextField from '@/components/TextField';
 import { Person } from '@/types';
-import { useFormState } from 'react-dom';
 
 import placeholderImage from '@/assets/images/profile-placeholder.jpg';
 import Button from './Button';
 
-type ActionState = {
-  validationErrors?: { [key: string]: Array<string> };
-};
-
-type Action = (id: string, formData: FormData) => Promise<void | ActionState>;
+type Action = (formData: FormData) => Promise<void>;
 
 type EmployeeFormProps = {
   employee?: Person;
@@ -20,16 +15,9 @@ type EmployeeFormProps = {
   className?: string;
 };
 
-const initialState = {
-  validationErrors: {},
-} as ActionState;
-
 const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className }) => {
-  // @ts-ignore
-  const [state, formAction] = useFormState<ActionState, Action>(action, initialState as unknown as void);
-
   return (
-    <form action={formAction} className={className}>
+    <form action={action} className={className}>
       <div className="flex justify-center w-full">
         <Image
           src={employee?.photo || placeholderImage}
@@ -41,64 +29,16 @@ const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className
       </div>
       <div className="flex w-full gap-14 mt-4">
         <div className="w-1/2 flex flex-col gap-4">
-          <TextField
-            id="firstname"
-            name="firstname"
-            label="First name"
-            defaultValue={employee?.firstname}
-            errorMessages={state?.validationErrors?.firstname}
-          />
-          <TextField
-            id="lastname"
-            name="lastname"
-            label="Last name"
-            defaultValue={employee?.lastname}
-            errorMessages={state?.validationErrors?.lastname}
-          />
-          <TextField
-            id="birthDate"
-            name="birthDate"
-            label="Birth date"
-            defaultValue={employee?.birthDate}
-            errorMessages={state?.validationErrors?.birthDate}
-          />
-          <TextField
-            id="email"
-            name="email"
-            label="Email address"
-            defaultValue={employee?.email}
-            errorMessages={state?.validationErrors?.email}
-          />
-          <TextField
-            id="phone"
-            name="phone"
-            label="Phone number"
-            defaultValue={employee?.phone}
-            errorMessages={state?.validationErrors?.phone}
-          />
+          <TextField id="firstname" name="firstname" label="First name" defaultValue={employee?.firstname} />
+          <TextField id="lastname" name="lastname" label="Last name" defaultValue={employee?.lastname} />
+          <TextField id="birthDate" name="birthDate" label="Birth date" defaultValue={employee?.birthDate} />
+          <TextField id="email" name="email" label="Email address" defaultValue={employee?.email} />
+          <TextField id="phone" name="phone" label="Phone number" defaultValue={employee?.phone} />
         </div>
         <div className="w-1/2 flex flex-col gap-4">
-          <TextField
-            id="position"
-            name="position"
-            label="Role"
-            defaultValue={employee?.position}
-            errorMessages={state?.validationErrors?.position}
-          />
-          <TextField
-            id="entryDate"
-            name="entryDate"
-            label="Entry date"
-            defaultValue={employee?.entryDate}
-            errorMessages={state?.validationErrors?.entryDate}
-          />
-          <TextField
-            id="manager"
-            name="manager"
-            label="Manager"
-            defaultValue={employee?.manager}
-            errorMessages={state?.validationErrors?.manager}
-          />
+          <TextField id="position" name="position" label="Role" defaultValue={employee?.position} />
+          <TextField id="entryDate" name="entryDate" label="Entry date" defaultValue={employee?.entryDate} />
+          <TextField id="manager" name="manager" label="Manager" defaultValue={employee?.manager} />
         </div>
       </div>
       <div className="flex justify-center">

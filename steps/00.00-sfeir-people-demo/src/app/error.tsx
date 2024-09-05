@@ -1,6 +1,6 @@
 'use client';
 
-const GlobalError = () => {
+const RootError = () => {
   return (
     <div className="flex min-h-screen bg-white dark:bg-slate-950 dark:text-white">
       <div className="w-1/3 bg-gray-400 dark:bg-gray-600"></div>
@@ -12,4 +12,4 @@ const GlobalError = () => {
   );
 };
 
-export default GlobalError;
+export default RootError;
