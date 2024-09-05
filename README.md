@@ -12,9 +12,21 @@
 
 You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-nextjs/).
 
-## Develop
+## Cloning without slides
 
-To run docs locally, go in directory `docs` and run `npx serve` of if you don't have node, you can use docker `docker-compose up`, and open slides on http://localhost:4242/.
+To clone this repository without the slides (which can be heavy) :
+
+```bash
+git clone --single-branch --branch without-slides https://github.com/sfeir-open-source/sfeir-school-nextjs.git
+```
+
+## Serving slides locally
+
+```bash
+npm run serve -w doc
+```
+
+Of if you don't have node, you can use docker `docker-compose up`, and open slides on http://localhost:4242/.
 
 ## Workshop
 
@@ -23,6 +35,18 @@ Workshops are in directory `steps` :
 - two directories per workshop :
   - one with a README.md with workshop steps and source file to complete
   - a second directory suffixed with `-solution` which contains source file with solutions.
+
+To run a workshop application :
+
+```bash
+npm run dev -w <workshop-number>
+```
+
+To run a workshop solution :
+
+```bash
+npm run dev -w <workshop-number>-solution
+```
 
 ## Contributing
 
