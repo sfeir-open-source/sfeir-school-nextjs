@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/sfeir-open-source/sfeir-school-nextjs#readme",
   "workspaces": [
-    "docs",
     "steps/*"
   ],
   "devDependencies": {
