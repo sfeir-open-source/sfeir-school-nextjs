@@ -9,7 +9,7 @@
 **1. next/link component**
 
 - Update the navigation menu to use client-side navigation
-- On the employees list view, add two links per card to go on the details page, or on the edit page
+- On the employees list view, add two links per card to access the **details** page or the **edit** page
 
 **2. Programmatic navigation**
 
@@ -17,8 +17,7 @@
 
 **3. Navigation state**
 
-- Implement a "Search" component (you can use the TextField component, or the \<input /\> element directly)
-- Update the URL when typing to add a query parameter containing the user search
-- Update the employees list view to filter depending on the URL query parameter
+- Implement a "Search" component : Update the URL to add the search as a query parameter
+- Update the employees list to filter depending on the user search
 
 </small>

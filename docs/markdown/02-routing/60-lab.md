@@ -19,12 +19,3 @@
 
 - Authentication layout for the login page
 - Dashboard layout for all the rest
-
-<br/>
-<br/>
-
-_Styling isn't important. You can help yourself to these components :_<br/>
-_DashboardLayout, AuthLayout, PageTitle, PersonCard, ExpensesTable, ExpenseDetails_ <br/><br/>
-_You can also use mocked data from **/src/data**_
-
-</small>
