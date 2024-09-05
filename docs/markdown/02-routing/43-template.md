@@ -46,3 +46,13 @@ const Wrapper = () => {
 ```
 
 <!-- .element: class="fragment" data-fragment-index="1"-->
+
+Notes:
+
+Layouts un peu particuliers : les templates
+
+Ce sont des layouts, mais qui sont re-render d'une page à l'autre
+
+Utile pour des besoins spécifiques. Par exemple pour du tracking (Redéclencher un pageView à chaque navigation)
+
+(Equivalent de mettre un key={pathname} sur un layout)

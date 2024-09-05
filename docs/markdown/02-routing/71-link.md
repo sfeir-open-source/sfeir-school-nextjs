@@ -30,3 +30,13 @@ const Component = ({ employeeId, employeeName }) => {
   );
 };
 ```
+
+Notes:
+
+Element principal de navigation : le liens
+
+C'est celui qu'il faudra utiliser un maximum
+
+Pour des questions d'accessibilité, et de sémantique HTML
+
+Il gère aussi le prefetch par défaut

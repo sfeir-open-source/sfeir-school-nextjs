@@ -19,3 +19,11 @@ const CodeBlock = async ({ code }) => {
 ```
 
 ##--##
+
+Notes:
+
+Avantage : permet d'éviter d'envoyer de grosses librairies côté client
+
+On peut éxécuter du code uniquement côté serveur et n'envoyer que le RSC payload
+
+Ce n'était pas possible avant avec le pages routes, même pour des composants non interactifs

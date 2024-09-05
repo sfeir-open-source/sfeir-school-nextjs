@@ -32,3 +32,7 @@ Patterns :
 <br/> <br/>
 
 <img src="./assets/images/02-routing/intercepting-pattern-routes.png" class="intercepting-pattern-routes-img" />
+
+Notes:
+
+Les patterns fonctionnent comme une arborescence de fichiers linux

@@ -13,3 +13,9 @@
 # Let's summarise
 
 <img src="./assets/images/03-server-components/cheatsheet.png" class="cheatsheet-38" />
+
+Notes:
+
+Quand utiliser un server component ?
+
+La réponse fournie par NExt.js

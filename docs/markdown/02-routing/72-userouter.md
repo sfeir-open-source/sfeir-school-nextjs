@@ -38,3 +38,9 @@ const Component = ({ employeeId, employeeName }) => {
   return <p>You will be redirected in 5 seconds</p>;
 };
 ```
+
+Notes:
+
+Si on ne peut pas utiliser de Link, ou qu'on souhaite interagir directement avec le router de manière programmatique
+
+On peut accéder à l'instance du router et utiliser ses méthodes

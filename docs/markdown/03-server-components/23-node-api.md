@@ -42,3 +42,11 @@ const LogViewer = async () => {
   );
 };
 ```
+
+Notes:
+
+Vu qu'ils ne sont joués qu'une seule fois et sur le serveur, ils permettent d'accéder aux apis nodejs
+
+On peut faire la comparaison avec PHP : le langage a accès à toutes les ressources du serveur
+
+Il n'y a que dans certains cas bien particuliers qu'on décide d'insérer du code "client" via un "script"

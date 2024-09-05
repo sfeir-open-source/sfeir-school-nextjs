@@ -20,3 +20,7 @@ Cons :
 - Bad SEO
 - A lot a JavaScript
 - Network blocking requests
+
+Notes:
+
+Description du workflow et explication des inconvénients du full CSR

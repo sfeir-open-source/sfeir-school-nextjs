@@ -39,3 +39,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 export default Layout;
 ```
+
+Notes:
+
+Layouts : pour toute UI ou fonctionnalité partagée entre plusieurs pages
+
+Pas de re-render d'une page à l'autre (partial rendering) : grosse plus value de la navigation côté client
+
+Illustration avec un exemple

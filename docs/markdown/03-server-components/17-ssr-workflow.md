@@ -18,3 +18,7 @@ Pros :
 
 - Better first loading performance
 - Better SEO
+
+Notes:
+
+Présentation du workflow SSR

@@ -29,3 +29,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 
 export default RootLayout;
 ```
+
+Notes:
+
+Layout un peu particulier : le root, qui est obligatoire
+
+Permet de définir la structure de base partagée par tout le site

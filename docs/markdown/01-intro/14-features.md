@@ -60,3 +60,15 @@
   - Server Actions
   </div>
   <!-- .element: class="fragment" data-fragment-index="5"-->
+
+Notes:
+
+- Passage en revue des principales fonctionnalités de Next.js
+
+Avec des exemples sur des sites en live :
+
+- Client side navigation (rapide à illustrer)
+
+Pour le CSS : Pas de prérogative du framework
+
+Il supporte les standards mais n'offre pas une manière officielle de faire. C'est au choix

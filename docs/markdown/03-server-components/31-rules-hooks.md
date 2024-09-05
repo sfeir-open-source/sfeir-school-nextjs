@@ -26,3 +26,19 @@ const Timer = () => {
   return <span>Seconds : {count}</span>
 }
 ```
+
+Notes:
+
+Maintenant qu'on comprend pourquoi les RSC existent, on va se pencher sur les règles d'utilisation
+
+Quand on sait pourquoi ils existent, normalement ça devrait paraitre assez logique
+
+à partir du moment où un composant a de l'interactivité : hooks, contextes, event handlers
+
+Ils ne peuvent pas être rendus uniquement côté serveur
+
+Sinon toute cette interactivité ne pourrait pas être mise en oeuvre dans le navigateur
+
+Donc pour dire qu'un composant doit être rendu de manière classique, "use client"
+
+ce qui ne l'empêche pas d'être rendu côté serveur. C'est juste que ses éléments interactifs seront ignorés dans le rendu initial

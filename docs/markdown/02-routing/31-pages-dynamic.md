@@ -41,3 +41,15 @@ Optional catch all segments :
 </div>
 
 <!-- .element: class="fragment" data-fragment-index="2"-->
+
+Notes:
+
+Illustration des différents dynamic segments
+
+Pour gérer des URLs complexes
+
+Warning : Pas de possibilité de gérer des segments composés d'une partie fixe + une partie dynamique
+
+Il faut le gérer dans tout le segment
+
+Ou via d'autres mécanismes qu'on verra plus tard

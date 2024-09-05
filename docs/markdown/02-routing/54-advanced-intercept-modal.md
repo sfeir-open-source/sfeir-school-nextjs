@@ -23,3 +23,9 @@ We can combine route interception and parallel routing to display a page on top 
 ##--##
 
 <img src="./assets/images/02-routing/modal-schema.png" class="intercepting-pattern-modal-schema-img" />
+
+Notes:
+
+L'interception toute seule peut sembler trop spécifique, mais utilisé en combinaison avec le parallel routing, elle permet de gérer des modals avec URL
+
+Démo sur l'application SFEIR People

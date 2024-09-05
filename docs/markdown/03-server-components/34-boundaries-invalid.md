@@ -30,3 +30,7 @@ It's impossible to import it from a client-component :
 <img src="./assets/images/03-server-components/tree-3.png" class="tree-34" />
 </div>
 <!-- .element: class="fragment" data-fragment-index="1"-->
+
+Notes:
+
+Exemple d'import impossible à faire

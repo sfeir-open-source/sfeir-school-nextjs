@@ -23,3 +23,11 @@ const MyComponent = () => {
   return <h1>Hello World!</h1>;
 };
 ```
+
+Notes:
+
+Justement, si on veut faire l'équivalent d'un script en PHP, on peut ajouter un "use client" sur un composant
+
+ça signifie alors qu'il sera éxécuté une fois, lors du rendu initial côté serveur
+
+Puis une ou plusieurs fois côté client, selon son cycle de vie

@@ -39,3 +39,11 @@ ReactDOM.createRoot(rootElement).render(<App />);
 </div>
 
 <!-- .element: class="fragment" data-fragment-index="1"-->
+
+Notes:
+
+les applications React à l'origine était quasiment toutes des SPA, rendues uniquement côté client
+
+Ce que le navigateur reçoit : une page HTML vide
+
+- un script chargé de booter l'application avec React et React-Dom

@@ -19,3 +19,16 @@ const Page = ({ params, searchParams }) => {
   );
 };
 ```
+
+Notes:
+
+Du côté serveur, on expliquera un peu plus tard ce que ça implique
+
+Mais on peut récupérer :
+
+- les paramètres dynamiques d'URL
+- les query params
+
+Uniquement dans les pages
+
+Donc il faudra le faire descendre si on en a besoin plus loin dans la hiérarchie de composants

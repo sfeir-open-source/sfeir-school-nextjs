@@ -48,3 +48,11 @@ And the component tree :
 <img src="./assets/images/03-server-components/tree-2.png" class="tree-34" />
 </div>
 <!-- .element: class="fragment" data-fragment-index="1"-->
+
+Notes:
+
+On est pas condamnés à n'avoir que des client-components
+
+On a des patterns de composition à notre disposition qui nous permettent de le gérer
+
+Par exemple, on peut passer un server component à un client component en tant que props (children ou props)

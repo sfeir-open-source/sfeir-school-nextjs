@@ -22,3 +22,13 @@
 
 </div>
 <!-- .element: class="fragment" data-fragment-index="1"-->
+
+Notes:
+
+Version 14 qui a bien stabilisé le app router
+
+La version 15 sera dans la même lignée
+
+Pas encore de visibilité sur une potentiel déprécation du pages router
+
+Même si on sent que le focus est mis sur le app router (résolution d'issues + nouvelles features)

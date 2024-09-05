@@ -31,3 +31,7 @@ They can be used for :
 </div>
 
 <!-- .element: class="fragment" data-fragment-index="1"-->
+
+Notes:
+
+Groups, fonctionnalité incomprise de Next, mais pourtant très puissante

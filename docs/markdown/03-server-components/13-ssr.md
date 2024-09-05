@@ -39,3 +39,11 @@ app.use('/employees/:id', async (req, res) => {
   res.send(html);
 });
 ```
+
+Notes:
+
+pendant longtemps, React c'était pour le CSR, et pour le SSR on utilisait des technos dédiées (Java / PHP etc...)
+
+Mais on a fini par réaliser qu'on pouvait utiliser les technos JavaScript pour faire le rendu côté serveur
+
+On fait globalement la même chose, mais à la demande des utilisateurs, sur un serveur au lieu du navigateur

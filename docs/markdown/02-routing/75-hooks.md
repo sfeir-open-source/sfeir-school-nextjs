@@ -47,3 +47,9 @@ export function Navigation() {
   );
 }
 ```
+
+Notes:
+
+Pour consulter l'état de la navigation, avant on avait un hook unique sur le pages router
+
+Maintenant c'est via des hooks dédiés

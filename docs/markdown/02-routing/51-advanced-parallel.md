@@ -40,3 +40,9 @@ const Layout = ({ children, settings, employees }) => {
   );
 };
 ```
+
+Notes:
+
+Utile quand on a une page composée de plusieurs parties indépendantes
+
+Inconvénient : difficile de faire communiquer les parties entre elles (partager les données de l'une à l'autre)

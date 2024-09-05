@@ -27,3 +27,9 @@ export default function EmployeePage({ employee }) {
   );
 }
 ```
+
+Notes:
+
+Sur NextJs, c'est le fonctionnement qu'on retrouve sur le pages router
+
+getServerSideProps => chargement de la donnée côté serveur + sérialisation
