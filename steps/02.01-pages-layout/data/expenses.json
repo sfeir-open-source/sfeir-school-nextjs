@@ -1,0 +1,342 @@
+[
+  {
+    "id": "0475830f-a563-44e0-8c5c-6d829c11a132",
+    "employeeId": "5763cd4d51fdb6588742f99e",
+    "price": {
+      "priceIncludingTax": 120.50,
+      "taxAmount": 20.50,
+      "priceExcludingTax": 100,
+      "currency": "EUR"
+    },
+    "label": "Business Lunch",
+    "description": "Lunch with a client to discuss a new project.",
+    "category": "Meals",
+    "receiptLink": "https://example.com/receipt1.pdf",
+    "status": "approved",
+    "creationDate": "2024-03-15T09:30:00Z",
+    "updateDate": "2024-03-18T14:45:00Z"
+  },
+  {
+    "id": "a2e8b2c4-99d8-4c13-9a9c-0a8a68623260",
+    "employeeId": "5763cd4d51fdb6588742f99e",
+    "price": {
+      "priceIncludingTax": 55.20,
+      "taxAmount": 7.20,
+      "priceExcludingTax": 48,
+      "currency": "USD"
+    },
+    "label": "Office Supplies",
+    "description": "Purchase of paper, pens, etc.",
+    "category": "Supplies",
+    "receiptLink": "https://example.com/receipt2.jpg",
+    "status": "created",
+    "creationDate": "2024-05-02T11:20:00Z",
+    "updateDate": "2024-05-02T11:20:00Z"
+  },
+  {
+    "id": "3d3fb561-0d9c-4021-8285-d2f49c40c47d",
+    "employeeId": "5763cd4d51fdb6588742f99e",
+    "price": {
+      "priceIncludingTax": 250,
+      "taxAmount": 0,
+      "priceExcludingTax": 250,
+      "currency": "EUR"
+    },
+    "label": "Plane Ticket",
+    "description": "Business trip to Berlin.",
+    "category": "Travel",
+    "receiptLink": "https://example.com/receipt3.png",
+    "status": "declined",
+    "creationDate": "2024-04-10T16:45:00Z",
+    "updateDate": "2024-04-12T09:30:00Z"
+  },
+  {
+    "id": "4c41689c-e5f5-4029-a181-38c498e7a82b",
+    "employeeId": "5763cd4d5fc36e4f842ca5a9",
+    "price": {
+      "priceIncludingTax": 80.00,
+      "taxAmount": 13.33,
+      "priceExcludingTax": 66.67,
+      "currency": "USD"
+    },
+    "label": "Hotel",
+    "description": "Hotel night in London.",
+    "category": "Accommodation",
+    "receiptLink": "https://example.com/receipt4.pdf",
+    "status": "approved",
+    "creationDate": "2024-06-20T08:15:00Z",
+    "updateDate": "2024-06-22T10:30:00Z"
+  },
+  {
+    "id": "871030e0-e485-41d5-882c-30201429a23f",
+    "employeeId": "5763cd4d5fc36e4f842ca5a9",
+    "price": {
+      "priceIncludingTax": 35.75,
+      "taxAmount": 5.75,
+      "priceExcludingTax": 30,
+      "currency": "EUR"
+    },
+    "label": "Taxi Fare",
+    "description": "Ride from the airport to the office.",
+    "category": "Transportation",
+    "receiptLink": "https://example.com/receipt5.jpg",
+    "status": "submitted",
+    "creationDate": "2024-07-05T19:00:00Z",
+    "updateDate": "2024-07-05T19:00:00Z"
+  },
+  {
+    "id": "e38e7368-8686-4211-a6a2-844806839a4c",
+    "employeeId": "5763cd4d979b62a209809160",
+    "price": {
+      "priceIncludingTax": 180.00,
+      "taxAmount": 30.00,
+      "priceExcludingTax": 150,
+      "currency": "USD"
+    },
+    "label": "Car Rental",
+    "description": "Car rental for a week.",
+    "category": "Transportation",
+    "receiptLink": "https://example.com/receipt6.png",
+    "status": "approved",
+    "creationDate": "2024-02-28T13:40:00Z",
+    "updateDate": "2024-03-02T11:15:00Z"
+  },
+  {
+    "id": "90432a7b-3009-491a-832b-a4622721a490",
+    "employeeId": "5763cd4d15e6c2c28b70f2e8",
+    "price": {
+      "priceIncludingTax": 65.00,
+      "taxAmount": 10.83,
+      "priceExcludingTax": 54.17,
+      "currency": "USD"
+    },
+    "label": "Client Meal",
+    "description": "Dinner with a potential client.",
+    "category": "Meals",
+    "receiptLink": "https://example.com/receipt7.pdf",
+    "status": "in_review",
+    "creationDate": "2024-07-18T20:30:00Z",
+    "updateDate": "2024-07-19T09:00:00Z"
+  },
+  {
+    "id": "a88a026a-e928-48b6-8a1d-90d980e7a423",
+    "employeeId": "5763cd4d5d6ad8dfc6c34883",
+    "price": {
+      "priceIncludingTax": 95.99,
+      "taxAmount": 15.99,
+      "priceExcludingTax": 80,
+      "currency": "EUR"
+    },
+    "label": "Software",
+    "description": "Monthly subscription to project management software.",
+    "category": "Software",
+    "receiptLink": "https://example.com/receipt8.jpg",
+    "status": "approved",
+    "creationDate": "2024-05-10T10:00:00Z",
+    "updateDate": "2024-05-11T14:20:00Z"
+  },
+  {
+    "id": "21e5615a-9c2a-40f2-a489-0c2f4a866098",
+    "employeeId": "5763cd4dc378a38ecd387737",
+    "price": {
+      "priceIncludingTax": 25.50,
+      "taxAmount": 4.25,
+      "priceExcludingTax": 21.25,
+      "currency": "USD"
+    },
+    "label": "Parking Fees",
+    "description": "Parking fees at the airport.",
+    "category": "Transportation",
+    "receiptLink": "https://example.com/receipt9.png",
+    "status": "created",
+    "creationDate": "2024-07-30T17:45:00Z",
+    "updateDate": "2024-07-30T17:45:00Z"
+  },
+  {
+    "id": "5200c69a-e387-4292-9282-98e66878524c",
+    "employeeId": "5763cd4dfa6f96cd26c65787",
+    "price": {
+      "priceIncludingTax": 150.00,
+      "taxAmount": 25.00,
+      "priceExcludingTax": 125,
+      "currency": "USD"
+    },
+    "label": "Training",
+    "description": "Participation in professional training.",
+    "category": "Training",
+    "receiptLink": "https://example.com/receipt10.pdf",
+    "status": "approved",
+    "creationDate": "2024-04-05T09:00:00Z",
+    "updateDate": "2024-04-07T11:30:00Z"
+  },
+  {
+    "id": "9b60a0a2-d2cf-41ab-a8a6-690080e77898",
+    "employeeId": "5763cd4d9d2a4f259b53c901",
+    "price": {
+      "priceIncludingTax": 75.20,
+      "taxAmount": 12.53,
+      "priceExcludingTax": 62.67,
+      "currency": "EUR"
+    },
+    "label": "Office Supplies",
+    "description": "Purchase of office supplies.",
+    "category": "Supplies",
+    "receiptLink": "https://example.com/receipt11.jpg",
+    "status": "approved",
+    "creationDate": "2024-06-12T14:20:00Z",
+    "updateDate": "2024-06-14T10:15:00Z"
+  },
+  {
+    "id": "8478041f-7a41-46f0-9158-34759c409873",
+    "employeeId": "5763cd4d51fdb6588742f99e",
+    "price": {
+      "priceIncludingTax": 280.00,
+      "taxAmount": 46.67,
+      "priceExcludingTax": 233.33,
+      "currency": "USD"
+    },
+    "label": "Plane Ticket",
+    "description": "Business trip to New York.",
+    "category": "Travel",
+    "receiptLink": "https://example.com/receipt12.png",
+    "status": "submitted",
+    "creationDate": "2024-07-25T11:30:00Z",
+    "updateDate": "2024-07-25T11:30:00Z"
+  },
+  {
+    "id": "4902854f-2049-4498-9597-74823829501f",
+    "employeeId": "5763cd4dba6362a3f92c954e",
+    "price": {
+      "priceIncludingTax": 95.00,
+      "taxAmount": 15.83,
+      "priceExcludingTax": 79.17,
+      "currency": "EUR"
+    },
+    "label": "Hotel",
+    "description": "Hotel night in Paris.",
+    "category": "Accommodation",
+    "receiptLink": "https://example.com/receipt13.pdf",
+    "status": "in_review",
+    "creationDate": "2024-08-01T08:45:00Z",
+    "updateDate": "2024-08-02T10:00:00Z"
+  },
+  {
+    "id": "4309573f-8903-4a42-a095-839529490582",
+    "employeeId": "5763cd4d3b57c672861bfa1f",
+    "price": {
+      "priceIncludingTax": 42.50,
+      "taxAmount": 7.08,
+      "priceExcludingTax": 35.42,
+      "currency": "EUR"
+    },
+    "label": "Taxi Fare",
+    "description": "Ride from the station to the conference venue.",
+    "category": "Transportation",
+    "receiptLink": "https://example.com/receipt14.jpg",
+    "status": "approved",
+    "creationDate": "2024-05-20T18:30:00Z",
+    "updateDate": "2024-05-22T09:15:00Z"
+  },
+  {
+    "id": "3028759f-9023-4a83-a785-928375928375",
+    "employeeId": "5763cd4d5fc36e4f842ca5a9",
+    "price": {
+      "priceIncludingTax": 190.00,
+      "taxAmount": 31.67,
+      "priceExcludingTax": 158.33,
+      "currency": "USD"
+    },
+    "label": "Car Rental",
+    "description": "Weekend car rental.",
+    "category": "Transportation",
+    "receiptLink": "https://example.com/receipt15.png",
+    "status": "created",
+    "creationDate": "2024-07-28T12:00:00Z",
+    "updateDate": "2024-07-28T12:00:00Z"
+  },
+  {
+    "id": "92837592-8375-9283-7592-837592837592",
+    "employeeId": "5763cd4d979b62a209809160",
+    "price": {
+      "priceIncludingTax": 70.00,
+      "taxAmount": 11.67,
+      "priceExcludingTax": 58.33,
+      "currency": "USD"
+    },
+    "label": "Client Meal",
+    "description": "Lunch with a client to discuss a project.",
+    "category": "Meals",
+    "receiptLink": "https://example.com/receipt16.pdf",
+    "status": "declined",
+    "creationDate": "2024-03-08T13:15:00Z",
+    "updateDate": "2024-03-10T09:30:00Z"
+  },
+  {
+    "id": "85930583-0385-9305-8303-859305830385",
+    "employeeId": "5763cd4d15e6c2c28b70f2e8",
+    "price": {
+      "priceIncludingTax": 110.50,
+      "taxAmount": 18.42,
+      "priceExcludingTax": 92.08,
+      "currency": "EUR"
+    },
+    "label": "Software",
+    "description": "Purchase of a license for design software.",
+    "category": "Software",
+    "receiptLink": "https://example.com/receipt17.jpg",
+    "status": "approved",
+    "creationDate": "2024-06-05T10:45:00Z",
+    "updateDate": "2024-06-07T14:30:00Z"
+  },
+  {
+    "id": "03958305-8305-9385-0385-930583059385",
+    "employeeId": "5763cd4d5d6ad8dfc6c34883",
+    "price": {
+      "priceIncludingTax": 35.00,
+      "taxAmount": 5.83,
+      "priceExcludingTax": 29.17,
+      "currency": "USD"
+    },
+    "label": "Parking Fees",
+    "description": "Parking fees at the conference center.",
+    "category": "Transportation",
+    "receiptLink": "https://example.com/receipt18.png",
+    "status": "submitted",
+    "creationDate": "2024-07-15T16:20:00Z",
+    "updateDate": "2024-07-15T16:20:00Z"
+  },
+  {
+    "id": "93850395-8503-9585-0395-850395850395",
+    "employeeId": "5763cd4dc378a38ecd387737",
+    "price": {
+      "priceIncludingTax": 165.00,
+      "taxAmount": 27.50,
+      "priceExcludingTax": 137.50,
+      "currency": "USD"
+    },
+    "label": "Training",
+    "description": "Registration for a webinar on digital marketing.",
+    "category": "Training",
+    "receiptLink": "https://example.com/receipt19.pdf",
+    "status": "in_review",
+    "creationDate": "2024-07-10T09:00:00Z",
+    "updateDate": "2024-07-11T14:30:00Z"
+  },
+  {
+    "id": "85039585-0395-8503-9585-039585039585",
+    "employeeId": "5763cd4dfa6f96cd26c65787",
+    "price": {
+      "priceIncludingTax": 82.75,
+      "taxAmount": 13.79,
+      "priceExcludingTax": 68.96,
+      "currency": "EUR"
+    },
+    "label": "Office Supplies",
+    "description": "Purchase of ink cartridges for the printer.",
+    "category": "Supplies",
+    "receiptLink": "https://example.com/receipt20.jpg",
+    "status": "approved",
+    "creationDate": "2024-06-28T11:45:00Z",
+    "updateDate": "2024-06-30T09:15:00Z"
+  }
+]

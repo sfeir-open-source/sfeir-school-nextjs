@@ -13,7 +13,7 @@ export const verifyExists = (request, reply, done) => {
 
 export const findAll = async (request, reply) => {
   const page = Number(request.query?.page) || 1;
-  const per_page = Number(request.query?.per_page) || 1;
+  const per_page = Number(request.query?.per_page) || 100;
   const employee = request.query?.employee;
   const sortBy = request.query?.sort_by;
   const order = request.query?.order?.toLowerCase() === 'desc' ? 'desc' : 'asc';
