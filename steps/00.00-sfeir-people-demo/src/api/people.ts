@@ -6,7 +6,7 @@ import { PaginationAttributes, Person } from '@/types';
 
 import { fetchJson } from './common';
 
-const baseUrl = process.env.API_BASE_URL;
+const baseUrl = process.env.API_BASE_URL || 'http://localhost:3001';
 
 const formatPersonObject = (apiPerson: Person): Person => ({
   ...apiPerson,
