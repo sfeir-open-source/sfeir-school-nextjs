@@ -15,6 +15,8 @@ export const Tags = {
   EXPENSE_SINGLE: 'expense-single',
 };
 
+const pause = (delay: number) => new Promise((resolve) => setTimeout(() => resolve('done'), delay));
+
 export const findAll = async (
   query: {
     page?: number;
@@ -36,6 +38,8 @@ export const findAll = async (
     data: Array<Expense>;
     pagination: PaginationAttributes;
   }>(url, { next: { tags: [Tags.EXPENSE_COMMON, Tags.EXPENSE_LIST] } });
+
+  await pause(2000);
 
   return {
     pagination: expensesData.pagination,
