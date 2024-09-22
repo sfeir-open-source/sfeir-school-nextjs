@@ -17,6 +17,20 @@ They will not be interpreted as routes :
 
 <img src="./assets/images/02-routing/colocation.png" class="routing-colocation-img"  />
 
+##--##
+
+<br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+
+<div>
+
+**⚠️ Warning**
+
+- It can create confusion
+- May conflict with future conventions
+
+</div>
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
 Notes:
 
 La colocation de fichier permet d'envisager toute structure de projet

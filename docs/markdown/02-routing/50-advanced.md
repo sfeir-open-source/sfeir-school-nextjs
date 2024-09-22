@@ -1,11 +1,6 @@
-<!-- .slide: class="two-column with-code " -->
+<!-- .slide: class="transition bg-pink" -->
 
-# Routing
-
-## Advanced features
-
-- Parallel routing
-- Intercepting routes
+# Routing : Advanced Patterns
 
 Notes:
 

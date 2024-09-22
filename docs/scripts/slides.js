@@ -3,12 +3,12 @@ import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-s
 function schoolSlides() {
   return [
     '00-school/01-title.md',
-    '00-school/10-planning.md',
-    '00-school/20-wifi.md',
-    '00-school/21-repo.md',
-    '00-school/22-requirements.md',
-    '00-school/30-speaker.md',
-    '00-school/31-tour-de-table.md',
+    '00-school/10-speaker.md',
+    '00-school/11-tour-de-table.md',
+    '00-school/20-planning.md',
+    '00-school/30-requirements.md',
+    '00-school/31-wifi.md',
+    '00-school/32-repo.md',
     '00-school/40-what-we-will-do.md',
     '00-school/41-plan.md',
     '00-school/42-application.md',
@@ -36,10 +36,21 @@ function routingSlides() {
   return [
     '02-routing/00-title.md',
     '02-routing/01-intro.md',
+    '02-routing/02-vocabulary.md',
+    '02-routing/03-vocabulary-1.md',
+    '02-routing/04-vocabulary-2.md',
     '02-routing/10-naming.md',
-    '02-routing/11-hierarchy.md',
-    '02-routing/12-nesting.md',
-    '02-routing/13-with-pages-router.md',
+    '02-routing/10.1-naming-page.md',
+    '02-routing/10.2-naming-layout.md',
+    '02-routing/10.3-naming-template.md',
+    '02-routing/10.4-naming-loading.md',
+    '02-routing/10.5-naming-error.md',
+    '02-routing/10.6-naming-global-error.md',
+    '02-routing/10.7-naming-notfound.md',
+    '02-routing/10.8-naming-route.md',
+    '02-routing/12-hierarchy.md',
+    '02-routing/13-nesting.md',
+    '02-routing/14-with-pages-router.md',
     '02-routing/20-colocation.md',
     '02-routing/21-colocation-private.md',
     '02-routing/30-pages.md',
@@ -218,7 +229,8 @@ function renderingMethodSlides() {
     '08-rendering-methods/54-streaming-parallel.md',
     '08-rendering-methods/60-suspense.md',
     '08-rendering-methods/61-limitations.md',
-    '08-rendering-methods/70-lab.md',
+    '08-rendering-methods/70-attendance-sheet.md',
+    '08-rendering-methods/80-lab.md',
   ];
 }
 
@@ -245,6 +257,12 @@ function deployingSlides() {
   ];
 }
 
+function conclusionSlides() {
+  return [
+    '20-conclusion/00-title.md', //
+  ];
+}
+
 function formation() {
   return [
     ...schoolSlides(),
@@ -257,6 +275,7 @@ function formation() {
     ...middlewareSlides(),
     ...renderingMethodSlides(),
     ...deployingSlides(),
+    ...conclusionSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
   });

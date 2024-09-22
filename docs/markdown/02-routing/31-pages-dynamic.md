@@ -17,9 +17,9 @@
 Catch all segments :
 
 ```
-/app/post/[...slug]/page                website.com/a
-                                        website.com/a/b
-                                        website.com/a/b/c
+/app/post/[...slug]/page.tsx            website.com/post/a
+                                        website.com/post/a/b
+                                        website.com/post/a/b/c
                                         ...
 ```
 
@@ -32,9 +32,9 @@ Catch all segments :
 Optional catch all segments :
 
 ```
-/app/post/[[...slug]]/page              website.com
-                                        website.com/a
-                                        website.com/a/b
+/app/post/[[...slug]]/page              website.com/post
+                                        website.com/post/a
+                                        website.com/post/a/b
                                         ...
 ```
 
