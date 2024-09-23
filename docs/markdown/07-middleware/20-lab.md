@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# next.config.js lifecycles
+# 07.01 - next.config.js lifecycles
 
 ## Lab
 

@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Data fetching
+<h1 id="data-fetching" style="margin-bottom: 30px;">04.01 - Data fetching</h1>
 
 ## Lab
 
@@ -16,5 +16,11 @@
 
 - On the employee details page, there is a `<EmployeeExpenses />` component. It's displaying employee expenses on click, by making an asynchronous fetch request. Open it and find why it's not working
 - Create a route handler to make this component work
+
+<br/> <br/>
+
+**ℹ️ Running the lab**<br/>
+`npm run start -w api`<br/>
+`npm run dev -w 04.01`<br/>
 
 </small>

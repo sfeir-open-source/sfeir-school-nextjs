@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Server Components
+# 03.02 - Server Components
 
 ## Lab
 
@@ -15,5 +15,9 @@
 
 - Create a `ThemeProvider` component which will share the user's theme preference in a context
 - Subscribe to this context to update the application logo
+
+<br/> <br/>
+**ℹ️ Running the lab**<br/>
+`npm run dev -w 03.02`
 
 </small>

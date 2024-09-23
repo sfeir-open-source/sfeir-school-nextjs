@@ -8,6 +8,8 @@ import { validateBodySchema, addDelay, protectRequest } from './handlers.js';
 import * as employeeController from './controllers/employees.js';
 import * as expenseController from './controllers/expenses.js';
 
+import { DELAY_DEFAULT, DELAY_MUTATION } from './config.js';
+
 import swagger from '@fastify/swagger';
 import swaggerUi from '@fastify/swagger-ui';
 
@@ -96,7 +98,7 @@ fastify.get(
     },
     preHandler: [
       protectRequest, //
-      addDelay(),
+      addDelay(DELAY_DEFAULT),
     ],
   },
   employeeController.findAll
@@ -127,7 +129,7 @@ fastify.post(
     preHandler: [
       protectRequest, //
       validateBodySchema(employeeController.employeeSchema),
-      addDelay(1000),
+      addDelay(DELAY_MUTATION),
     ],
   },
   employeeController.create
@@ -138,7 +140,7 @@ fastify.get(
   {
     preHandler: [
       protectRequest, //
-      addDelay(),
+      addDelay(DELAY_DEFAULT),
       employeeController.verifyExists,
     ],
   },
@@ -150,7 +152,7 @@ fastify.delete(
   {
     preHandler: [
       protectRequest, //
-      addDelay(),
+      addDelay(DELAY_DEFAULT),
       employeeController.verifyExists,
     ],
   },
@@ -182,7 +184,7 @@ fastify.patch(
     preHandler: [
       protectRequest, //
       validateBodySchema(employeeController.partialEmployeeSchema),
-      addDelay(1000),
+      addDelay(DELAY_MUTATION),
       employeeController.verifyExists,
     ],
   },
@@ -223,7 +225,7 @@ fastify.get(
     },
     preHandler: [
       protectRequest, //
-      addDelay(),
+      addDelay(DELAY_DEFAULT),
     ],
   },
   expenseController.findAll
@@ -231,7 +233,13 @@ fastify.get(
 
 fastify.get(
   '/api/expenses/:id',
-  { preHandler: [protectRequest, addDelay(), expenseController.verifyExists] },
+  {
+    preHandler: [
+      protectRequest, //
+      addDelay(DELAY_MUTATION),
+      expenseController.verifyExists,
+    ],
+  },
   expenseController.findOne
 );
 

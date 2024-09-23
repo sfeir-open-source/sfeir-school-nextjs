@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Form hooks
+# 05.02 - Form hooks
 
 ## Lab
 
@@ -16,5 +16,10 @@
 
 - In the `EmployeeForm`, use the appropriate hook to get the form state
 - Pass the form validation errors to `TextFields` components
+
+<br/> <br/>
+**ℹ️ Running the lab**<br/>
+`npm run start -w api` <br/>
+`npm run dev -w 05.02`
 
 </small>

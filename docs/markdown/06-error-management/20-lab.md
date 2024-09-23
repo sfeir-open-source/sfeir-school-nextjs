@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Error Boundaries
+<h1 id="error-boundaries" style="margin-bottom: 30px;">06.01 - Error Boundaries</h1>
 
 ## Lab
 
@@ -10,8 +10,7 @@
 
 - Try to run the application without starting the API server : it's broken
 - Add a global error boundary to display a user-friendly maintenance page
-- Take a look at the home page files : it has parralel routing !
-- Implement error boundaries to the homepage for errors close to the problem
+- Implement error boundaries to the homepage parallel routes
 
 **2. Now you can re-start the API Server :**
 
@@ -22,5 +21,8 @@
 - Take a look at the expenses details page : the page is broken ! :o
 - Find the error cause
 - Implement a custom Error boundary using `react-error-boundary` to prevent the whole page to break
+
+**ℹ️ Running the lab**<br/>
+`npm run dev -w 06.01`
 
 </small>
