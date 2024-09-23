@@ -13,7 +13,7 @@ const Expenses = async () => {
   );
 };
 
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 export default Expenses;

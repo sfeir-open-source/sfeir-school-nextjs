@@ -1,12 +1,19 @@
 <!-- .slide: class="two-column with-code" -->
 
+<style>
+  .routing-component-nesting {
+    width: 1400px;
+    height: auto;
+  }
+</style>
+
 # Routing
 
 ## Nested file hierarchy
 
 Nested routes = nested components
 
-![](./assets/images/component-nesting.png)
+<img src="./assets/images/02-routing/component-nesting.png" class="routing-component-nesting"  />
 
 Notes:
 

@@ -1,4 +1,4 @@
-# 08.01 - Suspense
+# 08.02 - Suspense
 
 ## Prerequisites
 

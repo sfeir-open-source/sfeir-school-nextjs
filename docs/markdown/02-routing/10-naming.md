@@ -1,26 +1,28 @@
-<!-- .slide: class="with-code" -->
+<!-- .slide: class="two-column with-code" -->
+
+<style>
+  .routing-naming {
+    width: 500px;
+    height: auto;
+  }
+</style>
 
 # Routing
 
 ## Conventions
 
-(.tsx | .js | .jsx)
+(.tsx | .ts | .js | .jsx)
 
-- **layout** : shared UI for a segment (and its children)
-- **template** : shared UI for a segment with re-render (and its children)
-- **page** : public route UI
-- **loading** : loading UI for a segment (and its children)
-- **not-found** : page not found UI for a segment (and its children)
-- **error** : Unexpected error UI for a segment (and its children)
-- **route** : Server API endpoint definitions
+<img src="./assets/images/02-routing/naming.png" class="routing-naming"  />
+
+##--##
+
+<br/> <br/> <br/>
 
 <div>
-<br/>
 
-**Special files**
+⚠️ **Warning :** <br/> It's not possible to create routes other than with the file-system based router
 
-- **/error** (root level) : Unexpected global error
-- **default** : (advanced) Fallback UI for parallel routes
 </div>
 <!-- .element: class="fragment" data-fragment-index="1"-->
 

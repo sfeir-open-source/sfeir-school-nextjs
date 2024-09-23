@@ -1,12 +1,19 @@
 <!-- .slide: class="two-column with-code" -->
 
+<style>
+  .routing-component-hierarchy {
+    width: 1700px;
+    height: auto;
+  }
+</style>
+
 # Routing
 
 ## File hierarchy
 
 File components are rendered and nested in a specific order :
 
-![full-width](./assets/images/component-hierarchy.png)
+<img src="./assets/images/02-routing/component-hierarchy.png" class="routing-component-hierarchy"  />
 
 Notes:
 
