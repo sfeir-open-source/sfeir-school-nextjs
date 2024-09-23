@@ -15,7 +15,7 @@
 
 Templates are layouts, but when navigating :
 
-- Their children are re-render
+- Their children re-render
 - Their state is reset
 
 <img src="./assets/images/02-routing/template-schema.png" class="template-schema-img" />

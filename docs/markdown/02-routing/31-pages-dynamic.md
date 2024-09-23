@@ -4,43 +4,20 @@
 
 ## Page declaration : dynamic routing
 
-```
-/app/post/[id]/page.tsx                 website.com/post/123
-                                        website.com/post/abc
-                                        ...
+Dynamic segments :
+<img src="./assets/images/02-routing/page-2.png" style="width:700px;height:auto;"  />
 
-/app/post/[id]/[name]/edit/page.tsx     website.com/post/123/123/edit
-                                        ...
-```
+##--##
+
+<br/> <br/> <br/>
 
 <div>
-Catch all segments :
+Catch all segments, <br/>and optional catch-all segments :
 
-```
-/app/post/[...slug]/page.tsx            website.com/post/a
-                                        website.com/post/a/b
-                                        website.com/post/a/b/c
-                                        ...
-```
+<img src="./assets/images/02-routing/page-3.png" style="width:700px;height:auto;display:block;"  />
 
 </div>
-
 <!-- .element: class="fragment" data-fragment-index="1"-->
-
-<div>
-
-Optional catch all segments :
-
-```
-/app/post/[[...slug]]/page              website.com/post
-                                        website.com/post/a
-                                        website.com/post/a/b
-                                        ...
-```
-
-</div>
-
-<!-- .element: class="fragment" data-fragment-index="2"-->
 
 Notes:
 

@@ -4,11 +4,11 @@
 
 ## Hydration problems
 
-- Poor reactivity
+- Poor interactivity
 - A lot of JavaScript is needed
-- Server code only at route level, not for any component
 - The whole page is hydrated at once
 - Even non-interactive components are hydrated
+- Server code only at route level, not for any component
 - Non standard (every framework has its own aproach)
 
 Notes:

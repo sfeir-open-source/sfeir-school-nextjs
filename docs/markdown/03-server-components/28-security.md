@@ -1,6 +1,6 @@
 <!-- .slide: class="two-column with-code " -->
 
-# Server components
+# Server Components
 
 ## Security & Data fetching
 
