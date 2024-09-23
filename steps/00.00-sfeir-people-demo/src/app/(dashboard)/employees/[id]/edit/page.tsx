@@ -1,7 +1,5 @@
 import * as peopleApi from '@/api/people';
-import Link from 'next/link';
 
-import ArrowLeft from '@/components/Icons/ArrowLeft';
 import EmployeeForm from '@/components/EmployeeForm';
 
 import { update } from '../../actions';

@@ -20,9 +20,6 @@ npm run start -w 03.01
 
 ## Information
 
-For the active navigation item, you can use the class `bg-blue-50 dark:bg-slate-950`
-<br/><br/>
-
 ## Documentation :
 
 - [Reading file with Node.js](https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs)

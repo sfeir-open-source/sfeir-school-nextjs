@@ -1,0 +1,2 @@
+{"date":"1725610756604","search":"","results":10}
+{"date":"1725610760081","search":"lea","results":1}
