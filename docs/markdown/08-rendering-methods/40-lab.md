@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Rendering methods
+<h1 id="rendering-methods" style="margin-bottom: 30px;">08.01 - Rendering methods</h1>
 
 ## Lab
 
@@ -23,5 +23,9 @@
 
 **4. Bonus** : <br/>
 Implement a `<NoSSR>{children}</NoSSR/>` component : that make sure its children are never rendered on the server
+
+**ℹ️ Running the lab**<br/>
+`npm run start -w api`<br/>
+`npm run dev -w 08.01`
 
 </small>

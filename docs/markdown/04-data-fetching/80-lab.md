@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Caching
+<h1 id="caching" style="margin-bottom: 30px;">04.02 - Caching</h1>
 
 ## Lab
 
@@ -18,5 +18,11 @@ Let's create a mechanism to fix this :
 - second one to revalidate all data cache
 
 **3. Play with cache revalidation**
+
+<br/>
+
+**ℹ️ Running the lab**<br/>
+`npm run start -w api`<br/>
+`npm run dev -w 04.02`<br/>
 
 </small>

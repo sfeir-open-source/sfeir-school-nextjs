@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-<h1 id="navigating" style="margin-bottom: 30px;">Navigating</h1>
+<h1 id="navigating" style="margin-bottom: 30px;">02.02 - Navigating</h1>
 
 ## Lab
 
@@ -19,5 +19,10 @@
 
 - Implement a "Search" component : Update the URL to add the search as a query parameter
 - Update the employees list to filter depending on the user search
+
+<br/> <br/>
+
+**ℹ️ Running the lab**<br/>
+`npm run dev -w 02.02`
 
 </small>

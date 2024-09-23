@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Middleware
+# 07.02 - Middleware
 
 ## Lab
 

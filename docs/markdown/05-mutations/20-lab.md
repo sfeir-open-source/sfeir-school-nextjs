@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# Server actions
+# 05.01 - Server actions
 
 ## Lab
 
@@ -15,5 +15,10 @@
 
 - Make sure that the data is not stale after creating a new employee
 - Once the form is submitted, redirect to the new employee detail page
+
+<br/> <br/>
+**ℹ️ Running the lab**<br/>
+`npm run start -w api` <br/>
+`npm run dev -w 05.01`
 
 </small>
