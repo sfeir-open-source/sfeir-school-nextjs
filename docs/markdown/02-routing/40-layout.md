@@ -11,9 +11,9 @@
 
 ## Shared layouts
 
-Layouts can be used to define a UI that is shared between several sub-segments.
+Layouts can be used to define a UI that is shared between multiple sub-segments
 
-When navigating, layouts are **not re-rendered**, they **preserve their state** and remain **interactive**.
+When navigating, layouts are **not re-rendered** and they **preserve their state**
 
 <img src="./assets/images/02-routing/layout-schema.png" class="layout-schema-img" />
 

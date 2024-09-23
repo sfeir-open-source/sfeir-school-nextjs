@@ -6,10 +6,19 @@
 
 Create a _page.tsx_ file in nested directories :
 
-```
-/app/page.tsx                 website.com
-/app/admin/page.tsx           website.com/admin
-/app/about/contact/page.tsx   website.com/about/contact
+<img src="./assets/images/02-routing/page-1.png" style="width:700px;height:auto;"  />
+
+##--##
+
+<br/> <br/> <br/> <br/>
+And export a React component :
+
+```jsx
+const MyPage = () => {
+  return <h1>Hello world !</h1>;
+};
+
+export default MyPage;
 ```
 
 Notes:

@@ -1,6 +1,6 @@
 <!-- .slide: class="exercice" -->
 
-# 03.01 - Server Components
+<h1 id="server-components" style="margin-bottom: 30px;">03.01 - Server Components</h1>
 
 ## Lab
 
