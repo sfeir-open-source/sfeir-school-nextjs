@@ -1,10 +1,10 @@
-# Déroulement de la formation
+# Practical information
 
 <p class="center">
-C'est quand la pause ?<br>
-Quand est-ce qu'on mange ?<br>
-Tour de table ...
+When's the break ?<br>
+When do we eat?<br>
+Are there any constraints?<br/>
 </p>
 <br><br>
 
-**Feuille de présence (obligatoire)**
+**Attendance sheet (required)**
