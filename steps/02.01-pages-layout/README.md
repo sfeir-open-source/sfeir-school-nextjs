@@ -15,12 +15,12 @@ npm run start -w 02.01
 - Employees pages (List, Detail, Edit, Create)
 - Expenses page (List, Single)
 
-**2. Add some metadatas (title, description)**
-
-**3. Create the application layouts**
+**2. Create the application layouts**
 
 - Authentication layout for the login page
 - Dashboard layout for all the rest
+
+**Bonus : Add some metadatas (title, description)**
 
 ## Information
 

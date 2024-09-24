@@ -13,7 +13,7 @@
 - Employees pages (List, Detail, Edit, Create)
 - Expenses page (List, Single)
 
-**3. Create the application layouts**
+**2. Create the application layouts**
 
 - Authentication layout for the login page
 - Dashboard layout for all the rest
