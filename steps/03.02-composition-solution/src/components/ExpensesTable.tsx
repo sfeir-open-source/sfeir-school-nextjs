@@ -36,7 +36,7 @@ const ExpensesTable: React.FC<ExpensesTableProps> = ({ expenses }) => {
             )}
           >
             <td className="pl-4 pr-2 py-4 font-bold whitespace-nowrap dark:text-white">{expense.label}</td>
-            <td className="px-2 py-4">{new Date(expense.creationDate).toLocaleDateString()}</td>
+            <td className="px-2 py-4">{new Date(expense.creationDate).toLocaleDateString('en-GB')}</td>
             <td className="px-2 py-4">{expense.category}</td>
             <td className="pl-2 pr-4 py-4">
               {expense.price.priceIncludingTax} {expense.price.currency}

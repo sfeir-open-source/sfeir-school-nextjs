@@ -46,8 +46,8 @@ const ExpenseDetails: React.FC<ExpenseDetailsProps> = async ({ expenseId }) => {
       }
       workflow={
         <Paper className="p-4 space-y-4 mb-4">
-          <ExpenseDetailsRow label="Creation date" value={new Date(expense.creationDate).toLocaleString()} />
-          <ExpenseDetailsRow label="Last update" value={new Date(expense.updateDate).toLocaleString()} />
+          <ExpenseDetailsRow label="Creation date" value={new Date(expense.creationDate).toLocaleString('en-GB')} />
+          <ExpenseDetailsRow label="Last update" value={new Date(expense.updateDate).toLocaleString('en-GB')} />
           <ExpenseDetailsRow label="Status" value={expense.status} />
         </Paper>
       }
