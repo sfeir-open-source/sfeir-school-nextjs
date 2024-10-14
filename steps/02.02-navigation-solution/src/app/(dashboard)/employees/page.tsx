@@ -7,7 +7,7 @@ import Search from '@/components/Search';
 
 import employeesData from '@/data/employees.json';
 
-const Employees = async ({ searchParams }: { searchParams: { search?: string } }) => {
+const Employees = ({ searchParams }: { searchParams: { search?: string } }) => {
   const search = searchParams.search || '';
   const employees = employeesData.filter((employee) =>
     `${employee.firstname} ${employee.lastname}`.toLowerCase().includes(search.toLowerCase())
