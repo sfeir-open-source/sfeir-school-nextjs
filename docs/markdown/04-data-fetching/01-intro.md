@@ -2,20 +2,13 @@
 
 # Data fetching
 
-**What we will learn :**
-
-Two ways to fetch data :
+**Two ways to fetch data :**
 
 1. On the server : React Server Components
 2. On the client : Route handlers
 
 <div>
 
-Caching :
-
-- Request memoïzation
-- Data cache
-- Full Route cache
-- Router cache
+3. On the client : React 19's use() hook
 </div>
 <!-- .element: class="fragment" data-fragment-index="1"-->

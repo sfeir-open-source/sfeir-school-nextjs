@@ -3,8 +3,9 @@ import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-s
 function schoolSlides() {
   return [
     '00-school/01-title.md',
-    '00-school/10-speaker.md',
-    '00-school/11-tour-de-table.md',
+    '00-school/10-speaker-leo.md',
+    '00-school/11-speaker-thomas.md',
+    '00-school/12-tour-de-table.md',
     '00-school/20-planning.md',
     '00-school/30-requirements.md',
     '00-school/31-wifi.md',
@@ -27,7 +28,6 @@ function introSlides() {
     '01-intro/14-features.md',
     '01-intro/20-history.md',
     '01-intro/21-app-router.md',
-    '01-intro/22-today.md',
     '01-intro/30-command.md',
     '01-intro/40-letsgo.md',
     '01-intro/41-labs.md',
@@ -52,7 +52,7 @@ function routingSlides() {
     '02-routing/10.8-naming-route.md',
     '02-routing/12-hierarchy.md',
     '02-routing/13-nesting.md',
-    '02-routing/14-with-pages-router.md',
+    // '02-routing/14-with-pages-router.md',
     '02-routing/20-colocation.md',
     '02-routing/21-colocation-private.md',
     '02-routing/30-pages.md',
@@ -62,11 +62,11 @@ function routingSlides() {
     '02-routing/42-nested-layout.md',
     '02-routing/43-template.md',
     '02-routing/44-groups.md',
-    '02-routing/50-advanced.md',
-    '02-routing/51-advanced-parallel.md',
-    '02-routing/52-advanced-intercept.md',
-    '02-routing/53-advanced-intercept-patterns.md',
-    '02-routing/54-advanced-intercept-modal.md',
+    // '02-routing/50-advanced.md',
+    // '02-routing/51-advanced-parallel.md',
+    // '02-routing/52-advanced-intercept.md',
+    // '02-routing/53-advanced-intercept-patterns.md',
+    // '02-routing/54-advanced-intercept-modal.md',
     '02-routing/60-lab.md',
     '02-routing/70-navigation.md',
     '02-routing/71-link.md',
@@ -128,21 +128,21 @@ function dataFetchingSlides() {
     '04-data-fetching/23-client-handler-headers.md',
     '04-data-fetching/24-client-fetch.md',
     '04-data-fetching/30-lab.md',
-    '04-data-fetching/40-caching.md',
-    '04-data-fetching/41-memoization.md',
-    '04-data-fetching/42-memoization-example.md',
-    '04-data-fetching/43-memoisation-third.md',
-    '04-data-fetching/44-data.md',
-    '04-data-fetching/45-data-ttl.md',
-    '04-data-fetching/46-data-ttl-behavior.md',
-    '04-data-fetching/47-data-on-demand.md',
-    '04-data-fetching/48-data-third.md',
-    '04-data-fetching/50-route-cache.md',
-    '04-data-fetching/51-route-cache-configuration.md',
-    '04-data-fetching/60-router-browser-cache.md',
-    '04-data-fetching/61-router-browser-cache-configuration.md',
-    '04-data-fetching/70-recap.md',
-    '04-data-fetching/80-lab.md',
+    // '04-data-fetching/40-caching.md',
+    // '04-data-fetching/41-memoization.md',
+    // '04-data-fetching/42-memoization-example.md',
+    // '04-data-fetching/43-memoisation-third.md',
+    // '04-data-fetching/44-data.md',
+    // '04-data-fetching/45-data-ttl.md',
+    // '04-data-fetching/46-data-ttl-behavior.md',
+    // '04-data-fetching/47-data-on-demand.md',
+    // '04-data-fetching/48-data-third.md',
+    // '04-data-fetching/50-route-cache.md',
+    // '04-data-fetching/51-route-cache-configuration.md',
+    // '04-data-fetching/60-router-browser-cache.md',
+    // '04-data-fetching/61-router-browser-cache-configuration.md',
+    // '04-data-fetching/70-recap.md',
+    // '04-data-fetching/80-lab.md',
   ];
 }
 
@@ -235,7 +235,7 @@ function renderingMethodSlides() {
     '08-rendering-methods/54-streaming-parallel.md',
     '08-rendering-methods/60-suspense.md',
     '08-rendering-methods/61-limitations.md',
-    '08-rendering-methods/70-attendance-sheet.md',
+    // '08-rendering-methods/70-attendance-sheet.md',
     '08-rendering-methods/80-lab.md',
   ];
 }
@@ -263,6 +263,18 @@ function deployingSlides() {
   ];
 }
 
+function a11ySlides() {
+  return [];
+}
+
+function i18nSlides() {
+  return [];
+}
+
+function furtherExploration() {
+  return [...deployingSlides(), ...a11ySlides(), ...i18nSlides()];
+}
+
 function conclusionSlides() {
   return [
     '20-conclusion/00-title.md', //
@@ -280,7 +292,7 @@ function formation() {
     ...errorSlides(),
     ...middlewareSlides(),
     ...renderingMethodSlides(),
-    ...deployingSlides(),
+    ...furtherExploration(),
     ...conclusionSlides(),
   ].map((slidePath) => {
     return { path: slidePath };

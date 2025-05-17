@@ -12,12 +12,12 @@
 
 ##--##
 
-<br/> <br/> <br />
+<!-- <br/> <br/> <br />
 
 **Advanced features :**
 
 - Parrallel routing
-- Route interception
+- Route interception -->
 
 Notes:
 

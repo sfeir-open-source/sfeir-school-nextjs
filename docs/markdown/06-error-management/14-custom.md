@@ -4,7 +4,7 @@
 
 ## What if I need to be more granular?
 
-You can still create custom ErrorBoundary component :
+You can still create a custom ErrorBoundary old-school Class Component :
 
 ```jsx
 class ErrorBoundary extends React.Component {

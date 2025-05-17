@@ -8,4 +8,3 @@ Next.js combines various rendering strategies :
 - static rendering
 - incremental static generation
 - streaming
-- bonus : partial pre-rendering
