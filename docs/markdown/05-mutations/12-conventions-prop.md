@@ -17,4 +17,6 @@ const ServerComponent = () => {
 };
 ```
 
+<small>⚠️ props named `action` or ending with `Action` are assumed to receive Server Actions</small>
+
 _Useful for passing server actions from server components to client components_

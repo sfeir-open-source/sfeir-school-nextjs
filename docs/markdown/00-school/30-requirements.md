@@ -1,8 +1,8 @@
 ## Requirements
 
 - Basic knowledge of HTML and CSS
-- Completion of Typescript institute or equivalent
-- Completion of the React institute or equivalent
+- Basic knowledge of React
+- Basic knowledge of Typescript
 
 <br/><br/>
 
