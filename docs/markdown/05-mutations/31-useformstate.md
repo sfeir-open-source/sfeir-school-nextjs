@@ -2,9 +2,9 @@
 
 # Utility hooks
 
-## useFormState
+## useActionState
 
-Creates a state that is updated when a form action is invoked :
+Allows you to update state based on the result of a form action :
 
 ```jsx
 import { useActionState } from 'react';

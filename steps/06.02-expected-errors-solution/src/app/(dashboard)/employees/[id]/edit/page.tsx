@@ -6,7 +6,8 @@ import * as peopleApi from '@/api/people';
 import { update } from '../../actions';
 import Alert from '@/components/Alert';
 
-const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
+const EmployeeDetail = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   try {
     const employee = await peopleApi.findOne(params.id);
     const action = update.bind(null, params.id);
