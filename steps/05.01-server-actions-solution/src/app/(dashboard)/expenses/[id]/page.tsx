@@ -3,7 +3,8 @@ import PageTitle from '@/components/PageTitle';
 
 import * as expensesApi from '@/api/expenses';
 
-const SingleExpense = async ({ params }: { params: { id: string } }) => {
+const SingleExpense = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   const expense = await expensesApi.findOne(params.id);
 
   return (

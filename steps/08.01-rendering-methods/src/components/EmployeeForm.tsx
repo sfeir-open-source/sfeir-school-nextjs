@@ -1,10 +1,10 @@
+import { useActionState } from "react";
 'use client';
 
 import Image from 'next/image';
 import TextField from '@/components/TextField';
 import { Person } from '@/types';
 import SubmitFormButton from './SubmitFormButton';
-import { useFormState } from 'react-dom';
 
 import placeholderImage from '@/assets/images/profile-placeholder.jpg';
 
@@ -26,7 +26,7 @@ const initialState = {
 
 const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className }) => {
   // @ts-ignore
-  const [state, formAction] = useFormState<ActionState, Action>(action, initialState as unknown as void);
+  const [state, formAction] = useActionState<ActionState, Action>(action, initialState as unknown as void);
 
   return (
     <form action={formAction} className={className}>
