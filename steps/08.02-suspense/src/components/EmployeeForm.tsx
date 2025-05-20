@@ -1,6 +1,6 @@
-import { useActionState } from "react";
 'use client';
 
+import { useActionState } from "react";
 import Image from 'next/image';
 import TextField from '@/components/TextField';
 import { Person } from '@/types';
