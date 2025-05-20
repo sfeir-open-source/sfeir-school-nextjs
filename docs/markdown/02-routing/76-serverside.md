@@ -6,17 +6,20 @@
 
 **using page props, only in Page components (page.tsx) :**
 
+**⚠️ Since Next 15, you must await params and searchParams**
+
 ```jsx
-const Page = ({ params, searchParams }) => {
-  return (
-    <EmployeesList
-      currentEmployee={params.id}
-      search={searchParams.query}
-      page={searchParams.page}
-      sort={searchParams.sort}
-      filter={searchParams.filter}
-    />
-  );
+const Page = async ({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ id: string }>,
+  searchParams: Promise<{ query: string, page: string, sort: string, filter: string }>,
+}) => {
+  const { id } = await params;
+  const { query, page, sort, filter } = await searchParams;
+
+  return <EmployeesList currentEmployee={id} search={query} page={page} sort={sort} filter={filter} />;
 };
 ```
 
