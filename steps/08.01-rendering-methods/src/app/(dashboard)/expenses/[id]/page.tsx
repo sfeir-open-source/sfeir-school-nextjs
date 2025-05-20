@@ -5,7 +5,8 @@ import * as expensesApi from '@/api/expenses';
 import { notFound } from 'next/navigation';
 import { ApiError } from '@/api/error';
 
-const SingleExpense = async ({ params }: { params: { id: string } }) => {
+const SingleExpense = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   try {
     const expense = await expensesApi.findOne(params.id);
 

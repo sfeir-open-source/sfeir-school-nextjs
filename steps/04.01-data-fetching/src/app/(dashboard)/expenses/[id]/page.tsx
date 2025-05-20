@@ -4,7 +4,8 @@ import PageTitle from '@/components/PageTitle';
 import expensesData from '@/data/expenses.json';
 import { Expense } from '@/types';
 
-const SingleExpense = ({ params }: { params: { id: string } }) => {
+const SingleExpense = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   const expense = expensesData.find((expense) => expense.id === params.id);
 
   return (

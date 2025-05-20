@@ -7,7 +7,8 @@ import Search from '@/components/Search';
 
 import * as peopleApi from '@/api/people';
 
-const Employees = async ({ searchParams }: { searchParams: { search?: string } }) => {
+const Employees = async (props: { searchParams: Promise<{ search?: string }> }) => {
+  const searchParams = await props.searchParams;
   const search = searchParams.search || undefined;
   const employeesData = await peopleApi.findAll({ search });
 
