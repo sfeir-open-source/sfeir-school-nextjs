@@ -10,6 +10,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/expenses/variation',
+        destination: '/expenses',
+        permanent: false,
+      },
+      {
+        source: '/employees/:id',
+        destination: '/e_:id',
+        permanent: false,
+      },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [
@@ -32,20 +46,6 @@ const nextConfig = {
       afterFiles: [],
       fallback: [],
     };
-  },
-  async redirects() {
-    return [
-      {
-        source: '/expenses/variation',
-        destination: '/expenses',
-        permanent: false,
-      },
-      {
-        source: '/employees/:id',
-        destination: '/e_:id',
-        permanent: false,
-      },
-    ];
   },
 };
 

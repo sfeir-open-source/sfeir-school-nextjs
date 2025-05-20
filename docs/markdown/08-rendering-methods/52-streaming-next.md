@@ -7,4 +7,4 @@
 Two possibilities :
 
 - using router file convention : **loading.tsx**
-- using **<Suspense />** directly
+- using **`<Suspense />`** directly
