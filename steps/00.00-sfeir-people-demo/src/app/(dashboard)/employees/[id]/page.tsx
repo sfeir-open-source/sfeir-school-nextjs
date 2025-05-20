@@ -10,7 +10,8 @@ import Paper from '@/components/Paper';
 import { Suspense } from 'react';
 import TableLoading from '@/components/TableLoading';
 
-const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
+const EmployeeDetail = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   const employee = await peopleApi.findOne(params.id);
 
   return (

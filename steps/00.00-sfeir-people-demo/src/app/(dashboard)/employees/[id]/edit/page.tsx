@@ -5,7 +5,8 @@ import EmployeeForm from '@/components/EmployeeForm';
 import { update } from '../../actions';
 import PageTitle from '@/components/PageTitle';
 
-const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
+const EmployeeDetail = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   const employee = await peopleApi.findOne(params.id);
 
   const formAction = update.bind(null, employee.id);

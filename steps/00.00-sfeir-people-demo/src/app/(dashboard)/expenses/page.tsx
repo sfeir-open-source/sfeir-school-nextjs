@@ -4,7 +4,8 @@ import PageTitle from '@/components/PageTitle';
 import * as expensesApi from '@/api/expenses';
 import Pagination from '@/components/Pagination';
 
-const Expenses = async ({ searchParams }: { searchParams: { page?: string } }) => {
+const Expenses = async (props: { searchParams: Promise<{ page?: string }> }) => {
+  const searchParams = await props.searchParams;
   const { data: expenses, pagination } = await expensesApi.findAll({
     page: Number(searchParams.page) || 1,
   });

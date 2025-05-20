@@ -4,7 +4,8 @@ import PersonCard from '@/components/PersonCard';
 import * as peopleApi from '@/api/people';
 import EmployeeExpenses from '@/components/EmployeeExpenses';
 
-const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
+const EmployeeDetail = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   const employee = await peopleApi.findOne(params.id);
 
   if (!employee) return <PageTitle backHref="/employees">Single Employee - Not found</PageTitle>;

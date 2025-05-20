@@ -6,7 +6,8 @@ import PersonCard from '@/components/PersonCard';
 import Search from '@/components/Search';
 import Link from 'next/link';
 
-const Employees = async ({ searchParams }: { searchParams: { search?: string; page?: string } }) => {
+const Employees = async (props: { searchParams: Promise<{ search?: string; page?: string }> }) => {
+  const searchParams = await props.searchParams;
   const peopleData = await peopleApi.findAll({
     page: Number(searchParams.page) || 1,
     search: searchParams.search,
