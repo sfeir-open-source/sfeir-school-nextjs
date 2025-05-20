@@ -3,23 +3,14 @@ import PageTitle from '@/components/PageTitle';
 
 import employeesData from '@/data/employees.json';
 
-
-interface EmployeeDetailPageParams {
-  params: Promise<{
-    id: string;
-  }>;
-}
-
-const EmployeeDetail = async ({ params }: EmployeeDetailPageParams) => {
-  const { id } = await params;
-
-  const employee = employeesData.find((employee) => employee.id === id);
+const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
+  const employee = employeesData.find((employee) => employee.id === params.id);
 
   if (!employee) return <PageTitle>Single Employee - Not found</PageTitle>;
 
   return (
     <>
-      <PageTitle backHref={`/employees/${id}`}>
+      <PageTitle backHref={`/employees/${params.id}`}>
         Single Employee - {employee.firstname} {employee.lastname} <span className="font-normal">| Edit</span>
       </PageTitle>
 
