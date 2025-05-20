@@ -12,14 +12,6 @@
 
 You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-nextjs/).
 
-## Cloning without slides
-
-To clone this repository without the slides (which can be heavy) :
-
-```bash
-git clone --single-branch --branch without-slides https://github.com/sfeir-open-source/sfeir-school-nextjs.git
-```
-
 ## Serving slides locally
 
 ```bash
