@@ -4,9 +4,9 @@
 
 ![speaker blue](./assets/images/speaker-thomas.jpg)
 
-<!-- ![badge first-badge](./assets/images/js-logo.png)
-![badge second-badge](./assets/images/nodejs-logo.png)
-![badge third-badge](./assets/images/logo-react.png) -->
+![badge first-badge](./assets/images/logo-react.svg)
+![badge second-badge](./assets/images/logo-react-certification-2.png)
+![badge third-badge](./assets/images/logo-spring-boot.png)
 
 ![company](./assets/images/logo-SFEIR-blanc.png)
 
@@ -16,6 +16,6 @@
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### [@github](https://github.com/)
+### [@ThomasOUVRY](https://github.com/ThomasOUVRY)
 
 <!-- .element: class="icon-second" -->
