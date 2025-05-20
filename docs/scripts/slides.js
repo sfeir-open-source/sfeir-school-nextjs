@@ -292,7 +292,7 @@ function formation() {
     ...errorSlides(),
     ...middlewareSlides(),
     ...renderingMethodSlides(),
-    ...furtherExploration(),
+    // ...furtherExploration(),
     ...conclusionSlides(),
   ].map((slidePath) => {
     return { path: slidePath };
