@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 import { headers } from 'next/headers';
 
 export async function GET(request: Request) {
-  const headersList = headers();
+  const headersList = await headers();
   const referer = headersList.get('referer');
 
   return new Response('Hello, Next.js!', {
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 import { cookies } from 'next/headers';
 
 export async function GET(request: Request) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const token = cookieStore.get('token');
 
   return new Response('Hello, Next.js!', {

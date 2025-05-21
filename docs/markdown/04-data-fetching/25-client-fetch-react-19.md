@@ -5,10 +5,6 @@
 **🆕 Using fetch API since React 19**
 
 ```js
-'use client';
-
-import { use } from 'react';
-
 const ServerComponent = ({ employeeId }: { employeeId: string }) => {
   const employee: Promise<Employee> = fetchEmployeeById(employeeId);
 

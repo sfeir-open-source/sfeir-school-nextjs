@@ -18,6 +18,7 @@ const MyComponent = ({ employeeId }) => {
       setEmployee(data);
       setLoadingStatus('LOADED');
     };
+    fetchData();
   }, []);
 
   if (loadingStatus === 'LOADING') return 'Loading...';
