@@ -6,7 +6,6 @@ import { revalidateTag } from 'next/cache';
 import { redirect } from 'next/navigation';
 
 export const create = async (state, formData: FormData) => {
-  console.log(formData);
   const payload = {
     firstname: formData.get('firstname') as string,
     lastname: formData.get('lastname') as string,
