@@ -3,7 +3,7 @@
 # Présentation
 
 ![speaker](./assets/images/speaker-antoiner.jpeg)
-![badge](./assets/images/logo-react.png)
+![badge](./assets/images/logo-react.svg)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
 ## Antoine RICHARD

@@ -15,7 +15,7 @@ export const login = async (_: unknown, formData: FormData) => {
   const token = await loginFn(username, password);
 
   if (token) {
-    cookies().set('auth_token', token, {
+    (await cookies()).set('auth_token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       maxAge: 3600,

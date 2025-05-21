@@ -5,6 +5,8 @@
 ## Lab
 
 <small>
+⚠️ Before starting the lab, make sure to run the API server and <strong>set the API_KEY and API_BASE_URL</strong> in your .env file.
+See .env.example for more details.
 
 **1. On the server :**
 

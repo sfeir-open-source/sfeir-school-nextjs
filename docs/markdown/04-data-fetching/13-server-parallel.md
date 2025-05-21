@@ -32,7 +32,9 @@ EmployeesList.tsx
 import { BASE_URL } from './api';
 
 const EmployeesList = async () => {
-  const employees = await fetch(`${BASE_URL}/api/employees`).then((res) => res.json());
+  const data = await fetch(`${BASE_URL}/api/employees`);
+  const employees = await data.json();
+
   return (
     <>
       {employees.map((employee) => (
@@ -49,7 +51,9 @@ ExpensesList.tsx
 import { BASE_URL } from './api';
 
 const ExpensesList = async () => {
-  const expenses = await fetch(`${BASE_URL}/api/expenses`).then((res) => res.json());
+  const data = await fetch(`${BASE_URL}/api/expenses`);
+  const expenses = await data.json();
+
   return <ExpensesListUI expenses={expenses} />;
 };
 ```

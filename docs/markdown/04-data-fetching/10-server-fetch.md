@@ -6,11 +6,12 @@
 
 Data can be fetched into an asynchronous server component :
 
-```jsx [3-4]
+```jsx [4-5]
 import { BASE_URL } from './api';
 
 const Employees = async () => {
-  const data = await fetch(`${BASE_URL}/api/employees`).then((res) => res.json());
+  const data = await fetch(`${BASE_URL}/api/employees`);
+  const employees = await data.json();
 
   return (
     <>

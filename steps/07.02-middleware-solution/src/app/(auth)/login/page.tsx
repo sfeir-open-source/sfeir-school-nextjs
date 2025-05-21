@@ -1,7 +1,6 @@
 'use client';
 
-import { Metadata } from 'next';
-import { useFormState } from 'react-dom';
+import { useActionState } from 'react';
 
 import TextField from '@/components/TextField';
 import Button from '@/components/Button';
@@ -11,7 +10,7 @@ import { login } from './../actions';
 
 const LoginPage = () => {
   // @ts-ignore
-  const [state, formAction] = useFormState<ActionState, Action>(login, { error: null } as unknown as void);
+  const [state, formAction] = useActionState<ActionState, Action>(login, { error: null } as unknown as void);
 
   return (
     <form action={formAction} className="w-full max-w-md m-auto">

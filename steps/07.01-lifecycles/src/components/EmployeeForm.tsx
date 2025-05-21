@@ -1,12 +1,13 @@
 'use client';
 
+import { useActionState } from 'react';
+
 import Image from 'next/image';
 import TextField from '@/components/TextField';
 import { Person } from '@/types';
 
 import placeholderImage from '@/assets/images/profile-placeholder.jpg';
 import SubmitFormButton from './SubmitFormButton';
-import { useFormState } from 'react-dom';
 
 type Action = (formData: FormData) => Promise<void>;
 
@@ -17,7 +18,7 @@ type EmployeeFormProps = {
 };
 
 const EmployeeForm: React.FC<EmployeeFormProps> = ({ employee, action, className }) => {
-  const [state, formAction] = useFormState(action, {});
+  const [state, formAction] = useActionState(action, {});
   return (
     <form action={formAction} className={className}>
       <div className="flex justify-center w-full">

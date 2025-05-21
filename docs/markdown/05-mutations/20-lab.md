@@ -13,7 +13,6 @@
 
 **2. Server Action**
 
-- Make sure that the data is not stale after creating a new employee
 - Once the form is submitted, redirect to the new employee detail page
 
 <br/> <br/>

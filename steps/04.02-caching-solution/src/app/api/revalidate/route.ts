@@ -1,4 +1,5 @@
 import { revalidatePath, revalidateTag } from 'next/cache';
+import { NextRequest } from 'next/server';
 
 export const GET = (request: NextRequest) => {
   const tag = request.nextUrl.searchParams.get('tag');

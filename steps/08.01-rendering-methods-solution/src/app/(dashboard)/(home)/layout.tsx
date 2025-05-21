@@ -25,6 +25,5 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({ employeesSlot, expensesSlot }) 
 };
 
 export const dynamic = 'force-dynamic';
-export const fetchCache = 'force-no-store';
 
 export default HomeLayout;

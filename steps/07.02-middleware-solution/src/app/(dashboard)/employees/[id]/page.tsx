@@ -5,7 +5,8 @@ import * as peopleApi from '@/api/people';
 import EmployeeExpenses from '@/components/EmployeeExpenses';
 import { notFound } from 'next/navigation';
 
-const EmployeeDetail = async ({ params }: { params: { id: string } }) => {
+const EmployeeDetail = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params;
   try {
     const employee = await peopleApi.findOne(params.id);
     return (

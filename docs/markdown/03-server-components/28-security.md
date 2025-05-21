@@ -41,6 +41,6 @@ Notes:
 
 Avantage : sécurité
 
-Permet de s'assurer que du code est joué uniquement sur le serveur, et qu'il ne sera jamais envyué au client
+Permet de s'assurer que du code est joué uniquement sur le serveur, et qu'il ne sera jamais envoyé au client
 
 Permet également l'utilisation de async, donc permet les taches asynchrones comme le chargement de donnée

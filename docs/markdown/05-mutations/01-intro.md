@@ -18,7 +18,7 @@
 
 <div>
 
-**For what?**
+**What for?**
 
 - To handle form submissions
 - To handle data mutation

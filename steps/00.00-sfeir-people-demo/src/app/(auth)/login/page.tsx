@@ -1,9 +1,10 @@
 'use client';
 
+import { useActionState } from 'react';
+
 import TextField from '@/components/TextField';
 import { login } from './../actions';
 import Button from '@/components/Button';
-import { useFormState } from 'react-dom';
 import Alert from '@/components/Alert';
 
 type ActionState = {
@@ -14,7 +15,7 @@ type Action = (formData: FormData) => Promise<void | ActionState>;
 
 const LoginPage = () => {
   // @ts-ignore
-  const [state, formAction] = useFormState<ActionState, Action>(login, { error: null } as unknown as void);
+  const [state, formAction] = useActionState<ActionState, Action>(login, { error: null } as unknown as void);
 
   return (
     <form action={formAction} className="w-full max-w-md m-auto">
