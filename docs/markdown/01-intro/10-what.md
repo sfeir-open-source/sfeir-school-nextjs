@@ -11,6 +11,6 @@
 
 - React metaframework for building web applications
 - Developed by Vercel (previously ZEIT)
-- Current major version : 14
+- Current major version : 15
   <br/> <br/> <br/>
   <img src="./assets/images/01-intro/vercel.png" class="vercel-10"  />
