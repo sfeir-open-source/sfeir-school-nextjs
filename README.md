@@ -10,7 +10,7 @@
 
 # Slides
 
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-nextjs/).
+You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-nextjs?theme=institute).
 
 ## Serving slides locally
 
