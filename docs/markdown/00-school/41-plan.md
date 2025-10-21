@@ -9,10 +9,4 @@
 - Module 5 : **Error Management**
 - Module 6 : **Lifecycles & Middleware**
 - Module 7 : **Rendering methods**
-
-<div>
-
-- **Further exploration** : Deployment, a11y, i18n
-
-</div>
-<!-- .element: class="fragment" data-fragment-index="1"-->
+- Module 8 (further exploration) : **Deploying**

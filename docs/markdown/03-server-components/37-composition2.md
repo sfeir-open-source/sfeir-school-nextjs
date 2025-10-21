@@ -14,17 +14,19 @@
 App.tsx :
 
 ```jsx
-import EmployeesDisplayMode from './EmployeesDisplayMode';
 import EmployeesList from './EmployeesList';
+import EmployeeCard from './EmployeeCard';
 import Pagination from './Pagination';
 
 const App = ({ employees }) => {
   return (
     <>
-      <EmployeesDisplayMode>
-        <EmployeesList employees={employees} />
+      <EmployeesList>
+        {employees.map((employee) => (
+          <EmployeeCard key={employee.id} employee={employee} />
+        ))}
         <Pagination />
-      </EmployeesDisplayMode>
+      </EmployeesList>
     </>
   );
 };
