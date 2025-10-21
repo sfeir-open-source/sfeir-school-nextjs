@@ -17,7 +17,7 @@
 
 <div>
 <br/> <br/><br/>
-"use client" is declared at module-level <br/> All client-component imports are considered to be client-components.
+"use client" is declared at module-level <br/> All imports are considered to be client-components.
 
 <img src="./assets/images/03-server-components/tree-2.png" class="tree-33" />
 </div>
