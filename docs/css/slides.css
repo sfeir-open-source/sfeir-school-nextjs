@@ -1,5 +1,16 @@
-/*# sourceMappingURL=slides.css.map */
-
-.title-margin-sm h1 {
-  margin-bottom: 60px !important;
+.reveal .slides section.with-code pre.medium-code:not(.literal) code {
+  font-size: 1.1em;
+  line-height: 2em;
 }
+
+.reveal .slides section.with-code pre.big-code:not(.literal) code {
+  font-size: 1.3em;
+  line-height: 2em;
+}
+
+.reveal .slides section.with-code pre code {
+  max-height: 800px !important;
+  overflow: auto !important;
+}
+
+/*# sourceMappingURL=slides.css.map */

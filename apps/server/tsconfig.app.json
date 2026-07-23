@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist/apps/server",
+    "types": ["node"],
+    "rootDir": "src",
+    "tsBuildInfoFile": "dist/apps/server/tsconfig.app.tsbuildinfo",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["eslint.config.js", "eslint.config.cjs", "eslint.config.mjs"],
+  "files": ["src/db/db.json"]
+}

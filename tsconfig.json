@@ -1,0 +1,109 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/01-layout"
+    },
+    {
+      "path": "./apps/server"
+    },
+    {
+      "path": "./docs"
+    },
+    {
+      "path": "./libs/type"
+    },
+    {
+      "path": "./libs/ui"
+    },
+    {
+      "path": "./libs/ui-solution"
+    },
+    {
+      "path": "./apps/01-layout-solution"
+    },
+    {
+      "path": "./apps/02-navigation-solution"
+    },
+    {
+      "path": "./apps/02-navigation"
+    },
+    {
+      "path": "./libs/helpers"
+    },
+    {
+      "path": "./apps/03-server-components-solution"
+    },
+    {
+      "path": "./apps/03-server-components"
+    },
+    {
+      "path": "./apps/04-composition"
+    },
+    {
+      "path": "./apps/04-composition-solution"
+    },
+    {
+      "path": "./apps/05-data-fetching-solution"
+    },
+    {
+      "path": "./apps/05-data-fetching"
+    },
+    {
+      "path": "./apps/06-data-caching"
+    },
+    {
+      "path": "./apps/06-data-caching-solution"
+    },
+    {
+      "path": "./apps/07-server-action"
+    },
+    {
+      "path": "./apps/07-server-action-solution"
+    },
+    {
+      "path": "./apps/08-form-hooks"
+    },
+    {
+      "path": "./apps/08-form-hooks-solution"
+    },
+    {
+      "path": "./apps/09-error-boundaries"
+    },
+    {
+      "path": "./apps/09-error-boundaries-solution"
+    },
+    {
+      "path": "./apps/10-expected-errors"
+    },
+    {
+      "path": "./apps/10-expected-errors-solution"
+    },
+    {
+      "path": "./apps/11-lifecycle-solution"
+    },
+    {
+      "path": "./apps/11-lifecycle"
+    },
+    {
+      "path": "./apps/12-middleware"
+    },
+    {
+      "path": "./apps/12-middleware-solution"
+    },
+    {
+      "path": "./apps/13-rendering-methods-solution"
+    },
+    {
+      "path": "./apps/13-rendering-methods"
+    },
+    {
+      "path": "./apps/14-suspense-solution"
+    },
+    {
+      "path": "./apps/14-suspense"
+    }
+  ]
+}

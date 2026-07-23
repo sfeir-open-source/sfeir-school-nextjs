@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/01-layout",
+    "module": "esnext",
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.js",
+    "**/*.test.js"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.js",
+    "**/*.mjs"
+  ]
+}

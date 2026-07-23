@@ -1,11 +1,9 @@
-import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/sfeir-school-theme.mjs';
+import { SfeirThemeInitializer } from '../web_modules/sfeir-school-theme/dist/sfeir-school-theme.mjs';
 
 function schoolSlides() {
   return [
     '00-school/01-title.md',
-    '00-school/10-speaker-antoine.md',
-    '00-school/11-speaker-leo.md',
-    '00-school/12-speaker-thomas.md',
+    '00-school/12.1-speaker-nicolas.md',
     '00-school/13-tour-de-table.md',
     '00-school/20-planning.md',
     '00-school/30-requirements.md',
@@ -20,261 +18,282 @@ function schoolSlides() {
 
 function introSlides() {
   return [
-    '01-intro/01-title.md',
-    '01-intro/02-bg.md',
-    '01-intro/10-what.md',
-    '01-intro/11-what-meta.md',
-    '01-intro/12-react-vercel.md',
-    '01-intro/13-equivalents.md',
-    '01-intro/14-features.md',
-    '01-intro/20-history.md',
-    '01-intro/21-app-router.md',
-    '01-intro/30-command.md',
-    '01-intro/40-letsgo.md',
-    '01-intro/41-labs.md',
+    '01-intro/00-title.md',
+    '01-intro/10-problem.md',
+    '01-intro/11-metaframework.md',
+    '01-intro/12-vercel-react.md',
+    '01-intro/20-app-router.md',
+    '01-intro/30-whats-ahead.md',
+    '01-intro/40-history.md',
+    '01-intro/50-create-next-app.md',
+    '01-intro/51-cli-flags.md',
+    '01-intro/60-project-structure.md',
+    '01-intro/80-lets-go.md',
+    '01-intro/90-lab.md',
   ];
 }
 
-function routingSlides() {
+function layoutSlides() {
   return [
-    '02-routing/00-title.md',
-    '02-routing/01-intro.md',
-    '02-routing/02-vocabulary.md',
-    '02-routing/03-vocabulary-1.md',
-    '02-routing/04-vocabulary-2.md',
-    '02-routing/10-naming.md',
-    '02-routing/10.1-naming-page.md',
-    '02-routing/10.2-naming-layout.md',
-    '02-routing/10.3-naming-template.md',
-    '02-routing/10.4-naming-loading.md',
-    '02-routing/10.5-naming-error.md',
-    '02-routing/10.6-naming-global-error.md',
-    '02-routing/10.7-naming-notfound.md',
-    '02-routing/10.8-naming-route.md',
-    '02-routing/12-hierarchy.md',
-    '02-routing/13-nesting.md',
-    '02-routing/14-with-pages-router.md',
-    '02-routing/20-colocation.md',
-    '02-routing/21-colocation-private.md',
-    '02-routing/30-pages.md',
-    '02-routing/31-pages-dynamic.md',
-    '02-routing/40-layout.md',
-    '02-routing/41-root-layout.md',
-    '02-routing/42-nested-layout.md',
-    '02-routing/43-template.md',
-    '02-routing/44-groups.md',
-    '02-routing/50-advanced.md',
-    '02-routing/51-advanced-parallel.md',
-    '02-routing/52-advanced-intercept.md',
-    '02-routing/53-advanced-intercept-patterns.md',
-    '02-routing/54-advanced-intercept-modal.md',
-    '02-routing/60-lab.md',
-    '02-routing/70-navigation.md',
-    '02-routing/71-link.md',
-    '02-routing/72-userouter.md',
-    '02-routing/73-history.md',
-    '02-routing/74-redirect.md',
-    '02-routing/75-hooks.md',
-    '02-routing/76-serverside.md',
-    '02-routing/80-lab.md',
+    '02-layout/00-title.md',
+    '02-layout/10-page.md',
+    '02-layout/11-page-schema.md',
+    '02-layout/20-layout-problem.md',
+    '02-layout/21-layout-solution.md',
+    '02-layout/22-layout-persist.md',
+    '02-layout/30-root-layout.md',
+    '02-layout/40-nested-layouts.md',
+    '02-layout/50-route-groups.md',
+    '02-layout/60-image-problem.md',
+    '02-layout/61-next-image.md',
+    '02-layout/62-next-image-depth.md',
+    '02-layout/70-metadata.md',
+    '02-layout/71-metadata-depth.md',
+    '02-layout/80-lets-go.md',
+    '02-layout/90-lab.md',
   ];
 }
 
-function serverComponentSlides() {
+function navigationSlides() {
   return [
-    '03-server-components/00-title.md',
-    '03-server-components/01-intro.md',
-    '03-server-components/10-csr.md',
-    '03-server-components/11-csr-workflow.md',
-    '03-server-components/13-ssr.md',
-    '03-server-components/14-ssr2.md',
-    '03-server-components/15-ssr3.md',
-    '03-server-components/16-ssr-next.md',
-    '03-server-components/17-ssr-workflow.md',
-    '03-server-components/18-hydration-cons.md',
-    '03-server-components/20-server-components.md',
-    '03-server-components/21-client-component-result.md',
-    '03-server-components/22-server-component-result.md',
-    '03-server-components/23-use-client.md',
-    '03-server-components/24-why.md',
-    '03-server-components/25-partial-hydration.md',
-    '03-server-components/26-heavy-work.md',
-    '03-server-components/27-node-api.md',
-    '03-server-components/28-security.md',
-    '03-server-components/29-lab.md',
-    '03-server-components/31-rules-hooks.md',
-    '03-server-components/32-rules-import.md',
-    '03-server-components/33-boundaries.md',
-    '03-server-components/34-boundaries-invalid.md',
-    '03-server-components/35-composition.md',
-    '03-server-components/36-composition1.md',
-    '03-server-components/37-composition2.md',
-    '03-server-components/38-recap.md',
-    '03-server-components/40-lab.md',
+    '03-navigation/00-title.md',
+    '03-navigation/10-problem.md',
+    '03-navigation/20-dynamic-segment.md',
+    '03-navigation/30-params.md',
+    '03-navigation/40-link-problem.md',
+    '03-navigation/41-link-solution.md',
+    '03-navigation/42-link-prefetch.md',
+    '03-navigation/50-active-link.md',
+    '03-navigation/80-lets-go.md',
+    '03-navigation/90-lab.md',
+  ];
+}
+
+function serverComponentsSlides() {
+  return [
+    '04-server-components/00-title.md',
+    '04-server-components/10-reveal.md',
+    '04-server-components/11-reveal-tree.md',
+    '04-server-components/20-why-it-matters.md',
+    '04-server-components/21-server-only-example.md',
+    '04-server-components/30-cant-do.md',
+    '04-server-components/40-use-client.md',
+    '04-server-components/41-use-client-boundary.md',
+    '04-server-components/50-composition-rule.md',
+    '04-server-components/51-composition-leaves.md',
+    '04-server-components/51.1-serializable-props.md',
+    '04-server-components/60-decision-rule.md',
+    '04-server-components/70-row-click-payoff.md',
+    '04-server-components/70.1-router-methods.md',
+    '04-server-components/71-active-link-payoff.md',
+    '04-server-components/80-lets-go.md',
+    '04-server-components/90-lab.md',
+  ];
+}
+
+function compositionSlides() {
+  return [
+    '05-composition/00-title.md',
+    '05-composition/10-puzzle.md',
+    '05-composition/11-resolution.md',
+    '05-composition/12-theme-example.md',
+    '05-composition/13-context-providers-pattern.md',
+    '05-composition/14-react-cache.md',
+    '05-composition/20-composition-habit.md',
+    '05-composition/30-expenses-payoff.md',
+    '05-composition/40-log-read-example.md',
+    '05-composition/80-lets-go.md',
+    '05-composition/90-lab.md',
   ];
 }
 
 function dataFetchingSlides() {
   return [
-    '04-data-fetching/00-title.md',
-    '04-data-fetching/01-intro.md',
-    '04-data-fetching/10-server-fetch.md',
-    '04-data-fetching/11-server-third.md',
-    '04-data-fetching/12-server-parallel-pattern.md',
-    '04-data-fetching/13-server-parallel.md',
-    '04-data-fetching/14-server-security.md',
-    '04-data-fetching/20-client-handler.md',
-    '04-data-fetching/21-client-handler-convention.md',
-    '04-data-fetching/22-client-handler-request.md',
-    '04-data-fetching/23-client-handler-headers.md',
-    '04-data-fetching/24-client-fetch.md',
-    '04-data-fetching/25-client-fetch-react-19.md',
-    '04-data-fetching/30-lab.md',
-    '04-data-fetching/40-caching.md',
-    '04-data-fetching/41-memoization.md',
-    '04-data-fetching/42-memoization-example.md',
-    '04-data-fetching/43-memoisation-third.md',
-    '04-data-fetching/44-data.md',
-    '04-data-fetching/45-data-ttl.md',
-    '04-data-fetching/46-data-ttl-behavior.md',
-    '04-data-fetching/47-data-on-demand.md',
-    '04-data-fetching/48-data-third.md',
-    '04-data-fetching/50-route-cache.md',
-    '04-data-fetching/51-route-cache-configuration.md',
-    '04-data-fetching/60-router-browser-cache.md',
-    '04-data-fetching/61-router-browser-cache-configuration.md',
-    '04-data-fetching/70-recap.md',
-    '04-data-fetching/80-lab.md',
+    '06-data-fetching/00-title.md',
+    '06-data-fetching/10-real-backend.md',
+    '06-data-fetching/20-old-way.md',
+    '06-data-fetching/30-fetch-in-component.md',
+    '06-data-fetching/40-provider-pattern.md',
+    '06-data-fetching/50-env-vars.md',
+    '06-data-fetching/60-employee-expenses-problem.md',
+    '06-data-fetching/70-route-handler.md',
+    '06-data-fetching/71-route-handler-post.md',
+    '06-data-fetching/72-route-handler-put-delete.md',
+    '06-data-fetching/73-route-handler-vs-server-actions.md',
+    '06-data-fetching/80-decision-rule.md',
+    '06-data-fetching/90-lets-go.md',
+    '06-data-fetching/95-lab.md',
   ];
 }
 
-function mutationSlides() {
+function dataCachingSlides() {
   return [
-    '05-mutations/00-title.md',
-    '05-mutations/01-intro.md',
-    '05-mutations/02-behavior-without.md',
-    '05-mutations/03-behavior-with.md',
-    '05-mutations/04-behavior.md',
-    '05-mutations/10-conventions-definition.md',
-    '05-mutations/11-conventions-using.md',
-    '05-mutations/12-conventions-prop.md',
-    '05-mutations/13-other-than-form.md',
-    '05-mutations/14-params.md',
-    '05-mutations/15-params-invocation.md',
-    '05-mutations/16-security.md',
-    '05-mutations/17-security-closure.md',
-    '05-mutations/18-security-origins.md',
-    '05-mutations/19-how-to-chose.md',
-    '05-mutations/20-lab.md',
-    '05-mutations/30-useformstatus.md',
-    '05-mutations/31-useformstate.md',
-    '05-mutations/32-error.md',
-    '05-mutations/40-lab.md',
+    '07-data-caching/00-title.md',
+    '07-data-caching/10-the-cost.md',
+    '07-data-caching/20-mental-model.md',
+    '07-data-caching/30-use-cache.md',
+    '07-data-caching/40-flip-the-switch.md',
+    '07-data-caching/50-cache-tag.md',
+    '07-data-caching/60-revalidation-two-ways.md',
+    '07-data-caching/65-cachelife-profiles.md',
+    '07-data-caching/70-on-demand-revalidate.md',
+    '07-data-caching/80-whos-calling-this.md',
+    '07-data-caching/90-lets-go.md',
+    '07-data-caching/95-lab.md',
   ];
 }
 
-function errorSlides() {
+function serverActionsSlides() {
   return [
-    '06-error-management/00-title.md',
-    '06-error-management/01-intro.md',
-    '06-error-management/10-error-boundaries.md',
-    '06-error-management/11-router-default.md',
-    '06-error-management/12-router-error.md',
-    '06-error-management/13-parallel-routing.md',
-    '06-error-management/14-custom.md',
-    '06-error-management/20-lab.md',
-    '06-error-management/30-expected-errors.md',
-    '06-error-management/31-expected-redirect.md',
-    '06-error-management/32-not-found.md',
-    '06-error-management/40-lab.md',
+    '08-server-actions/00-title.md',
+    '08-server-actions/10-old-way.md',
+    '08-server-actions/20-use-server.md',
+    '08-server-actions/30-form-data.md',
+    '08-server-actions/40-wire-it-up.md',
+    '08-server-actions/50-function-vs-action.md',
+    '08-server-actions/60-revalidate.md',
+    '08-server-actions/70-redirect.md',
+    '08-server-actions/72-throw-vs-return.md',
+    '08-server-actions/73-bind-arguments.md',
+    '08-server-actions/80-whats-next.md',
+    '08-server-actions/90-lets-go.md',
+    '08-server-actions/95-lab.md',
   ];
 }
 
-function middlewareSlides() {
+function formHooksSlides() {
   return [
-    '07-middleware/00-title.md',
-    '07-middleware/01-intro.md',
-    '07-middleware/10-next-config.md',
-    '07-middleware/11-headers.md',
-    '07-middleware/12-matching.md',
-    '07-middleware/13-matching-attribute.md',
-    '07-middleware/14-redirects.md',
-    '07-middleware/15-rewrite.md',
-    '07-middleware/16-rewrite-advanced.md',
-    '07-middleware/20-lab.md',
-    '07-middleware/30-middleware.md',
-    '07-middleware/31-definition.md',
-    '07-middleware/32-use-cases.md',
-    '07-middleware/33-convention.md',
-    '07-middleware/34-url-matching.md',
-    '07-middleware/35-api-modify.md',
-    '07-middleware/36-api-rewrite-redirect.md',
-    '07-middleware/37-api-return.md',
-    '07-middleware/38-warning.md',
-    '07-middleware/40-lab.md',
+    '09-form-hooks/00-title.md',
+    '09-form-hooks/10-two-gaps.md',
+    '09-form-hooks/20-use-action-state.md',
+    '09-form-hooks/25-permalink.md',
+    '09-form-hooks/30-action-returns-state.md',
+    '09-form-hooks/40-form-reads-state.md',
+    '09-form-hooks/45-client-validation.md',
+    '09-form-hooks/50-use-form-status.md',
+    '09-form-hooks/60-child-not-parent.md',
+    '09-form-hooks/70-payoff.md',
+    '09-form-hooks/80-whats-next.md',
+    '09-form-hooks/90-lets-go.md',
+    '09-form-hooks/95-lab.md',
   ];
 }
 
-function renderingMethodSlides() {
+function errorBoundariesSlides() {
   return [
-    '08-rendering-methods/00-title.md',
-    '08-rendering-methods/01-intro.md',
-    '08-rendering-methods/10-ssr.md',
-    '08-rendering-methods/11-pro-cons.md',
-    '08-rendering-methods/20-static-rendering.md',
-    '08-rendering-methods/21-static-rendering-schema.md',
-    '08-rendering-methods/22-static-rendering-config.md',
-    '08-rendering-methods/30-incremental.md',
-    '08-rendering-methods/31-incremental-schema.md',
-    '08-rendering-methods/32-incremental-example.md',
-    '08-rendering-methods/33-incremental-example2.md',
-    '08-rendering-methods/34-incremental-runtime.md',
-    '08-rendering-methods/40-lab.md',
-    '08-rendering-methods/50-streaming.md',
-    '08-rendering-methods/51-solution.md',
-    '08-rendering-methods/52-streaming-next.md',
-    '08-rendering-methods/53-streaming-loading.md',
-    '08-rendering-methods/54-streaming-parallel.md',
-    '08-rendering-methods/60-suspense.md',
-    '08-rendering-methods/61-limitations.md',
-    '08-rendering-methods/70-attendance-sheet.md',
-    '08-rendering-methods/80-lab.md',
+    '10-error-boundaries/00-title.md',
+    '10-error-boundaries/10-the-crash.md',
+    '10-error-boundaries/20-default-screen.md',
+    '10-error-boundaries/30-error-tsx.md',
+    '10-error-boundaries/35-global-error.md',
+    '10-error-boundaries/40-why-client.md',
+    '10-error-boundaries/50-error-reset-props.md',
+    '10-error-boundaries/60-nesting.md',
+    '10-error-boundaries/70-parallel-routes.md',
+    '10-error-boundaries/80-slot-errors.md',
+    '10-error-boundaries/85-whats-next.md',
+    '10-error-boundaries/90-lets-go.md',
+    '10-error-boundaries/95-lab.md',
+  ];
+}
+
+function expectedErrorsSlides() {
+  return [
+    '11-expected-errors/00-title.md',
+    '11-expected-errors/10-not-a-crash.md',
+    '11-expected-errors/20-the-gap.md',
+    '11-expected-errors/30-notfound-function.md',
+    '11-expected-errors/40-not-found-tsx.md',
+    '11-expected-errors/45-route-handler-404.md',
+    '11-expected-errors/50-nesting.md',
+    '11-expected-errors/60-server-or-client.md',
+    '11-expected-errors/70-decision-rule.md',
+    '11-expected-errors/90-lets-go.md',
+    '11-expected-errors/95-lab.md',
+  ];
+}
+
+function lifecycleSlides() {
+  return [
+    '12-lifecycle/00-title.md',
+    '12-lifecycle/05-the-full-picture.md',
+    '12-lifecycle/10-the-question.md',
+    '12-lifecycle/20-two-widgets-two-speeds.md',
+    '12-lifecycle/30-without-anything.md',
+    '12-lifecycle/40-suspense-the-answer.md',
+    '12-lifecycle/50-two-boundaries.md',
+    '12-lifecycle/60-streaming.md',
+    '12-lifecycle/65-hydration.md',
+    '12-lifecycle/70-shallow-on-purpose.md',
+    '12-lifecycle/71-config-redirects.md',
+    '12-lifecycle/73-config-rewrites.md',
+    '12-lifecycle/75-cookie-rewrite.md',
+    '12-lifecycle/90-lets-go.md',
+    '12-lifecycle/95-lab.md',
+  ];
+}
+
+function proxySlides() {
+  return [
+    '13-proxy/00-title.md',
+    '13-proxy/10-the-hole.md',
+    '13-proxy/20-proxy-file.md',
+    '13-proxy/25-naming-history.md',
+    '13-proxy/30-matcher.md',
+    '13-proxy/40-reading-the-cookie.md',
+    '13-proxy/50-two-redirects.md',
+    '13-proxy/60-caution.md',
+    '13-proxy/65-tying-it-together.md',
+    '13-proxy/90-lets-go.md',
+    '13-proxy/95-lab.md',
+  ];
+}
+
+function renderingMethodsSlides() {
+  return [
+    '14-rendering-methods/00-title.md',
+    '14-rendering-methods/10-the-question.md',
+    '14-rendering-methods/20-the-spectrum.md',
+    '14-rendering-methods/30-known-dynamic-routes.md',
+    '14-rendering-methods/40-generate-static-params.md',
+    '14-rendering-methods/50-subset-at-build.md',
+    '14-rendering-methods/60-outside-the-set.md',
+    '14-rendering-methods/65-dynamic-params-flag.md',
+    '14-rendering-methods/70-vocabulary.md',
+    '14-rendering-methods/90-lets-go.md',
+    '14-rendering-methods/95-lab.md',
+  ];
+}
+
+function suspenseSlides() {
+  return [
+    '15-suspense/00-title.md',
+    '15-suspense/10-the-full-picture.md',
+    '15-suspense/20-loading-file.md',
+    '15-suspense/30-loading-scope.md',
+    '15-suspense/40-the-slow-piece.md',
+    '15-suspense/45-what-triggers-suspense.md',
+    '15-suspense/50-nested-suspense.md',
+    '15-suspense/60-decision-rule.md',
+    '15-suspense/70-streaming-tie-in.md',
+    '15-suspense/90-lets-go.md',
+    '15-suspense/95-lab.md',
   ];
 }
 
 function deployingSlides() {
   return [
-    '09-deploying-and-hosting/00-title.md',
-    '09-deploying-and-hosting/01-intro.md',
-    '09-deploying-and-hosting/10-vercel.md',
-    '09-deploying-and-hosting/20-nodejs.md',
-    '09-deploying-and-hosting/30-docker-image.md',
-    '09-deploying-and-hosting/31-docker-multistage.md',
-    '09-deploying-and-hosting/32-docker-standalone.md',
-    '09-deploying-and-hosting/33-docker-demo.md',
-    '09-deploying-and-hosting/34-docker-cache.md',
-    '09-deploying-and-hosting/35-docker-cache-custom.md',
-    '09-deploying-and-hosting/36-docker-cache-redis.md',
-    '09-deploying-and-hosting/40-static.md',
-    '09-deploying-and-hosting/41-static-convention.md',
-    '09-deploying-and-hosting/42-static-supported.md',
-    '09-deploying-and-hosting/43-static-unsupported.md',
-    '09-deploying-and-hosting/44-static-adaptations.md',
-    '09-deploying-and-hosting/45-static-proxy-schema.md',
-    '09-deploying-and-hosting/46-static-pro-cons.md',
+    '16-deploying-and-hosting/00-title.md',
+    '16-deploying-and-hosting/10-the-gap.md',
+    '16-deploying-and-hosting/20-vercel.md',
+    '16-deploying-and-hosting/30-node-server.md',
+    '16-deploying-and-hosting/40-docker.md',
+    '16-deploying-and-hosting/50-static-export.md',
+    '16-deploying-and-hosting/60-static-unsupported.md',
+    '16-deploying-and-hosting/70-static-tradeoff.md',
+    '16-deploying-and-hosting/80-compatibility.md',
+    '16-deploying-and-hosting/90-you-made-it.md',
   ];
-}
-
-function a11ySlides() {
-  return [];
-}
-
-function i18nSlides() {
-  return [];
-}
-
-function furtherExploration() {
-  return [...deployingSlides(), ...a11ySlides(), ...i18nSlides()];
 }
 
 function conclusionSlides() {
@@ -287,16 +306,23 @@ function formation() {
   return [
     ...schoolSlides(),
     ...introSlides(),
-    ...routingSlides(),
-    ...serverComponentSlides(),
+    ...layoutSlides(),
+    ...navigationSlides(),
+    ...serverComponentsSlides(),
+    ...compositionSlides(),
     ...dataFetchingSlides(),
-    ...mutationSlides(),
-    ...errorSlides(),
-    ...middlewareSlides(),
-    ...renderingMethodSlides(),
-    ...furtherExploration(),
+    ...dataCachingSlides(),
+    ...serverActionsSlides(),
+    ...formHooksSlides(),
+    ...errorBoundariesSlides(),
+    ...expectedErrorsSlides(),
+    ...lifecycleSlides(),
+    ...proxySlides(),
+    ...renderingMethodsSlides(),
+    ...suspenseSlides(),
+    ...deployingSlides(),
     ...conclusionSlides(),
-  ].map((slidePath) => {
+  ].map(slidePath => {
     return { path: slidePath };
   });
 }
