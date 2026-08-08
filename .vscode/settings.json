@@ -1,0 +1,11 @@
+{
+  "cSpell.words": [
+    "esnext",
+    "expensees",
+    "firstname",
+    "lastname",
+    "sfeir",
+    "tailwindcss"
+  ],
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
+}

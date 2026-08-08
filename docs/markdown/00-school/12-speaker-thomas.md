@@ -1,21 +1,23 @@
 <!-- .slide: class="speaker-slide blue" -->
 
+<div class="speaker-slide">
+
 # Présentation
 
-![speaker blue](./assets/images/speaker-thomas.jpg)
+![](./assets/images/speaker-thomas.jpg 'speaker blue')
 
-![badge first-badge](./assets/images/logo-react.svg)
-![badge second-badge](./assets/images/logo-react-certification-2.png)
-![badge third-badge](./assets/images/logo-spring-boot.png)
+![](./assets/images/logo-react.svg 'badge badge')
 
-![company](./assets/images/logo-SFEIR-blanc.png)
+![](./assets/images/logo-react-certification-2.png 'badge badge')
+
+![](./assets/images/logo-spring-boot.png 'badge badge')
+
+![](./assets/images/logo-SFEIR-blanc.png 'company')
 
 <h2>Thomas <span>OUVRY</span></h2>
 
 ### Developer
 
-<!-- .element: class="icon-rule icon-first" -->
-
 ### [@ThomasOUVRY](https://github.com/ThomasOUVRY)
 
-<!-- .element: class="icon-second" -->
+</div>

@@ -1,17 +1,19 @@
 <!-- .slide: class="speaker-slide" -->
 
+<div class="speaker-slide">
+
 # Présentation
 
-![speaker](./assets/images/speaker-antoiner.jpeg)
-![badge](./assets/images/logo-react.svg)
-![company](./assets/images/logo-sfeir-blanc.png)
+![](./assets/images/speaker-antoiner.jpeg 'speaker')
+
+![](./assets/images/logo-react.svg 'badge')
+
+![](./assets/images/logo-sfeir-blanc.png 'company')
 
 ## Antoine RICHARD
 
 ### Developer & EM
 
-<!-- .element: class="icon-rule icon-first" -->
-
 ### richard.an@sfeir.com
 
-<!-- .element: class="icon-twitter icon-second" -->
+</div>

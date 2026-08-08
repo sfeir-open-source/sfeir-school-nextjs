@@ -1,3 +1,14 @@
-.reveal .slides section {
-    // Do some stuff
+.reveal .slides section.with-code pre.medium-code:not(.literal) code {
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.reveal .slides section.with-code pre.big-code:not(.literal) code {
+  font-size: 1.3em;
+  line-height: 2em;
+}
+
+.reveal .slides section.with-code pre code {
+  max-height: 800px !important;
+  overflow: auto !important;
 }

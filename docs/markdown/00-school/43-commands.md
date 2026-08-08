@@ -1,4 +1,6 @@
-<!-- .slide: class="two-column with-code" -->
+<!-- .slide: class="tc-multiple-columns with-code" -->
+
+##++##
 
 # What we will do
 
@@ -9,3 +11,5 @@ npm install
 npm run start -w api
 npm run dev -w demo
 ```
+
+##++##

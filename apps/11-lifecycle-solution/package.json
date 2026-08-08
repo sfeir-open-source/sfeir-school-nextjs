@@ -1,0 +1,32 @@
+{
+  "name": "11-lifecycle-solution",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "next": "~16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@sfeir/ui-solution": "*",
+    "@sfeir/types": "*"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "dependsOn": [
+          "build-deps"
+        ]
+      },
+      "dev": {
+        "dependsOn": [
+          "watch-deps",
+          {
+            "projects": "server",
+            "target": "serve"
+          }
+        ]
+      }
+    }
+  }
+}
