@@ -8,3 +8,4 @@ export * from './lib/NoSSR';
 export * from './lib/Search';
 export * from './lib/Theme';
 export * from './lib/SubmitFormButton';
+export * from './lib/ExpensesTable'; // DO NOT REMOVE this line. it also exports from the server because during the workshop ExpensesTable moved from client to server

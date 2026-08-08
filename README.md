@@ -1,108 +1,144 @@
-# New Nx Repository
+# SFEIR School - Next.js
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+Welcome! This repository is the training platform used for the SFEIR Next.js
+school. It contains the presentation slides you'll follow along with, and a
+set of hands-on workshop applications where you'll practice what you just
+learned.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+The whole project is managed with [Nx](https://nx.dev), a monorepo tool that
+lets us host dozens of small apps and shared libraries side by side, and run
+commands (`dev`, `build`, `test`, `lint`, ...) against any of them consistently.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/docs/technologies/typescript/introduction?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
-🚀 If you haven't connected to Nx Cloud yet, [complete your setup here](https://cloud.nx.app/get-started). Get faster builds with remote caching, distributed task execution, and self-healing CI. [See how your workspace can benefit](#nx-cloud).
+## Goal of this project
 
-## Generate a library
+Each Next.js concept taught in the slides (layouts, routing, server
+components, data fetching, mutations, error handling, middleware, rendering
+strategies, suspense, ...) has a matching **workshop app** where you implement
+it yourself, plus a **solution app** you can compare against or peek at if
+you're stuck. The idea is: watch the slides for a topic, then go build it in
+the corresponding workshop app.
 
-```sh
-npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
-```
-
-## Run tasks
-
-To build the library use:
-
-```sh
-npx nx run pkg1:build
-```
-
-To run any task with Nx use:
-
-```sh
-npx nx run <project-name>:<target>
-```
-
-These targets are either [inferred automatically](https://nx.dev/docs/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/docs/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Versioning and releasing
-
-To version and release the library use
+## Project structure
 
 ```
-npx nx release
+/apps
+  ├── 01-layout                       # Workshop: Layout & Components
+  ├── 01-layout-solution               # Solution to the above
+  ├── 02-navigation                    # Workshop: Routing & Navigation
+  ├── 02-navigation-solution
+  ├── 03-server-components             # Workshop: Server Components
+  ├── 03-server-components-solution
+  ├── 04-composition                   # Workshop: Composition patterns
+  ├── 04-composition-solution
+  ├── 05-data-fetching                 # Workshop: Data fetching
+  ├── 05-data-fetching-solution
+  ├── 06-data-caching                  # Workshop: Data caching
+  ├── 06-data-caching-solution
+  ├── 07-server-action                 # Workshop: Server Actions
+  ├── 07-server-action-solution
+  ├── 08-form-hooks                    # Workshop: Form hooks (useActionState, ...)
+  ├── 08-form-hooks-solution
+  ├── 09-error-boundaries               # Workshop: Error boundaries
+  ├── 09-error-boundaries-solution
+  ├── 10-expected-errors                # Workshop: Handling expected errors
+  ├── 10-expected-errors-solution
+  ├── 11-lifecycle                      # Workshop: Request/render lifecycle
+  ├── 11-lifecycle-solution
+  ├── 12-middleware                     # Workshop: Middleware
+  ├── 12-middleware-solution
+  ├── 13-rendering-methods               # Workshop: Rendering strategies (SSR/SSG/ISR)
+  ├── 13-rendering-methods-solution
+  ├── 14-suspense                        # Workshop: Suspense & streaming
+  ├── 14-suspense-solution
+  └── server                             # Shared Fastify backend API used by the workshops
+
+/docs
+  ├── markdown/                     # Slide content, one folder per training module:
+  │   ├── 00-school                 #   Welcome & environment setup
+  │   ├── 01-intro                  #   Introduction to Next.js
+  │   ├── 02-routing                #   Routing fundamentals
+  │   ├── 03-server-components      #   Server Components deep-dive
+  │   ├── 04-data-fetching          #   Data fetching patterns
+  │   ├── 05-mutations              #   Forms & mutations
+  │   ├── 06-error-management       #   Error boundaries & handling
+  │   ├── 07-middleware             #   Middleware
+  │   ├── 08-rendering-methods      #   Rendering strategies
+  │   ├── 09-deploying-and-hosting  #   Deployment & hosting
+  │   └── 20-conclusion             #   Wrap-up
+  ├── scripts/                      # Slide deck build/automation scripts
+  ├── scss/                         # Slide deck styling
+  └── assets/                       # Images & media used in the slides
+
+/libs
+  ├── helpers/         # Shared utility/helper functions used across apps
+  ├── type/             # Shared TypeScript types used across apps
+  ├── ui/                # Shared React UI component library (workshop version)
+  └── ui-solution/       # Same UI components, "solution" version
 ```
 
-Pass `--dry-run` to see what would happen without actually releasing the library.
+**In short:**
+- `/apps` is where you write and run code, one folder per topic (workshop +
+  its `-solution` pair), plus a shared `server` backend the workshops call.
+- `/docs` is the slide deck itself (content, styling, and the scripts that
+  build/serve it).
+- `/libs` holds code shared by multiple apps, so you don't rewrite the same
+  UI components or helpers in every workshop.
 
-[Learn more about Nx release &raquo;](https://nx.dev/docs/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## Commands
 
-## Keep TypeScript project references up to date
+### Getting started
 
-Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
+- `npm install` — install all dependencies for the monorepo.
+- `npm run launch:slides` — start the training slides at http://localhost:4242.
+- `npm run dev -- <app_name>` — start a specific workshop's dev server, e.g.
+  `npm run dev -- 01-layout`.
+- `npm run start:server` — start the shared backend API used by the workshop apps.
 
-To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
+### Working with Nx directly
 
-```sh
-npx nx sync
-```
+Nx is the tool orchestrating everything in this monorepo. You can call it
+through `npm run nx <command>`, or use its dedicated CLI commands below:
 
-You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
+- `npx nx dev <app-name>` — start a workshop app's Next.js dev server.
+- `npx nx build <app-name>` — build a specific app (or library).
+- `npx nx lint <app-name>` — lint a project's code.
+- `npx nx test <app-name>` — run a project's tests.
+- `npx nx run-many --target=test` — run tests across every project.
+- `npx nx affected --target=build` — build only the projects impacted by
+  your latest changes.
+- `npx nx graph` — open a visual graph of how every app/library depends on
+  each other.
 
-```sh
-npx nx sync:check
-```
+### Other useful scripts
 
-[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
+- `npm run lint:ci` — lint every affected project (used in CI).
+- `npm run build:ci` — build every affected project (used in CI).
+- `npm run sync-nx-workspace` — sync generated TypeScript project references.
 
-## Nx Cloud
+## Reporting a problem: the `create-issue` skill
 
-Nx Cloud ensures a [fast and scalable CI](https://nx.dev/nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+If you find a bug or something wrong in a workshop app (`/apps`) or in a
+slide module (`/docs`), you can ask Claude Code to open a GitHub issue for it
+using the built-in `create-issue` skill.
 
-- [Remote caching](https://nx.dev/docs/features/ci-features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/docs/features/ci-features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/docs/features/ci-features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/docs/features/ci-features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Just ask, for example:
 
-### Set up CI (non-Github Actions CI)
+> Create an issue: the cart total doesn't update in 05-data-fetching after
+> adding an item.
 
-**Note:** This is only required if your CI provider is not GitHub Actions.
+The skill will:
 
-Use the following command to configure a CI workflow for your workspace:
+1. Check that the GitHub CLI (`gh`) is installed and you're authenticated
+   (`gh auth login` if not).
+2. Ask you which app/module is impacted and for a description of the problem.
+3. Automatically enrich the issue with a list of likely impacted files and a
+   ready-to-use prompt you can paste into an AI assistant to fix it.
+4. Create the issue with `gh issue create` and give you back its URL.
 
-```sh
-npx nx g ci-workflow
-```
+You need the [GitHub CLI](https://cli.github.com/manual/) installed and
+authenticated (`gh auth login`) for this to work.
 
-[Learn more about Nx on CI](https://nx.dev/docs/features/ci-features?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/docs/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## 🔗 Learn More
+## Learn more
 
 - [Nx Documentation](https://nx.dev/docs)
-- [Crafting Your Workspace Tutorial](https://nx.dev/docs/getting-started/tutorials/crafting-your-workspace)
-- [Module Boundaries](https://nx.dev/docs/features/enforce-module-boundaries)
-- [Releasing Packages](https://nx.dev/docs/features/manage-releases)
-- [Nx Plugins](https://nx.dev/docs/concepts/nx-plugins)
-- [Nx Cloud](https://nx.dev/nx-cloud)
-
-## 💬 Community
-
-Join the Nx community:
-
-- [Discord](https://go.nx.dev/community)
-- [X (Twitter)](https://twitter.com/nxdevtools)
-- [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [YouTube](https://www.youtube.com/@nxdevtools)
-- [Blog](https://nx.dev/blog)
+- [Next.js Documentation](https://nextjs.org/docs)

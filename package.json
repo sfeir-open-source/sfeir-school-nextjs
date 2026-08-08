@@ -8,6 +8,8 @@
     "launch:slides": "nx start docs",
     "dev": "nx dev",
     "start:server": "nx serve server",
+    "lint:ci": "nx affected --exclude=docs --target=lint --parallel=10",
+    "build:ci": "nx affected --exclude=docs --target=build --parallel=10",
     "migrate": "nx migrate",
     "run-migration": "nx migrate --run-migrations",
     "sync-nx-workspace": "nx sync"
