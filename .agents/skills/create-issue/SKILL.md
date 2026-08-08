@@ -41,14 +41,39 @@ known `/apps` directories or `/docs/markdown` modules) for exactly two things:
 
 Do not proceed to Step 3 until both pieces of information are provided.
 
-## Step 3 — Create the issue
+## Step 3 — Enrich the description
 
-Build the issue from the two answers:
+Once the impacted area and problem description are known, enrich the issue body
+with two additional sections before creating it:
+
+1. **Impacted files** — delegate this to the `project-explorer` sub-agent. Give it
+   the impacted area (app/module) and the problem description, and ask it to
+   return a list of the specific files likely involved and, for each, a short
+   reason why (e.g. it defines the broken component, holds the relevant route
+   handler, contains the data-fetching logic described). Since project-explorer
+   is read-only, this is a safe, non-destructive lookup. Wait for its report
+   before continuing.
+2. **AI-ready fix prompt** — write a self-contained prompt that a developer could
+   copy-paste directly into an AI coding assistant to fix the issue. It must
+   include: the impacted area/app, a concise restatement of the problem, the list
+   of impacted files from step 1 (as context, not as a mandate to only touch
+   those files), and a clear instruction to fix the root cause with a minimal
+   change. Format it as a fenced code block so it's easy to copy as-is.
+
+## Step 4 — Create the issue
+
+Build the issue from the gathered and enriched information:
 
 - **Title**: a short summary prefixed with the impacted area, e.g.
   `[03-server-components] <short summary>` or `[docs/07-middleware] <short summary>`.
-- **Body**: include the impacted area and the full problem description the user
-  gave, formatted in Markdown.
+- **Body**: include, in order:
+  1. The impacted area and the full problem description the user gave.
+  2. An "## Impacted files" section listing each file and why, from the
+     project-explorer report.
+  3. An "## AI-ready prompt" section containing the copy-pasteable fenced code
+     block prompt.
+
+  All formatted in Markdown.
 
 Create it with `gh issue create` (see https://cli.github.com/manual/gh_issue_create),
 assigning it to `Nicoss54`:
@@ -66,7 +91,7 @@ EOF
 )"
 ```
 
-## Step 4 — Confirm
+## Step 5 — Confirm
 
 After creation, `gh issue create` prints the issue URL — share that URL with the
 user as confirmation.
