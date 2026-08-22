@@ -4,42 +4,11 @@
 
 ## Lab
 
-<small>
+Replace the JSON fixtures with real data providers hitting the Fastify
+backend, and add an API route so the "Load expenses" button has something
+to call.
 
-**1. Point the app at the real API**
-
-- In `05-data-fetching/.env.local`, set `API_BASE_URL=http://localhost:9000/api`
-  and add `API_KEY=''` — `src/shared/env.ts` already reads both
-
-**2. Write the providers**
-
-- Create `app/providers/employees.ts` with `getEmployees(search?)` and
-  `getEmployee(id)`, and `app/providers/expensees.ts` with `getExpenses()`,
-  `getExpenseById(id)` and `getExpensesByEmployee(employeeId)` — each one
-  builds a URL from `API_BASE_URL`, sends `x-api-key: API_KEY`, and calls
-  `fetchData` from `@sfeir/helpers`
-
-**3. Swap the JSON fixtures for real fetches**
-
-- In `employees/page.tsx`, `employees/[id]/page.tsx`, `expenses/page.tsx` and
-  `expenses/[id]/page.tsx`, remove the `@/data/*.json` imports and `await`
-  the matching provider instead — the JSX barely changes, only where the
-  data comes from
-
-**4. Give the "Load expenses" button something to call**
-
-- `EmployeeExpenses` (on the employee detail page) already `fetch`es
-  `/api/expenses?employeeId=...` — create `app/api/expenses/route.ts` with an
-  `export const GET` that reads `employeeId` off
-  `request.nextUrl.searchParams` and returns `Response.json(...)` from
-  `getExpensesByEmployee`
-
-**5. Verify against the solution**
-
-- Run `05-data-fetching-solution` alongside yours and compare
-  `app/providers/` and `app/api/expenses/route.ts`
-
-</small>
+📖 See `apps/05-data-fetching/README.md` for full step-by-step instructions.
 
 <br/>
 
