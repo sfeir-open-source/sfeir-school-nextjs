@@ -4,17 +4,11 @@
 
 ## Lab
 
-**1. Start your first workshop app**
+This orientation lab gets your first workshop app running and gives you a
+quick tour of the file-to-URL structure by tweaking the `<Alert>` on the
+home page.
 
-- Run the dev server: `npm run dev -- 01-layout`
-- Open <http://localhost:3000> — this app runs standalone, no backend
-  server needed for this module
-
-**2. Get your bearings**
-
-- Open `apps/01-layout/src/app/layout.tsx` and `page.tsx` in your editor
-- Find the `<Alert>` in `page.tsx` and change its text — save, and watch
-  the browser update without a manual refresh
+📖 See `apps/01-layout/README.md` for full step-by-step instructions.
 
 <br/>
 

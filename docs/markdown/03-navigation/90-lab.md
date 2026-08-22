@@ -4,33 +4,10 @@
 
 ## Lab
 
-**1. Build the employee detail page**
+Build employee and expense detail pages with dynamic `[id]` routes, then
+link to them from the list pages with `<Link>` from `next/link`.
 
-- In `02-navigation/src/app/(dashboard)/employees`, create an `[id]` folder
-  with a `page.tsx` inside
-- Read `params.id` — remember it's a Promise, so `await` it — find the
-  matching employee in `employee.json`, and render it with `PageTitle` and
-  `PersonCard` from `@sfeir/ui/server`
-- Visit `/employees/1` directly to check it renders
-
-**2. Link to it from the list**
-
-- Back in `employees/page.tsx`, use `<Link>` from `next/link` to point each
-  `PersonCard`'s `actions` slot at `/employees/{id}`
-- Click through from the list — no full-page reload, sidebar stays put
-
-**3. Same idea, for expenses**
-
-- Create `(dashboard)/expenses/[id]/page.tsx` the same way, reading from
-  `expense.json` this time
-- Visit `/expenses/{id}` directly to prove the route works
-
-**4. Compare with the solution**
-
-- Run `02-navigation-solution` alongside yours — notice each expense row is
-  clickable, and the current page's link is highlighted in the sidebar. Same
-  ideas you just used, just built out further — the mechanics land next
-  module
+📖 See `apps/02-navigation/README.md` for full step-by-step instructions.
 
 <br/>
 

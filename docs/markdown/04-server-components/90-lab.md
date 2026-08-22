@@ -4,30 +4,12 @@
 
 ## Lab
 
-**1. Prove a Server Component can touch the filesystem**
+Use a Server Component to write search logs straight to the filesystem, and
+read them back on a dedicated page — direct Node.js access with no API
+layer needed, because none of this code ever ships to the browser.
 
-- In `03-server-components/src/app/(dashboard)/employees/page.tsx`, after
-  filtering the employees, use `node:fs/promises`' `appendFile` (and
-  `node:path`'s `join`) to log each search — date, search term, number of
-  results — as a JSON line into `../../logs.txt`
-- Nothing extra to configure: this works because `page.tsx` is a Server
-  Component and never ships to the browser
-
-**2. Read it back**
-
-- Create `(dashboard)/employees/logs/page.tsx` — an `async` Server Component
-  that reads `../../logs.txt` with `readFile` and renders it with `<Code
-  lang="json">` from the `bright` package
-- Visit `/employees/logs` after searching a few times on `/employees`
-
-**3. Spot the payoff from last module**
-
-- Run `03-server-components-solution` alongside yours — click an expense row
-  (it now navigates to `/expenses/{id}`), and watch the sidebar highlight the
-  page you're on
-- Both come from the same trick: a small `'use client'` component
-  (`ExpensesTableRow`, `NavigationItem`) doing only the one thing that needs a
-  browser — nothing else around it had to change
+📖 See `apps/03-server-components/README.md` for full step-by-step
+instructions.
 
 <br/>
 

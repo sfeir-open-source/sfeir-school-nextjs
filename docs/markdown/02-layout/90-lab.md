@@ -4,24 +4,11 @@
 
 ## Lab
 
-**1. Build the dashboard shell**
+Build a dashboard shell around a `(dashboard)` route group, add the
+employees and expenses pages, and see the shared layout persist across
+navigation between them.
 
-- In `01-layout/src/app`, create a `(dashboard)` route group
-- Copy `_static/dashboard-layout.tsx` into `(dashboard)/layout.tsx` — it
-  renders the logo, the sidebar navigation, and wraps `{children}`
-- Copy `_static/dashboard-page.tsx` into `(dashboard)/page.tsx`
-
-**2. Add the employees and expenses pages**
-
-- Copy `_static/employee-page.tsx` into `(dashboard)/employees/page.tsx`
-- Copy `_static/expenses-page.tsx` into `(dashboard)/expenses/page.tsx`
-- Visit `/employees` and `/expenses` — same sidebar, different content, and
-  employee photos now go through `next/image`
-
-**3. Check the persistence**
-
-- Navigate between `/employees` and `/expenses` a few times — watch the
-  sidebar stay put while only the main content swaps
+📖 See `apps/01-layout/README.md` for full step-by-step instructions.
 
 <br/>
 

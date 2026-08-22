@@ -4,38 +4,12 @@
 
 ## Lab
 
-<small>
+Add a root `error.tsx` safety net plus dedicated `error.tsx` boundaries for
+the home page's two parallel route slots, then verify a failure in one
+widget stays isolated from the rest of the page.
 
-**1. Give the whole app a safety net**
-
-- Create `app/error.tsx`: start with `'use client'`, import `PageError` from
-  `@sfeir/ui/server`, and render a generic fallback message (e.g. "The
-  service is currently unavailable. Please try again later")
-
-**2. Isolate the two home page widgets**
-
-- Create `app/(dashboard)/(home)/@employeesSlot/error.tsx`: `'use client'`,
-  import `Alert` from `@sfeir/ui/server`, and show a short message about the
-  employees widget failing to load
-- Create `app/(dashboard)/(home)/@expensesSlot/error.tsx`: same idea, a
-  message about the expenses widget failing to load
-
-**3. Break it on purpose, twice**
-
-- With the `server` backend stopped, reload `/` — confirm you see two small
-  red alerts in place of the two widgets, while the page title and sidebar
-  keep rendering
-- Temporarily delete (or rename) one of the two slot `error.tsx` files,
-  reload `/` again, and watch the failure jump all the way up to your root
-  `error.tsx` instead — then restore the file
-
-**4. Verify against the solution**
-
-- Run `09-error-boundaries-solution` alongside yours and compare
-  `app/error.tsx`, `app/(dashboard)/(home)/@employeesSlot/error.tsx` and
-  `app/(dashboard)/(home)/@expensesSlot/error.tsx`
-
-</small>
+📖 See `apps/09-error-boundaries/README.md` for full step-by-step
+instructions.
 
 <br/>
 

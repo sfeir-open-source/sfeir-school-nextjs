@@ -4,62 +4,11 @@
 
 ## Lab
 
-<small>
+Observe streaming and caching behavior on the home page's two widgets,
+break a `<Suspense>` boundary on purpose, then add the `redirects()` and
+`rewrites()` still missing from `next.config.js`.
 
-**1. Watch the streaming actually happen**
-
-- Open `/` with the browser's Network tab open, throttle to "Slow 3G" if you
-  can, and reload a few times
-- Watch `@employeesSlot`'s widget appear almost immediately while
-  `@expensesSlot` briefly shows its `Loading...` fallback before the real
-  table swaps in — same page, two different arrival times
-
-**2. Turn the fast slot into a slow one**
-
-- In `app/providers/employees.ts`, comment out the `'use cache'` line (and
-  the `cacheTag('all-employees')` right after it) inside `getEmployees`
-- Reload `/` a few times — confirm `@employeesSlot` now shows its own
-  `Loading...` flash too, every single time, instead of resolving instantly
-- Uncomment both lines to put it back the way you found it
-
-**3. Break a `<Suspense>` boundary on purpose**
-
-- In `app/(dashboard)/(home)/@expensesSlot/page.tsx`, temporarily remove the
-  `<Suspense>` wrapper around `<ExpensesList />` (render `<ExpensesList />`
-  directly instead)
-- Reload `/` — with `cacheComponents: true` in `next.config.js`, Next.js
-  refuses to render this: it points at `getExpenses`'s uncached fetch and
-  tells you it needs a `<Suspense>` boundary around it
-- Put the `<Suspense>` wrapper back and confirm the error goes away
-
-**4. Add the redirects and rewrites `next.config.js` is still missing**
-
-- In `11-lifecycle`'s `next.config.js`, add an `async redirects()` that
-  returns three entries: `/expenses/variation` → `/expenses`, `/employees/:id`
-  → `/e_:id`, and `/employees/:id/edit` → `/e_:id/edit` — all three with
-  `permanent: false`
-- Add an `async rewrites()` that returns `{ beforeFiles, afterFiles: [],
-  fallback: [] }`, with `beforeFiles` holding three entries: `/e_:employeeId`
-  → `/employees/:employeeId`, `/e_:employeeId/edit` →
-  `/employees/:employeeId/edit`, and `/expenses` → `/expenses/variation`
-  gated behind `has: [{ type: 'cookie', key: 'abtest', value: 'true' }]`
-- Restart the dev server (`next.config.js` changes aren't hot-reloaded),
-  then click into an employee from `/` and confirm the URL becomes `/e_<id>`
-  while the real employee page still renders
-- Add an `abtest=true` cookie on the app's origin (devtools → Application →
-  Cookies) and reload `/expenses` — confirm the page's content changes even
-  though the URL stays `/expenses`; remove the cookie and reload to see it
-  flip back
-- Visit `/expenses/variation` directly — confirm it bounces you back to
-  `/expenses` instead of showing the variation on that URL
-
-**5. Verify against the solution**
-
-- Run `11-lifecycle-solution` alongside yours and compare `next.config.js` —
-  everything else in the two apps is identical on purpose, so this file is
-  the only diff
-
-</small>
+📖 See `apps/11-lifecycle/README.md` for full step-by-step instructions.
 
 <br/>
 
